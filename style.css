@@ -4,10 +4,11 @@ body {
   box-sizing: border-box;
 }
 
+/*/// Estilos del Header ////*/
+
 header {
   display: flex;
   align-items: center;
-  justify-content: center;
   flex-direction: column;
   background: black;
 }
@@ -23,5 +24,14 @@ nav button {
   color: blanchedalmond;
   background-color: black;
   padding: 10px;
+  margin-bottom: 10px;
   border: none;
+  font-size: 16px;
+}
+
+@media screen and (max-width: 600px) {
+  h1 {
+    font-size: 28px;
+    text-align: center;
+  }
 }
