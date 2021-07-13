@@ -1,1 +1,27 @@
+body {
+  margin: 0;
+  font-family: "Otomanopee One", sans-serif;
+  box-sizing: border-box;
+}
 
+header {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  background: black;
+}
+
+h1 {
+  color: blanchedalmond;
+  font-size: 50px;
+  margin-top: 10px;
+  margin-bottom: 10px;
+}
+
+nav button {
+  color: blanchedalmond;
+  background-color: black;
+  padding: 10px;
+  border: none;
+}
