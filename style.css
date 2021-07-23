@@ -2,6 +2,7 @@ body {
   margin: 0;
   font-family: "Otomanopee One", sans-serif;
   box-sizing: border-box;
+  background-color: rgb(61, 59, 59);
 }
 
 /*/// Estilos del Header ////*/
@@ -41,7 +42,7 @@ main {
   align-items: center;
   justify-content: center;
   flex-direction: column;
-  background-color: rgb(61, 59, 59);
+  
 }
 
 /*/// Estilos Section Conteiner-imagen ////*/
@@ -73,6 +74,7 @@ main {
   height: 50px;
   background-color: green;
   border-radius: 5px;
+  border: none;
   color: white;
   font-size: 18px;
   font-family: Arial, Helvetica, sans-serif;
@@ -90,6 +92,17 @@ main {
   width: 260px;
   font-family: Arial, Helvetica, sans-serif;
   background-color: black;
+  position: fixed;
+  top: 0;
+  right: 0;
+  display: flex;
+  justify-content: center;
+
+}
+
+form {
+  width: 90%;
+  height: 90%;
 }
 
 .titulo-panel {
