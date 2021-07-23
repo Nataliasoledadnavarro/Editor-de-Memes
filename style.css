@@ -42,10 +42,9 @@ main {
   align-items: center;
   justify-content: center;
   flex-direction: column;
-  
 }
 
-/*/// Estilos Section Conteiner-imagen ////*/
+/*/// ESTILOS SECCIÓN .conteiner-imagen ////*/
 
 .conteiner-imagen {
   width: 95%;
@@ -97,7 +96,6 @@ main {
   right: 0;
   display: flex;
   justify-content: center;
-
 }
 
 form {
@@ -108,6 +106,52 @@ form {
 .titulo-panel {
   text-align: center;
   color: white;
+}
+
+#url {
+  width: 98%;
+  height: 40px;
+  background-color: rgb(70, 67, 67);
+  border: none;
+  border-radius: 5px;
+  margin-top: 10px;
+}
+
+label {
+  color: white;
+  font-size: 14px;
+}
+
+.titulo-fondo {
+  color: white;
+  margin-top: 15px;
+  margin-bottom: 10px;
+  font-size: 14px;
+}
+.conteiner-color-fondo {
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+  background-color: rgb(70, 67, 67);
+  height: 45px;
+  border-radius: 5px;
+}
+
+#color-fondo-img {
+  width: 30px;
+  border: none;
+  background-color: transparent;
+}
+
+.texto-color-fondo-img {
+  color: white;
+  font-size: 14px;
+}
+#opciones-fondo-img {
+  background-color: rgb(70, 67, 67);
+  border: none;
+  color: white;
+  border-radius: 5px;
 }
 
 @media screen and (max-width: 600px) {

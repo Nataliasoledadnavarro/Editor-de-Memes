@@ -40,25 +40,31 @@
   <form class="form-img">
   <h2 class="titulo-panel">IMAGEN</h2>
   
-  <label for="url">
+  <label for="url">URL
     <input type="text" id="url" name="url">
   </label>
 
   <div class="editar-fondo-img">
 
-    <label for="fondo">FONDO
-      <input type="color" id="color-fondo-img">
-    </label>
+    <p class="titulo-fondo">FONDO</p>
 
-    <select name="opciones-fondo-img" id="opciones-fondo-img">
-      <option value="ninguno">Ninguno</option>
-      <option value="aclarar">Aclarar</option>
-      <option value="oscurecer">Oscurecer</option>
-      <option value="diferencia">Diferencia</option>
-      <option value="luminosidad">Luminosidad</option>
-      <option value="Multiplicar">Multiplicar</option>
-    </select>
-  </div>
+    <div class="conteiner-color-fondo">
+    <label>
+      <input type="color" id="color-fondo-img" value="#000000">
+    </label>
+<span class="texto-color-fondo-img">#000000</span>
+<select name="opciones-fondo-img" id="opciones-fondo-img">
+  <option value="ninguno">Ninguno</option>
+  <option value="aclarar">Aclarar</option>
+  <option value="oscurecer">Oscurecer</option>
+  <option value="diferencia">Diferencia</option>
+  <option value="luminosidad">Luminosidad</option>
+  <option value="Multiplicar">Multiplicar</option>
+</select>
+</div>
+
+    
+  
 
   <h3 class="filtros">FILTROS</h3>
 
