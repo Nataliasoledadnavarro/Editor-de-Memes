@@ -110,8 +110,8 @@ form {
 
 #url {
   width: 98%;
-  height: 40px;
-  background-color: rgb(70, 67, 67);
+  height: 35px;
+  background-color:rgb(46, 45, 45);
   border: none;
   border-radius: 5px;
   margin-top: 10px;
@@ -121,6 +121,8 @@ label {
   color: white;
   font-size: 14px;
 }
+
+
 
 .titulo-fondo {
   color: white;
@@ -132,9 +134,10 @@ label {
   display: flex;
   align-items: center;
   justify-content: space-around;
-  background-color: rgb(70, 67, 67);
-  height: 45px;
+  background-color: rgb(46, 45, 45);
+  height: 35px;
   border-radius: 5px;
+  width: 48%; 
 }
 
 #color-fondo-img {
@@ -148,11 +151,15 @@ label {
   font-size: 14px;
 }
 #opciones-fondo-img {
-  background-color: rgb(70, 67, 67);
+  width: 48%;
+  background-color:rgb(46, 45, 45);
   border: none;
   color: white;
   border-radius: 5px;
+
+  
 }
+.color-fondo-img{display: flex; justify-content: space-around;}
 
 @media screen and (max-width: 600px) {
   h1 {
