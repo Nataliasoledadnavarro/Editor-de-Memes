@@ -50,6 +50,7 @@ main {
   width: 95%;
   max-width: 600px;
   height: 600px;
+
 }
 
 .texto-superior,
@@ -66,6 +67,12 @@ main {
 .imagen-src {
   height: 70%;
   background-color: black;
+  overflow: hidden;
+  
+}
+
+#img-meme{
+  width: 100%;
 }
 
 .descargar {
@@ -159,7 +166,7 @@ label,
   display: flex;
   justify-content: space-around;
 }
-
+/* investigar  cambiar estilos */
 input[type="range"] {
   display: flex;
   flex-direction: column;
