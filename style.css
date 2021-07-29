@@ -50,7 +50,6 @@ main {
   width: 95%;
   max-width: 600px;
   height: 600px;
-
 }
 
 .texto-superior,
@@ -68,10 +67,9 @@ main {
   height: 70%;
   background-color: black;
   overflow: hidden;
-  
 }
 
-#img-meme{
+#img-meme {
   width: 100%;
 }
 
@@ -172,6 +170,37 @@ input[type="range"] {
   flex-direction: column;
   width: 100%;
   margin-bottom: 15px;
+}
+
+#rango-brillo {
+  filter: brightness();
+}
+
+#rango-opacidad {
+  filter: opacity();
+}
+
+#rango-contraste {
+  filter: contrast();
+}
+#rango-desenfoque {
+  filter: blur();
+}
+
+#rango-grises {
+  filter: grayscale();
+}
+
+#rango-hue {
+  filter: hue-rotate();
+}
+
+#rango-saturdo {
+  filter: saturate();
+}
+
+#rango-negativo {
+  filter: invert();
 }
 
 .reestablecer-filtros {
