@@ -21,12 +21,23 @@ console.log(urlInput);
 const brilloInput = document.getElementById("rango-brillo");
 const opacidadInput = document.getElementById("rango-opacidad");
 const contrasteInput = document.getElementById("rango-contraste");
-const desenfoqueInput = document.getElementById("rango-deenfoque");
+const desenfoqueInput = document.getElementById("rango-desenfoque");
 const escalaDeGrisesInput = document.getElementById("rango-grises");
-const sepiaInput = document.getElementById("rango-hue");
+const sepiaInput = document.getElementById("rango-sepia");
+const rangoHue = document.getElementById("rango-hue");
 const saturadoInput = document.getElementById("rango-saturado");
 const negativoInput = document.getElementById("rango-negativo");
 
 const inputsRangeEnCero = () => {
-  brilloInput
-}
+  brilloInput.value = "0";
+  opacidadInput.value = "0";
+  contrasteInput.value = "0";
+  desenfoqueInput.value = "0";
+  escalaDeGrisesInput.value = "0";
+  sepiaInput.value = "0";
+  rangoHue.value = "0";
+  saturadoInput.value = "0";
+  negativoInput.value = "0";
+};
+
+inputsRangeEnCero();
