@@ -55,8 +55,8 @@ const saturadoInput = document.getElementById("rango-saturado");
 const negativoInput = document.getElementById("rango-negativo");
 
 const inputsRangeEnCero = () => {
-  brilloInput.value = "0";
-  opacidadInput.value = "0";
+  brilloInput.value = "1";
+  opacidadInput.value = "1";
   contrasteInput.value = "0";
   desenfoqueInput.value = "0";
   escalaDeGrisesInput.value = "0";
