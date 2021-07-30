@@ -50,7 +50,6 @@ main {
   width: 95%;
   max-width: 600px;
   height: 600px;
-
 }
 
 .texto-superior,
@@ -68,11 +67,26 @@ main {
   height: 70%;
   background-color: black;
   overflow: hidden;
-  
 }
 
-#img-meme{
+#img-meme {
   width: 100%;
+
+  filter: brightness();
+
+  filter: opacity();
+
+  filter: contrast();
+
+  filter: blur();
+
+  filter: grayscale();
+
+  filter: hue-rotate();
+
+  filter: saturate();
+
+  filter: invert();
 }
 
 .descargar {
@@ -123,6 +137,7 @@ form {
   border: none;
   border-radius: 5px;
   margin-top: 10px;
+  color: white;
 }
 
 label,
@@ -166,6 +181,7 @@ label,
   display: flex;
   justify-content: space-around;
 }
+
 /* investigar  cambiar estilos */
 input[type="range"] {
   display: flex;
