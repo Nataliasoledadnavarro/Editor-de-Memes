@@ -9,13 +9,11 @@
     <script src="https://kit.fontawesome.com/0ca0e55b9a.js" crossorigin="anonymous"></script>
 
     <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Otomanopee+One&display=swap" rel="stylesheet">
-
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Otomanopee+One&display=swap" rel="stylesheet">
     <title>¡CREÁ TU PROPIO MEME!</title>
   </head>
-  <body>
-
+<body>
 <header>
   <h1> Generador de Memes</h1>
   <nav>
@@ -37,16 +35,16 @@
 </main>
 
 <section id="panel-img">
-  <form class="form-img">
+<form class="form-img">
   <h2 class="titulo-panel">IMAGEN</h2>
   
   <label for="url">URL
     <input type="text" id="url" name="url">
   </label>
 
- <h3 class="titulo-fondo">FONDO</h3>
+  <h3 class="titulo-fondo">FONDO</h3>
 
- <div class="color-fondo-img">
+<div class="color-fondo-img">
 
 <div class="conteiner-color-fondo">
 
@@ -107,21 +105,28 @@
   <button class="reestablecer-filtros"> Reestablecer filtros</button>
 </form>
 </section>
+
 <section id="panel-texto">
   <form class="form-texto">
+
   <h2 class="titulo-panel-texto">TEXTO</h2>
-  <label for="superior">SUPERIOR
+
+  <div>
+  <h3>SUPERIOR</h3>
     <textarea name="texto" id="superior" cols="10" rows="2">TOP TEXT</textarea>
     <input type="checkbox" id="sin-texto">
     <label for="sin-texto">Sin texto superior</label> 
-  </label>
-  <label for="inferior">INFERIOR
+  </div>
+
+  <div>
+    <h3>INFERIOR</h3>
     <textarea name="texto" id="inferior" cols="10" rows="2">BOTTOM TEXT</textarea>
     <input type="checkbox" id="sin-texto">
     <label for="sin-texto">Sin texto inferior</label> 
-  </label>
-  <label for="fuente">
-    FUENTE 
+  </div>
+  
+
+  <h3>FUENTE</h3>
     <select name="fuente" id="tipos-de-fuentes">
       <option value="Arial">Arial</option>
       <option value="Arial Black">Arial Black</option>
@@ -133,35 +138,47 @@
       <option value="Verdana">Verdana</option>
       <option value="Times New Roman">Times New Roman</option>
     </select>
-  </label>
+
+
   <div class="tamanio-letra">
     <input type="number" id="tamanio-letra" min="12">
     <div class="alineacion">
-      <i class="fas fa-align-left" aria-hidden="true"></i>
-      <i class="fas fa-align-center" aria-hidden="true"></i>
-      <i class="fas fa-align-right" aria-hidden="true"></i>
+    <button><i class="fas fa-align-left" aria-hidden="true"></i></button>
+    <button><i class="fas fa-align-center" aria-hidden="true"></i></button>
+    <button><i class="fas fa-align-right" aria-hidden="true"></i></button>
     </div>
   </div>
+
   <div class="color-y-fondo">
+    
     <div class="color">
-      <label>COLOR
-      <input name="Color de texto" type="color" id="input-color" value="#000000" aria-label="Color de texto">
-      </label>
+      <h3>COLOR </h3>
+      <div class="input-color">
+        <input name="Color de texto" type="color" id="input-color" value="#000000" aria-label="Color de texto">
+        <span>#000000</span>
+      </div>
     </div>
+
     <div class="fondo">
-      <label>FONDO
-      <input name="Color de fondo" type="color" id="input-fondo" value="#FFFFFF" aria-label="Color de fondo">
-      </label>
+      <h3>FONDO</h3>
+      <div class="input-fondo">
+        <input name="Color de fondo" type="color" id="input-fondo" value="#FFFFFF" aria-label="Color de fondo">
+        <span>#FFFFFF</span>
+      </div>
     </div>
+
+  </div>
+
     <input type="checkbox" id="fondo-transparente">
     <label for="fondo-transparente">Fondo transparente</label> 
-  </div>
+
   <div class="tipos-contorno">
   <h3>CONTORNO</h3>
   <button id="ninguno">Ninguno</button>
   <button id="claro">Claro</button>
   <button id="oscuro">Oscuro</button>
   </div>
+
   <label for="espaciado">ESPACIADO
     <input type="number">
   </label>
@@ -175,12 +192,10 @@
     <option value="2.5">2.5</option>
     </select>
   </label>
+
   </form>
 </section>
 
-
-
-
-    <script src="index.js"></script>
-  </body>
+<script src="index.js"></script>
+</body>
 </html>
