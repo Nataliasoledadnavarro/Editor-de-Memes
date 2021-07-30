@@ -27,4 +27,6 @@ const sepiaInput = document.getElementById("rango-hue");
 const saturadoInput = document.getElementById("rango-saturado");
 const negativoInput = document.getElementById("rango-negativo");
 
-console.log(brilloInput.value);
+const inputsRangeEnCero = () => {
+  brilloInput
+}
