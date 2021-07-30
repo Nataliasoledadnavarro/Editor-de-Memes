@@ -29,12 +29,15 @@ inputColor.addEventListener("input", colorPicker);
 //funcion selector
 
 const elementoSelector = document.getElementById("opciones-fondo-img"); //seleciono el sector
+const imagenFondo = document.querySelector(".imagen-src")
 
 const seleccionUsuario = (event)=>{
   if (event.target.value === "aclarar") {
-    // debe de aplicar el filtro a la imagen con el color
+    imagenFondo.style.mixBlendMode = "lighten"
   }
 }
+
+// object.style.mixBlendMode = "darken"
 
 elementoSelector.addEventListener("change", seleccionUsuario); //escucho cuando se hace click en el sector
 

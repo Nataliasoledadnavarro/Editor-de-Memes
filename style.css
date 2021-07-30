@@ -88,6 +88,14 @@ main {
 
   filter: invert();
 }
+img{
+  mix-blend-mode: normal;
+  mix-blend-mode: lighten; 
+  mix-blend-mode: darken;
+  mix-blend-mode: difference;
+  mix-blend-mode: luminosity;
+  mix-blend-mode: multiply;
+}
 
 .descargar {
   width: 200px;
