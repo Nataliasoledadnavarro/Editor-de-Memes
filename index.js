@@ -5,7 +5,7 @@ botonImg.onclick = () => {
   panelImg.style.width = "0";
 };
 
-//funcion de url imagen 
+//funcion de url imagen
 
 const imagenMeme = document.getElementById("img-meme");
 const urlInput = document.getElementById("url");
@@ -14,31 +14,28 @@ urlInput.oninput = () => {
   imagenMeme.src = urlInput.value;
 };
 
-
 // funcion picker de color
 
 let inputColor = document.getElementById("color-fondo-img"); //selecciono el id de input
 let textoColorFondo = document.querySelector(".texto-color-fondo-img"); //selecciono la clase del texto
 
-const colorPicker= (event) => {
+const colorPicker = (event) => {
   textoColorFondo.textContent = event.target.value; //toma al valor del evento input y cambiale el contenido de texto a textoColorfondo (target: objetivo)
-}
+};
 
-inputColor.addEventListener("input", colorPicker); 
+inputColor.addEventListener("input", colorPicker);
 
 //funcion selector
 
 const elementoSelector = document.getElementById("opciones-fondo-img"); //seleciono el sector
 
-const seleccionUsuario = (event)=>{
+const seleccionUsuario = (event) => {
   if (event.target.value === "aclarar") {
     // debe de aplicar el filtro a la imagen con el color
   }
-}
+};
 
 elementoSelector.addEventListener("change", seleccionUsuario); //escucho cuando se hace click en el sector
-
-
 
 console.log(urlInput);
 
@@ -54,7 +51,7 @@ const rangoHue = document.getElementById("rango-hue");
 const saturadoInput = document.getElementById("rango-saturado");
 const negativoInput = document.getElementById("rango-negativo");
 
-const inputsRangeEnCero = () => {
+const reestablecerInputsRange = () => {
   brilloInput.value = "1";
   opacidadInput.value = "1";
   contrasteInput.value = "100";
@@ -66,4 +63,12 @@ const inputsRangeEnCero = () => {
   negativoInput.value = "0";
 };
 
-inputsRangeEnCero();
+brilloInput.onchange = () => {
+  imagenMeme.style.filter = brightness(brilloInput.value);
+};
+
+console.log(brilloInput.value);
+
+escalaDeGrisesInput.oninput = () => {
+  imagenMeme.style.filter = "grayscale(escalaDeGrisesInput.value)";
+};
