@@ -143,9 +143,9 @@
   <div class="tamanio-letra">
     <input type="number" id="tamanio-letra" min="12">
     <div class="alineacion">
-    <button><i class="fas fa-align-left" aria-hidden="true"></i></button>
-    <button><i class="fas fa-align-center" aria-hidden="true"></i></button>
-    <button><i class="fas fa-align-right" aria-hidden="true"></i></button>
+    <button id="boton-izquierda"><i class="fas fa-align-left" aria-hidden="true"></i></button>
+    <button id="boton-centrado"><i class="fas fa-align-center" aria-hidden="true"></i></button>
+    <button id="boton-derecha"><i class="fas fa-align-right" aria-hidden="true"></i></button>
     </div>
   </div>
 
@@ -153,7 +153,7 @@
     
     <div class="color">
       <h3>COLOR </h3>
-      <div class="input-color">
+      <div class="color-color">
         <input name="Color de texto" type="color" id="input-color" value="#000000" aria-label="Color de texto">
         <span>#000000</span>
       </div>
@@ -161,7 +161,7 @@
 
     <div class="fondo">
       <h3>FONDO</h3>
-      <div class="input-fondo">
+      <div class="fondo-fondo">
         <input name="Color de fondo" type="color" id="input-fondo" value="#FFFFFF" aria-label="Color de fondo">
         <span>#FFFFFF</span>
       </div>
@@ -179,10 +179,13 @@
   <button id="oscuro">Oscuro</button>
   </div>
 
-  <label for="espaciado">ESPACIADO
-    <input type="number">
+  <label for="espaciado">
+    <h3>ESPACIADO</h3>
+    <input type="number" id="espaciado">
   </label>
-  <label for="interlineado">INTERLINEADO
+
+  <label for="interlineado">
+    <h3>INTERLINEADO</h3>
     <select name="interlineado" id="interlineado">
     <option value="0.8">0.8</option>
     <option value="1">1</option>
