@@ -64,7 +64,7 @@ const reestablecerInputsRange = () => {
 };
 
 brilloInput.onchange = () => {
-  imagenMeme.style.filter = brightness(brilloInput.value);
+  imagenMeme.style.filter = "brightness(" + brilloInput.value + ")";
 };
 
 console.log(brilloInput.value);
