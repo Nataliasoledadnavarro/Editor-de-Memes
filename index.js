@@ -5,12 +5,12 @@ botonImg.onclick = () => {
   panelImg.style.width = "0";
 };
 
-//funcion de url imagen arreglar en enter
+//funcion de url imagen 
 
 const imagenMeme = document.getElementById("img-meme");
 const urlInput = document.getElementById("url");
 
-urlInput.onchange = () => {
+urlInput.oninput = () => {
   imagenMeme.src = urlInput.value;
 };
 
