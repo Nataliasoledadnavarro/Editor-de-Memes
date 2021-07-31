@@ -70,23 +70,7 @@ main {
 }
 
 #img-meme {
-  width: 100%;
-
-  filter: brightness();
-
-  filter: opacity();
-
-  filter: contrast();
-
-  filter: blur();
-
-  filter: grayscale();
-
-  filter: hue-rotate();
-
-  filter: saturate();
-
-  filter: invert();
+  width: 100%; 
 }
 
 .descargar {

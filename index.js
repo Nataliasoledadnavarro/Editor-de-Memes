@@ -57,12 +57,12 @@ const negativoInput = document.getElementById("rango-negativo");
 const inputsRangeEnCero = () => {
   brilloInput.value = "1";
   opacidadInput.value = "1";
-  contrasteInput.value = "0";
+  contrasteInput.value = "100";
   desenfoqueInput.value = "0";
   escalaDeGrisesInput.value = "0";
   sepiaInput.value = "0";
   rangoHue.value = "0";
-  saturadoInput.value = "0";
+  saturadoInput.value = "100";
   negativoInput.value = "0";
 };
 
