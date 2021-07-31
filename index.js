@@ -51,6 +51,44 @@ const rangoHue = document.getElementById("rango-hue");
 const saturadoInput = document.getElementById("rango-saturado");
 const negativoInput = document.getElementById("rango-negativo");
 
+brilloInput.onchange = () => {
+  imagenMeme.style.filter = "brightness(" + brilloInput.value + ")";
+};
+
+opacidadInput.onchange = () => {
+  imagenMeme.style.filter = "opacity(" + opacidadInput.value + ")";
+};
+
+contrasteInput.onchange = () => {
+  imagenMeme.style.filter = "contrast(" + contrasteInput.value + "%)";
+};
+
+desenfoqueInput.onchange = () => {
+  imagenMeme.style.filter = "blur(" + desenfoqueInput.value + "px)";
+};
+
+escalaDeGrisesInput.oninput = () => {
+  imagenMeme.style.filter = "grayscale(" + escalaDeGrisesInput.value + "%)";
+};
+
+sepiaInput.onchange = () => {
+  imagenMeme.style.filter = "sepia(" + sepiaInput.value + "%)";
+};
+
+rangoHue.onchange = () => {
+  imagenMeme.style.filter = "hue-rotate(" + rangoHue.value + "deg)";
+};
+
+saturadoInput.onchange = () => {
+  imagenMeme.style.filter = "saturate(" + saturadoInput.value + "%)";
+};
+
+negativoInput.onchange = () => {
+  imagenMeme.style.filter = "invert(" + negativoInput.value + ")";
+};
+
+// FUNCION BOTON REESTABLECER FILTROS
+
 const reestablecerInputsRange = () => {
   brilloInput.value = "1";
   opacidadInput.value = "1";
@@ -61,14 +99,4 @@ const reestablecerInputsRange = () => {
   rangoHue.value = "0";
   saturadoInput.value = "100";
   negativoInput.value = "0";
-};
-
-brilloInput.onchange = () => {
-  imagenMeme.style.filter = "brightness(" + brilloInput.value + ")";
-};
-
-console.log(brilloInput.value);
-
-escalaDeGrisesInput.oninput = () => {
-  imagenMeme.style.filter = "grayscale(escalaDeGrisesInput.value)";
 };
