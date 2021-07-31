@@ -89,7 +89,9 @@ negativoInput.onchange = () => {
 
 // FUNCION BOTON REESTABLECER FILTROS
 
-const reestablecerInputsRange = () => {
+const reestablecerFiltros = document.querySelector(".reestablecer-filtros");
+
+reestablecerFiltros.onclick = () => {
   brilloInput.value = "1";
   opacidadInput.value = "1";
   contrasteInput.value = "100";
