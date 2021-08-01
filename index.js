@@ -114,7 +114,7 @@ negativoInput.onchange = () => {
 
 const reestablecerFiltros = document.querySelector(".reestablecer-filtros");
 
-reestablecerFiltros.onsubmit = () => {
+reestablecerFiltros.onclick = () => {
   brilloInput.value = "1";
   opacidadInput.value = "1";
   contrasteInput.value = "100";
