@@ -1,3 +1,4 @@
+// Boton imagen
 const botonImg = document.querySelector(".boton-imagen-nav");
 const panelImg = document.getElementById("panel-img");
 
@@ -5,6 +6,14 @@ botonImg.onclick = () => {
   panelImg.style.width = "0";
 };
 
+// Boton texto
+
+const botonTexto = document.querySelector(".boton-texto-nav");
+const panelTexto = document.getElementById("panel-texto");
+
+botonTexto.onclick = () => {
+  panelTexto.style.width = "0";
+};
 
 //funcion de url imagen
 
@@ -124,4 +133,15 @@ reestablecerFiltros.onclick = () => {
   rangoHue.value = "0";
   saturadoInput.value = "100";
   negativoInput.value = "0";
+};
+
+// Boton descargar meme
+
+const descargarMeme = document.querySelector(".conteiner-imagen");
+const botonDescarga = document.querySelector(".descargar");
+
+botonDescarga.onclick = () => {
+  domtoimage.toBlob(descargarMeme).then(function (blob) {
+    window.saveAs(blob, "elmejormeme.png");
+  });
 };
