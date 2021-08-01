@@ -5,6 +5,7 @@ botonImg.onclick = () => {
   panelImg.style.width = "0";
 };
 
+
 //funcion de url imagen
 
 const imagenMeme = document.getElementById("img-meme");
@@ -29,40 +30,35 @@ inputColor.addEventListener("input", colorPicker);
 //funcion selector
 
 const elementoSelector = document.getElementById("opciones-fondo-img"); //seleciono el sector
-const contenedorDeImagen = document.querySelector(".imagen-src");//seleccion del contenedor al q le aplico el fondo
+const contenedorDeImagen = document.querySelector(".imagen-src"); //seleccion del contenedor al q le aplico el fondo
 const imagenFondo = document.querySelector(".imagen-fondo"); //seleciono la imagen
 let seleccionDeFondo = " ";
 
 const seleccionUsuario = (event) => {
   //if q comprueba la seleccion del usuario del select y lo guarda el nombre del filtro en la variable que luego se utiliza en la funcion aplicarFiltro
-  if (event.target.value === "aclarar") { 
-    seleccionDeFondo = "lighten" 
-  }
-  else if (event.target.value === "oscurecer"){
-    seleccionDeFondo = "darken"
-  }
-  else if (event.target.value === "diferencia"){
-    seleccionDeFondo = "difference"
-  }
-  else if (event.target.value === "luminosidad"){
-    seleccionDeFondo = "luminosity"
-  } 
-  else if (event.target.value === "multiplicar"){
-    seleccionDeFondo = "multiply"
-  }
-  else{
-    seleccionDeFondo = "normal"
+  if (event.target.value === "aclarar") {
+    seleccionDeFondo = "lighten";
+  } else if (event.target.value === "oscurecer") {
+    seleccionDeFondo = "darken";
+  } else if (event.target.value === "diferencia") {
+    seleccionDeFondo = "difference";
+  } else if (event.target.value === "luminosidad") {
+    seleccionDeFondo = "luminosity";
+  } else if (event.target.value === "multiplicar") {
+    seleccionDeFondo = "multiply";
+  } else {
+    seleccionDeFondo = "normal";
   }
 
   aplicarFiltro(); //llamo a esta funcion que aplica los filtro
-}
+};
 
 elementoSelector.addEventListener("change", seleccionUsuario); //escucho cuando cambia el sector y se ejecuta la funcion seleccionUsuario
 
 let aplicarFiltro = () => {
-  imagenFondo.style.mixBlendMode = seleccionDeFondo //el mix necesita imagen y fondo
-  contenedorDeImagen.style.backgroundColor = inputColor.value
-}
+  imagenFondo.style.mixBlendMode = seleccionDeFondo; //el mix necesita imagen y fondo
+  contenedorDeImagen.style.backgroundColor = inputColor.value;
+};
 
 // Funciones Input de Rango
 
@@ -114,9 +110,11 @@ negativoInput.onchange = () => {
 
 // FUNCION BOTON REESTABLECER FILTROS
 
+//CHEQUEAR COMO MODIFICAR QUE NO BORRE LA IMG
+
 const reestablecerFiltros = document.querySelector(".reestablecer-filtros");
 
-reestablecerFiltros.onclick = () => {
+reestablecerFiltros.onsubmit = () => {
   brilloInput.value = "1";
   opacidadInput.value = "1";
   contrasteInput.value = "100";

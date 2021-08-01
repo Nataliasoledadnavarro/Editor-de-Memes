@@ -73,11 +73,11 @@ main {
 #img-meme {
   width: 100%;
 /* 
-  filter: brightness();
+  filter: brightness(0.5);
 
   filter: opacity();
 
-  filter: contrast();
+  filter: contrast(); 
 
   filter: blur();
 
