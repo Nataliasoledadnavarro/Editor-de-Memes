@@ -69,19 +69,11 @@ main {
   overflow: hidden;
 }
 
-.imagen-fondo{
-  mix-blend-mode: lighten;
-  mix-blend-mode: darken;
-  mix-blend-mode: difference;
-  mix-blend-mode: luminosity;
-  mix-blend-mode: multiply;
-  mix-blend-mode: normal;
-}
 
 #img-meme {
   width: 100%;
-
-  /* filter: brightness();
+/* 
+  filter: brightness();
 
   filter: opacity();
 
