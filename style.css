@@ -65,10 +65,18 @@ main {
 
 .imagen-src {
   height: 70%;
-  background-color: rgb(0, 251, 75);
+  background-color: black;
   overflow: hidden;
 }
 
+.imagen-fondo{
+  mix-blend-mode: lighten;
+  mix-blend-mode: darken;
+  mix-blend-mode: difference;
+  mix-blend-mode: luminosity;
+  mix-blend-mode: multiply;
+  mix-blend-mode: normal;
+}
 
 #img-meme {
   width: 100%;
