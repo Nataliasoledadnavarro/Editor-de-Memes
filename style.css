@@ -114,6 +114,7 @@ main {
   display: flex;
   justify-content: space-around;
   align-items: center;
+  filter: brightness();
 }
 
 /*//ESTILOS FORMULARIO IMAGEN ////*/
@@ -193,13 +194,16 @@ label,
   justify-content: space-around;
 }
 
-/* investigar  cambiar estilos */
+
 input[type="range"] {
-  display: flex;
-  flex-direction: column;
   width: 100%;
+  height: 6px;
   margin-bottom: 15px;
+  appearance: none;
+  background-color: gray;
+  border-radius: 10px;
 }
+
 
 .reestablecer-filtros {
   margin-top: 20px;
