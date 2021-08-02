@@ -77,11 +77,40 @@ const contrasteInput = document.getElementById("rango-contraste");
 const desenfoqueInput = document.getElementById("rango-desenfoque");
 const escalaDeGrisesInput = document.getElementById("rango-grises");
 const sepiaInput = document.getElementById("rango-sepia");
-const rangoHue = document.getElementById("rango-hue");
+const rangoHueInput = document.getElementById("rango-hue");
 const saturadoInput = document.getElementById("rango-saturado");
 const negativoInput = document.getElementById("rango-negativo");
 
-brilloInput.onchange = () => {
+
+// reolucion 2 solo me toma el filtro de brillo
+/*const filtrosImg = () => {
+  imagenMeme.style.filter = "brightness(" + brilloInput.value + ")";
+  "opacity(" + opacidadInput.value + ")";
+  "contrast(" + contrasteInput.value + "%)";
+  "blur(" + desenfoqueInput.value + "px)";
+  "grayscale(" + escalaDeGrisesInput.value + "%)";
+  "sepia(" + sepiaInput.value + "%)";
+  "hue-rotate(" + rangoHueInput.value + "deg)";
+  "saturate(" + saturadoInput.value + "%)";
+  "invert(" + negativoInput.value + ")"
+
+  Otra forma de llamas los valores. No lo toma
+  
+  "brightness(&{brilloInput.value})opacity(${opacidadInput.value}) contrast(${contrasteInput.value}%) blur(${desenfoqueInput.value}px) grayscale(${escalaDeGrisesInput.value}%) sepia(${sepiaInput.value}%) hue-rotate(${rangoHueInput.value}deg) saturate(${saturadoInput.value}%) invert(${negativoInput.value})"
+};
+
+brilloInput.addEventListener("change", filtrosImg);
+opacidadInput.addEventListener("change", filtrosImg);
+contrasteInput.addEventListener("change", filtrosImg);
+desenfoqueInput.addEventListener("change", filtrosImg);
+escalaDeGrisesInput.addEventListener("change", filtrosImg);
+sepiaInput.addEventListener("change", filtrosImg);
+rangoHueInput.addEventListener("change", filtrosImg);
+saturadoInput.addEventListener("change", filtrosImg);
+negativoInput.addEventListener("change", filtrosImg);*/
+
+//resolucion 1 funciona pero no incluye todas la smodificaciones de los inputs
+/*brilloInput.onchange = () => {
   imagenMeme.style.filter = "brightness(" + brilloInput.value + ")";
 };
 
@@ -106,7 +135,7 @@ sepiaInput.onchange = () => {
 };
 
 rangoHue.onchange = () => {
-  imagenMeme.style.filter = "hue-rotate(" + rangoHue.value + "deg)";
+  imagenMeme.style.filter = "hue-rotate(" + rangoHueInput.value + "deg)";
 };
 
 saturadoInput.onchange = () => {
@@ -115,7 +144,7 @@ saturadoInput.onchange = () => {
 
 negativoInput.onchange = () => {
   imagenMeme.style.filter = "invert(" + negativoInput.value + ")";
-};
+};*/
 
 // FUNCION BOTON REESTABLECER FILTROS
 
@@ -130,7 +159,7 @@ reestablecerFiltros.onclick = () => {
   desenfoqueInput.value = "0";
   escalaDeGrisesInput.value = "0";
   sepiaInput.value = "0";
-  rangoHue.value = "0";
+  rangoHueInput.value = "0";
   saturadoInput.value = "100";
   negativoInput.value = "0";
 };
