@@ -127,21 +127,23 @@ negativoInput.addEventListener("change", cambioFiltros);
 
 // FUNCION BOTON REESTABLECER FILTROS
 
-//CHEQUEAR COMO MODIFICAR QUE NO BORRE LA IMG
+//NO TOMA LA FUNCION DEL BOTON. RESOLVER!
 
 const reestablecerFiltros = document.querySelector(".reestablecer-filtros");
 
-reestablecerFiltros.onclick = () => {
-  brilloInput.value = "1";
-  opacidadInput.value = "1";
-  contrasteInput.value = "100";
-  desenfoqueInput.value = "0";
-  escalaDeGrisesInput.value = "0";
-  sepiaInput.value = "0";
-  hueInput.value = "0";
-  saturadoInput.value = "100";
-  negativoInput.value = "0";
-};
+reestablecerFiltros.addEventListener("click", () => {
+  brilloInput.value = 1;
+  opacidadInput.value = 1;
+  contrasteInput.value = 100;
+  desenfoqueInput.value = 0;
+  escalaDeGrisesInput.value = 0;
+  sepiaInput.value = 0;
+  hueInput.value = 0;
+  saturadoInput.value = 100;
+  negativoInput.value = 0;
+
+  cambioFiltros();
+});
 
 // Boton descargar meme
 
