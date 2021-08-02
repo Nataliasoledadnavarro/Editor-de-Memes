@@ -77,45 +77,53 @@ const contrasteInput = document.getElementById("rango-contraste");
 const desenfoqueInput = document.getElementById("rango-desenfoque");
 const escalaDeGrisesInput = document.getElementById("rango-grises");
 const sepiaInput = document.getElementById("rango-sepia");
-const rangoHue = document.getElementById("rango-hue");
+const hueInput = document.getElementById("rango-hue");
 const saturadoInput = document.getElementById("rango-saturado");
 const negativoInput = document.getElementById("rango-negativo");
 
-brilloInput.onchange = () => {
-  imagenMeme.style.filter = "brightness(" + brilloInput.value + ")";
+const cambioFiltros = () => {
+  imagenMeme.style.filter =
+    "brightness(" +
+    brilloInput.value +
+    ")" +
+    "opacity(" +
+    opacidadInput.value +
+    ")" +
+    "contrast(" +
+    contrasteInput.value +
+    "%)" +
+    "contrast(" +
+    contrasteInput.value +
+    "%)" +
+    "blur(" +
+    desenfoqueInput.value +
+    "px)" +
+    "grayscale(" +
+    escalaDeGrisesInput.value +
+    "%)" +
+    "sepia(" +
+    sepiaInput.value +
+    "%)" +
+    "hue-rotate(" +
+    hueInput.value +
+    "deg)" +
+    "saturate(" +
+    saturadoInput.value +
+    "%)" +
+    "invert(" +
+    negativoInput.value +
+    ")";
 };
 
-opacidadInput.onchange = () => {
-  imagenMeme.style.filter = "opacity(" + opacidadInput.value + ")";
-};
-
-contrasteInput.onchange = () => {
-  imagenMeme.style.filter = "contrast(" + contrasteInput.value + "%)";
-};
-
-desenfoqueInput.onchange = () => {
-  imagenMeme.style.filter = "blur(" + desenfoqueInput.value + "px)";
-};
-
-escalaDeGrisesInput.oninput = () => {
-  imagenMeme.style.filter = "grayscale(" + escalaDeGrisesInput.value + "%)";
-};
-
-sepiaInput.onchange = () => {
-  imagenMeme.style.filter = "sepia(" + sepiaInput.value + "%)";
-};
-
-rangoHue.onchange = () => {
-  imagenMeme.style.filter = "hue-rotate(" + rangoHue.value + "deg)";
-};
-
-saturadoInput.onchange = () => {
-  imagenMeme.style.filter = "saturate(" + saturadoInput.value + "%)";
-};
-
-negativoInput.onchange = () => {
-  imagenMeme.style.filter = "invert(" + negativoInput.value + ")";
-};
+brilloInput.addEventListener("change", cambioFiltros);
+opacidadInput.addEventListener("change", cambioFiltros);
+contrasteInput.addEventListener("change", cambioFiltros);
+desenfoqueInput.addEventListener("change", cambioFiltros);
+escalaDeGrisesInput.addEventListener("change", cambioFiltros);
+sepiaInput.addEventListener("change", cambioFiltros);
+hueInput.addEventListener("change", cambioFiltros);
+saturadoInput.addEventListener("change", cambioFiltros);
+negativoInput.addEventListener("change", cambioFiltros);
 
 // FUNCION BOTON REESTABLECER FILTROS
 
@@ -130,7 +138,7 @@ reestablecerFiltros.onclick = () => {
   desenfoqueInput.value = "0";
   escalaDeGrisesInput.value = "0";
   sepiaInput.value = "0";
-  rangoHue.value = "0";
+  hueInput.value = "0";
   saturadoInput.value = "100";
   negativoInput.value = "0";
 };

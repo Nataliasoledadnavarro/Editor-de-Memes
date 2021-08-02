@@ -69,28 +69,10 @@ main {
   overflow: hidden;
 }
 
-
 #img-meme {
-  width: 100%;
-/* 
-  filter: brightness(0.5);
-
-  filter: opacity();
-
-  filter: contrast(); 
-
-  filter: blur();
-
-  filter: grayscale();
-
-  filter: hue-rotate();
-
-  filter: saturate();
-
-  filter: invert(); */
-  
+  width: 100%; 
+  filter: hue
 }
-
 
 .descargar {
   width: 200px;
@@ -186,7 +168,6 @@ label,
   justify-content: space-around;
 }
 
-
 input[type="range"] {
   width: 100%;
   height: 6px;
@@ -195,7 +176,6 @@ input[type="range"] {
   background-color: gray;
   border-radius: 10px;
 }
-
 
 .reestablecer-filtros {
   margin-top: 20px;
@@ -251,7 +231,11 @@ input[type="range"] {
   text-align: center;
   color: white;
 }
-#superior, #inferior, #tipos-de-fuentes, #interlineado, #espaciado{
+#superior,
+#inferior,
+#tipos-de-fuentes,
+#interlineado,
+#espaciado {
   width: 98%;
   height: 35px;
   background-color: rgb(46, 45, 45);
@@ -259,7 +243,7 @@ input[type="range"] {
   border-radius: 5px;
   font-family: sans-serif;
 }
-#tamanio-letra{
+#tamanio-letra {
   height: 35px;
   background-color: rgb(46, 45, 45);
   border: none;
@@ -268,47 +252,51 @@ input[type="range"] {
   margin-top: 7px;
 }
 
-.tamanio-letra, .color-y-fondo{
+.tamanio-letra,
+.color-y-fondo {
   display: flex;
   margin-top: 8px;
 }
-#input-fondo, #input-color{
- width: 30px;
- padding:0;
- margin: 8px;  
+#input-fondo,
+#input-color {
+  width: 30px;
+  padding: 0;
+  margin: 8px;
 }
 
-span{
+span {
   margin: 8px;
   font-size: 15px;
 }
 
-.fas{
+.fas {
   background-color: rgb(46, 45, 45);
   color: white;
   border-radius: 3px;
   padding: 7px;
   font-size: 15px;
 }
-#boton-izquierda, #boton-centrado, #boton-derecha{
-margin: 3px;
-background-color: rgb(46, 45, 45);
-border-radius: 5px;
-
+#boton-izquierda,
+#boton-centrado,
+#boton-derecha {
+  margin: 3px;
+  background-color: rgb(46, 45, 45);
+  border-radius: 5px;
 }
-.alineacion{
+.alineacion {
   width: 48%;
   display: flex;
   justify-content: space-around;
   margin-left: 20px;
   padding: 0;
   margin-top: 4px;
-
 }
-.tipos-contorno{
+.tipos-contorno {
   margin-top: 30px;
 }
-#claro, #ninguno, #oscuro{
+#claro,
+#ninguno,
+#oscuro {
   font-family: sans-serif;
   background-color: rgb(46, 45, 45);
   border: none;
@@ -317,16 +305,21 @@ border-radius: 5px;
   height: 30px;
   border-radius: 3px;
 }
-.color-color, .fondo-fondo{
+.color-color,
+.fondo-fondo {
   display: flex;
   background-color: rgb(46, 45, 45);
   margin: 3px;
   border-radius: 5px;
 }
-textarea, select,input,h3, span{
+textarea,
+select,
+input,
+h3,
+span {
   color: white;
 }
-h3{
+h3 {
   font-size: 14px;
 }
 
