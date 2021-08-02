@@ -1,0 +1,127 @@
+[33mcommit 6c8ca614f8513f70881dc450bb04d21867062555[m[33m ([m[1;36mHEAD -> [m[1;32mformulario-imagen[m[33m, [m[1;31morigin/formulario-imagen[m[33m)[m
+Merge: 2c90a6a f59ad18
+Author: Natalia Soledad Navarro <nataliasoledadnavarro@gmail.com>
+Date:   Wed Jul 28 17:45:56 2021 -0300
+
+    Traigo proyecto actual
+
+[33mcommit 2c90a6a16687dd2cf7edeaa793d8e5054966350d[m
+Merge: 3b28baf b7a4543
+Author: Natalia Soledad Navarro <nataliasoledadnavarro@gmail.com>
+Date:   Wed Jul 28 17:30:53 2021 -0300
+
+    Merge branch 'main' of https://github.com/Nataliasoledadnavarro/Editor-de-Memes into formulario-imagen
+
+[33mcommit 3b28baf8b1a23c9296d619d4e257fc02ed727db5[m
+Author: Natalia Soledad Navarro <nataliasoledadnavarro@gmail.com>
+Date:   Wed Jul 28 17:28:51 2021 -0300
+
+    elimino archivos desactualizados
+
+[33mcommit f59ad185ce56c2564dac935271b4a8ebf195e257[m[33m ([m[1;31morigin/formulario_imagen_gaby[m[33m)[m
+Author: GabytaDev <gabyta.loyola@gmail.com>
+Date:   Wed Jul 28 11:35:44 2021 -0300
+
+    resolvimos funcion url
+
+[33mcommit b7a45431a3a4769fcfcc22e5ff272b8d0ed45349[m[33m ([m[1;31morigin/main[m[33m, [m[1;31morigin/HEAD[m[33m, [m[1;32mmain[m[33m)[m
+Author: Natalia Soledad Navarro <nataliasoledadnavarro@gmail.com>
+Date:   Tue Jul 27 10:43:13 2021 -0300
+
+    Arreglo clase imagen-src en style
+
+[33mcommit 15e440fb2b516e06a6099f154c07379a79578c43[m
+Author: Natalia Soledad Navarro <nataliasoledadnavarro@gmail.com>
+Date:   Tue Jul 27 10:32:59 2021 -0300
+
+    Borré carpeta img. Agregue js para sacar panel img y trabajar en ese espacio con el panel texto.
+
+[33mcommit 25990a56295ed5e821736a9e4ec2dd22c8ab6e1f[m
+Author: Natalia Soledad Navarro <nataliasoledadnavarro@gmail.com>
+Date:   Mon Jul 26 14:57:50 2021 -0300
+
+    Agregue min, max y step en inputs de rango.
+
+[33mcommit cd3a77f1b7712c46926b0e81980661afbe178bb1[m
+Author: Natalia Soledad Navarro <nataliasoledadnavarro@gmail.com>
+Date:   Mon Jul 26 10:54:25 2021 -0300
+
+    Agregue scroll al panel. Edite boton reestablecer filtros.
+
+[33mcommit bcd21992fd73e08f7b97ca5236aee1076dc29963[m
+Author: Natalia Soledad Navarro <nataliasoledadnavarro@gmail.com>
+Date:   Mon Jul 26 09:46:15 2021 -0300
+
+    Separé inpust color y select. Corregí backgound color.
+
+[33mcommit 84170f00f48d9455f07e332cffbb5c41d1fa377d[m
+Author: Natalia Soledad Navarro <nataliasoledadnavarro@gmail.com>
+Date:   Sun Jul 25 23:10:23 2021 -0300
+
+    Primer comentario rama Formulario-imagen
+
+[33mcommit e2aae23b4c24b39a65f987d93a164ba1a2f037ff[m
+Author: GabytaDev <gabyta.loyola@gmail.com>
+Date:   Sun Jul 25 21:30:23 2021 -0300
+
+    abro rama clase modo oscuro
+
+[33mcommit 03cf1b8d44ad7fc104e09ddd9f30eea6436e73a8[m
+Author: Natalia Soledad Navarro <nataliasoledadnavarro@gmail.com>
+Date:   Fri Jul 23 16:58:17 2021 -0300
+
+    Estilando panel Img
+
+[33mcommit 6895ab40e38a84ef6a3fc9f3f6f45cd0034bec22[m
+Author: Natalia Soledad Navarro <nataliasoledadnavarro@gmail.com>
+Date:   Fri Jul 23 16:07:31 2021 -0300
+
+    Agregue etiqueta form. Probando posición del panel.  Modifique color Body.
+
+[33mcommit 5e7c46628b423df1bda8158d5f6b8d262ebcc67d[m
+Author: Natalia Soledad Navarro <nataliasoledadnavarro@gmail.com>
+Date:   Thu Jul 22 14:58:18 2021 -0300
+
+    Comenzando panel de img
+
+[33mcommit 0c4f92a5c66ed73bdd731ade6cbd134fdcc5b3c4[m
+Author: Natalia Soledad Navarro <nataliasoledadnavarro@gmail.com>
+Date:   Wed Jul 14 12:16:56 2021 -0300
+
+    Corrigiendo responsive
+
+[33mcommit 11e2cdf33cf46387dbe69d23986468fda726857a[m
+Author: Natalia Soledad Navarro <nataliasoledadnavarro@gmail.com>
+Date:   Tue Jul 13 20:46:04 2021 -0300
+
+    Hover a botones del nav.
+
+[33mcommit c82b086f11f866253d4ebfc77d7a0b3e4cc0a531[m
+Author: Natalia Soledad Navarro <nataliasoledadnavarro@gmail.com>
+Date:   Tue Jul 13 20:34:51 2021 -0300
+
+    Agrero estilos al boton descargar.
+
+[33mcommit 4543b968e17449e2f14ae1553633893a75995feb[m
+Author: Natalia Soledad Navarro <nataliasoledadnavarro@gmail.com>
+Date:   Tue Jul 13 15:46:22 2021 -0300
+
+    Empezando estilos sección contenedor de imagen.
+
+[33mcommit 79a1aa14d43c1a1b30c53c02bb1c35a38fc35bad[m
+Author: Natalia Soledad Navarro <nataliasoledadnavarro@gmail.com>
+Date:   Tue Jul 13 15:21:00 2021 -0300
+
+    Style y Responsive en Header.
+
+[33mcommit 9923a916a3e9b873beac2d947a8be03460fa697f[m
+Author: Natalia Soledad Navarro <nataliasoledadnavarro@gmail.com>
+Date:   Tue Jul 13 13:49:53 2021 -0300
+
+    Comenzando a darle estilos. Body y Header.
+
+[33mcommit 8ec1b1df96d91b35ff5dda46bd83c35a579aacfd[m
+Author: Natalia Soledad Navarro <nataliasoledadnavarro@gmail.com>
+Date:   Tue Jul 13 10:42:44 2021 -0300
+
+    Agrego maquetado y archivos

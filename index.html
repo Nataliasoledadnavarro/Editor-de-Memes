@@ -9,13 +9,14 @@
     <script src="https://kit.fontawesome.com/0ca0e55b9a.js" crossorigin="anonymous"></script>
 
     <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Otomanopee+One&display=swap" rel="stylesheet">
-
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Otomanopee+One&display=swap" rel="stylesheet">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/FileSaver.js/2.0.0/FileSaver.min.js" integrity="sha512-csNcFYJniKjJxRWRV1R7fvnXrycHP6qDR21mgz1ZP55xY5d+aHLfo9/FcGDQLfn2IfngbAHd8LdfsagcCqgTcQ==" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/dom-to-image/2.6.0/dom-to-image.min.js" integrity="sha512-01CJ9/g7e8cUmY0DFTMcUw/ikS799FHiOA0eyHsUWfOetgbx/t6oV4otQ5zXKQyIrQGTHSmRVPIgrgLcZi/WMA==" crossorigin="anonymous"></script>
+    
     <title>¡CREÁ TU PROPIO MEME!</title>
   </head>
-  <body>
-
+<body>
 <header>
   <h1> Generador de Memes</h1>
   <nav>
@@ -28,7 +29,7 @@
 <main>
   <section class="conteiner-imagen">
     <div class="texto-superior">TEXTO SUPERIOR</div>
-    <div class="imagen-src"><img src=""  alt="Imagen meme" id="img-meme"></div>
+    <div class="imagen-src"><img src="" alt="Imagen meme" id="img-meme" class="imagen-fondo"></div>
     <div class="texto-inferior">TEXTO INFERIOR</div>
   </section>
 
@@ -37,80 +38,169 @@
 </main>
 
 <section id="panel-img">
-  <form class="form-img">
+<form class="form-img">
   <h2 class="titulo-panel">IMAGEN</h2>
   
   <label for="url">URL
     <input type="text" id="url" name="url">
   </label>
 
- <h3 class="titulo-fondo">FONDO</h3>
+  <h3 class="titulo-fondo">FONDO</h3>
 
- <div class="color-fondo-img">
+<div class="color-fondo-img">
 
-<div class="conteiner-color-fondo">
+  <div class="conteiner-color-fondo">
 
-      <input type="color" id="color-fondo-img" value="#fafafa">
-   
-    <span class="texto-color-fondo-img">#000000</span>
-</div>
+      <input type="color" id="color-fondo-img" value="#FFFFFF">
+    
+      <span class="texto-color-fondo-img">#FFFFFF</span>
+  </div>
 
 
-<select name="opciones-fondo-img" id="opciones-fondo-img">
-  <option value="ninguno">Ninguno</option>
-  <option value="aclarar">Aclarar</option>
-  <option value="oscurecer">Oscurecer</option>
-  <option value="diferencia">Diferencia</option>
-  <option value="luminosidad">Luminosidad</option>
-  <option value="Multiplicar">Multiplicar</option>
-</select>
+  <select name="opciones-fondo-img" id="opciones-fondo-img">
+    <option value="ninguno">Ninguno</option>
+    <option value="aclarar">Aclarar</option>
+    <option value="oscurecer">Oscurecer</option>
+    <option value="diferencia">Diferencia</option>
+    <option value="luminosidad">Luminosidad</option>
+    <option value="multiplicar">Multiplicar</option>
+  </select>
 </div>
 
   <h3 class="filtros">FILTROS</h3>
 
   <label for="rango-brillo">BRILLO
-    <input type="range" id="rango-brillo" min="0" max="1" step="0.1" name="brillo">
+    <input type="range" id="rango-brillo" min="0" max="1" step="0.1" value="1" name="brillo">
   </label>
 
   <label for="rango-opacidad">OPACIDAD
-    <input type="range" id="rango-opacidad"min="0" max="1" step="0.1"  name="opacidad">
+    <input type="range" id="rango-opacidad"min="0" max="1" step="0.1" value="1"  name="opacidad">
   </label>
   
   <label for="rango-contraste">CONTRASTE
-    <input type="range" id="rango-contraste" min="100%" max="1000%" step="1%" name="contraste">
+    <input type="range" id="rango-contraste" min="100" max="1000" step="1" value="100" name="contraste">
   </label>
 
   <label for="rango-desenfoque">DESENFOQUE
-    <input type="range" id="rango-desenfoque" min="0px" max="10px" step="0.1px"  name="desenfoque">
+    <input type="range" id="rango-desenfoque" min="0" max="10" step="0.1" value="0"  name="desenfoque">
   </label>
 
   <label for="rango-grises">ESCALA DE GRISES
-    <input type="range" id="rango-grises" min="0%" max="100%" step="1%" name="grises">
+    <input type="range" id="rango-grises" min="0" max="100" step="1" value="0"  name="grises">
   </label>
 
   <label for="rango-sepia">SEPIA
-    <input type="range" id="rango-sepia" min="0%" max="100%" step="1%" name="sepia">
+    <input type="range" id="rango-sepia" min="0" max="100" step="1" value="0"  name="sepia">
   </label>
 
   <label for="rango-hue">HUE
-    <input type="range" id="rango-hue" min="0deg" max="359deg" step="1deg" name="hue">
+    <input type="range" id="rango-hue" min="0" max="359" step="1" value="0"  name="hue"> 
   </label>
 
   <label for="rango-saturado">SATURADO
-    <input type="range" id="rango-saturado" min="100%" max="1000%" step="10%" name="saturado">
+    <input type="range" id="rango-saturado" min="100" max="1000" step="10" value="100"  name="saturado">
   </label>
 
   <label for="rango-negativo">Negativo
-    <input type="range" id="rango-negativo" min="0" max="1" step="0.1" name="negativo">
+    <input type="range" id="rango-negativo" min="0" max="1" step="0.1" value="0" name="negativo">
   </label>
 
   <button class="reestablecer-filtros"> Reestablecer filtros</button>
 </form>
 </section>
 
+<section id="panel-texto">
+  <form class="form-texto">
 
+  <h2 class="titulo-panel-texto">TEXTO</h2>
 
+  <div>
+  <h3>SUPERIOR</h3>
+    <textarea name="texto" id="superior" cols="10" rows="2">TOP TEXT</textarea>
+    <input type="checkbox" id="sin-texto">
+    <label for="sin-texto">Sin texto superior</label> 
+  </div>
 
-    <script src="index.js"></script>
-  </body>
+  <div>
+    <h3>INFERIOR</h3>
+    <textarea name="texto" id="inferior" cols="10" rows="2">BOTTOM TEXT</textarea>
+    <input type="checkbox" id="sin-texto">
+    <label for="sin-texto">Sin texto inferior</label> 
+  </div>
+  
+
+  <h3>FUENTE</h3>
+    <select name="fuente" id="tipos-de-fuentes">
+      <option value="Arial">Arial</option>
+      <option value="Arial Black">Arial Black</option>
+      <option value="American Typewriter">American Typewriter</option>
+      <option value="Andale Mono">Andale Mono</option>
+      <option value="Comic Sans MS">Comic Sans MS</option>
+      <option value="Helvetica">Helvetica</option>
+      <option value="Impact" selected="">Impact</option>
+      <option value="Verdana">Verdana</option>
+      <option value="Times New Roman">Times New Roman</option>
+    </select>
+
+  <div class="tamanio-letra">
+    <input type="number"id="tamanio-letra" min="12">
+    <div class="alineacion">
+    <button id="boton-izquierda"><i class="fas fa-align-left" aria-hidden="true"></i></button>
+    <button id="boton-centrado"><i class="fas fa-align-center" aria-hidden="true"></i></button>
+    <button id="boton-derecha"><i class="fas fa-align-right" aria-hidden="true"></i></button>
+    </div>
+  </div>
+
+  <div class="color-y-fondo">
+    
+    <div class="color">
+      <h3>COLOR </h3>
+      <div class="color-color">
+        <input name="Color de texto" type="color" id="input-color" value="#000000" aria-label="Color de texto">
+        <span>#000000</span>
+      </div>
+    </div>
+
+    <div class="fondo">
+      <h3>FONDO</h3>
+      <div class="fondo-fondo">
+        <input name="Color de fondo" type="color" id="input-fondo" value="#FFFFFF" aria-label="Color de fondo">
+        <span>#FFFFFF</span>
+      </div>
+    </div>
+
+  </div>
+
+    <input type="checkbox" id="fondo-transparente">
+    <label for="fondo-transparente">Fondo transparente</label> 
+
+  <div class="tipos-contorno">
+  <h3>CONTORNO</h3>
+  <button id="ninguno">Ninguno</button>
+  <button id="claro">Claro</button>
+  <button id="oscuro">Oscuro</button>
+  </div>
+
+  <label for="espaciado">
+    <h3>ESPACIADO</h3>
+    <input type="number" id="espaciado">
+  </label>
+
+  <label for="interlineado">
+    <h3>INTERLINEADO</h3>
+    <select name="interlineado" id="interlineado">
+    <option value="0.8">0.8</option>
+    <option value="1">1</option>
+    <option value="1.2">1.2</option>
+    <option value="1.5">1.5</option>
+    <option value="2">2</option>
+    <option value="2.5">2.5</option>
+    </select>
+  </label>
+
+  </form>
+</section>
+
+<script src="index.js"></script>
+</body>
 </html>
