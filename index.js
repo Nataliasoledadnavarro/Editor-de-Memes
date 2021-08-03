@@ -128,50 +128,21 @@ negativoInput.addEventListener("change", cambioFiltros);
 
 const botonFiltros = document.querySelector(".reestablecer-filtros");
 
-//PRUEBA 1
+// PRUEBA FUNCIONA CON DIV PERO NO CON EL BUTTON
 
-/*const reestablecerFiltros = () => {
-  brilloInput.value = "1";
-  opacidadInput.value = "1";
-  contrasteInput.value = "100";
-  desenfoqueInput.value = "0";
-  escalaDeGrisesInput.value = "0";
-  sepiaInput.value = "0";
-  hueInput.value = "0";
-  saturadoInput.value = "100";
-  negativoInput.value = "0";
+botonFiltros.onclick = () => {
+  brilloInput.value = 1;
+  opacidadInput.value = 1;
+  contrasteInput.value = 100;
+  desenfoqueInput.value = 0;
+  escalaDeGrisesInput.value = 0;
+  sepiaInput.value = 0;
+  hueInput.value = 0;
+  saturadoInput.value = 100;
+  negativoInput.value = 0;
+
+  imagenMeme.style.filter = "none";
 };
-
-botonFiltros.addEventListener("click", reestablecerFiltros());*/
-
-// PRUEBA 2
-
-/*botonFiltros.onclick = () => {
-  brilloInput.value = "1";
-  opacidadInput.value = "1";
-  contrasteInput.value = "100";
-  desenfoqueInput.value = "0";
-  escalaDeGrisesInput.value = "0";
-  sepiaInput.value = "0";
-  hueInput.value = "0";
-  saturadoInput.value = "100";
-  negativoInput.value = "0";
-};*/
-
-//PRUEBA 3
-
-/*botonFiltros.onclick = () => {
-  imagenMeme.style.filter =
-    "brightness(1)" +
-    "opacity(1)" +
-    "contrast(100%)" +
-    "blur(0)" +
-    "grayscale(0%)" +
-    "sepia(0%)" +
-    "hue-rotate(0deg)" +
-    "saturate(100%)" +
-    "invert(0)";
-};*/
 
 // Boton descargar meme
 
