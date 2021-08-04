@@ -1,19 +1,3 @@
-// Boton imagen
-const botonImg = document.querySelector(".boton-imagen-nav");
-const panelImg = document.getElementById("panel-img");
-
-botonImg.onclick = () => {
-  panelImg.style.width = "0";
-};
-
-// Boton texto
-
-const botonTexto = document.querySelector(".boton-texto-nav");
-const panelTexto = document.getElementById("panel-texto");
-
-botonTexto.onclick = () => {
-  panelTexto.style.width = "0";
-};
 
 //funcion de url imagen
 
@@ -59,7 +43,7 @@ const seleccionUsuario = (event) => {
     seleccionDeFondo = "normal";
   }
 
-  aplicarFiltro(); //llamo a esta funcion que aplica los filtro
+  aplicarFiltro(); //llamo a esta funcion que aplica los filtros
 };
 
 elementoSelector.addEventListener("change", seleccionUsuario); //escucho cuando cambia el sector y se ejecuta la funcion seleccionUsuario
@@ -137,11 +121,14 @@ reestablecerFiltros.onclick = () => {
 
 // Boton descargar meme
 
-const descargarMeme = document.querySelector(".conteiner-imagen");
-const botonDescarga = document.querySelector(".descargar");
+const descargarMeme = document.getElementById("contenedor-imagen");
+const botonDescarga = document.getElementById("boton-descaragar");
+
+
 
 botonDescarga.onclick = () => {
-  domtoimage.toBlob(descargarMeme).then(function (blob) {
-    window.saveAs(blob, "elmejormeme.png");
+  domtoimage.toBlob(descargarMeme)
+  .then(function (blob) {
+      window.saveAs(blob, 'elmejormeme.png');
   });
-};
+}
