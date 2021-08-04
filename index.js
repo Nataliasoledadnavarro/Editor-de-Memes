@@ -127,7 +127,10 @@ negativoInput.addEventListener("change", cambioFiltros);
 
 const botonFiltros = document.querySelector(".reestablecer-filtros");
 
-botonFiltros.onclick = () => {
+botonFiltros.onclick = (event) => {
+
+  event.preventDefault()
+
   brilloInput.value = 1;
   opacidadInput.value = 1;
   contrasteInput.value = 100;
@@ -139,7 +142,8 @@ botonFiltros.onclick = () => {
   negativoInput.value = 0;
 
   imagenMeme.style.filter = "none";
-};
+
+}
 
 // Boton descargar meme
 
