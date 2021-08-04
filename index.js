@@ -124,11 +124,8 @@ negativoInput.addEventListener("change", cambioFiltros);
 
 // FUNCION BOTON REESTABLECER FILTROS
 
-//NO TOMA LA FUNCION DEL BOTON. RESOLVER!
 
 const botonFiltros = document.querySelector(".reestablecer-filtros");
-
-// PRUEBA FUNCIONA CON DIV PERO NO CON EL BUTTON
 
 botonFiltros.onclick = () => {
   brilloInput.value = 1;
