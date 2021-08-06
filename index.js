@@ -142,7 +142,7 @@ botonFiltros.onclick = (event) => {
   negativoInput.value = 0;
 
   imagenMeme.style.filter = "none";
-
+  
 }
 
 // Boton descargar meme

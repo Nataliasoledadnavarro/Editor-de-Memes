@@ -71,7 +71,8 @@ main {
 
 #img-meme {
   width: 100%;
-  filter: hue;
+filter: contrast(50%); opacity(2)
+
 }
 
 .descargar {
@@ -178,7 +179,6 @@ input[type="range"] {
   appearance: none;
   background-color: gray;
   border-radius: 10px;
-  
 }
 
 .reestablecer-filtros {
