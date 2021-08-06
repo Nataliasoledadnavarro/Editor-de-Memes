@@ -1,8 +1,25 @@
+// Boton imagen y Boton texto
+const botonImg = document.querySelector('.boton-imagen-nav');
+const botonTexto = document.querySelector('.boton-texto-nav');
+const panelImg = document.getElementById('panel-img');
+const panelTexto = document.getElementById('panel-texto');
+
+const mostrarPanelTexto = () => {
+  panelTexto.classList.remove('ocultar');
+  panelImg.classList.add('ocultar');
+};
+const mostrarPanelImagen = () => {
+  panelImg.classList.remove('ocultar');
+  panelTexto.classList.add('ocultar');
+};
+
+botonTexto.onclick = mostrarPanelTexto;
+botonImg.onclick = mostrarPanelImagen;
 
 //funcion de url imagen
 
-const imagenMeme = document.getElementById("img-meme");
-const urlInput = document.getElementById("url");
+const imagenMeme = document.getElementById('img-meme');
+const urlInput = document.getElementById('url');
 
 urlInput.oninput = () => {
   imagenMeme.src = urlInput.value;
@@ -10,37 +27,37 @@ urlInput.oninput = () => {
 
 // funcion picker de color
 
-let inputColor = document.getElementById("color-fondo-img"); //selecciono el id de input
-let textoColorFondo = document.querySelector(".texto-color-fondo-img"); //selecciono la clase del texto
+let inputColor = document.getElementById('color-fondo-img'); //selecciono el id de input
+let textoColorFondo = document.querySelector('.texto-color-fondo-img'); //selecciono la clase del texto
 
 const colorPicker = (event) => {
   textoColorFondo.textContent = event.target.value; //toma al valor del evento input y cambiale el contenido de texto a textoColorfondo (target: objetivo)
   aplicarFiltro(); //llama a la funcion que aplica los filtros
 };
 
-inputColor.addEventListener("input", colorPicker);
+inputColor.addEventListener('input', colorPicker);
 
 //funcion selector
 
-const elementoSelector = document.getElementById("opciones-fondo-img"); //seleciono el sector
-const contenedorDeImagen = document.querySelector(".imagen-src"); //seleccion del contenedor al q le aplico el fondo
-const imagenFondo = document.querySelector(".imagen-fondo"); //seleciono la imagen
-let seleccionDeFondo = " ";
+const elementoSelector = document.getElementById('opciones-fondo-img'); //seleciono el sector
+const contenedorDeImagen = document.querySelector('.imagen-src'); //seleccion del contenedor al q le aplico el fondo
+const imagenFondo = document.querySelector('.imagen-fondo'); //seleciono la imagen
+let seleccionDeFondo = ' ';
 
 const seleccionUsuario = (event) => {
   //if q comprueba la seleccion del usuario del select y lo guarda el nombre del filtro en la variable que luego se utiliza en la funcion aplicarFiltro
-  if (event.target.value === "aclarar") {
-    seleccionDeFondo = "lighten";
-  } else if (event.target.value === "oscurecer") {
-    seleccionDeFondo = "darken";
-  } else if (event.target.value === "diferencia") {
-    seleccionDeFondo = "difference";
-  } else if (event.target.value === "luminosidad") {
-    seleccionDeFondo = "luminosity";
-  } else if (event.target.value === "multiplicar") {
-    seleccionDeFondo = "multiply";
+  if (event.target.value === 'aclarar') {
+    seleccionDeFondo = 'lighten';
+  } else if (event.target.value === 'oscurecer') {
+    seleccionDeFondo = 'darken';
+  } else if (event.target.value === 'diferencia') {
+    seleccionDeFondo = 'difference';
+  } else if (event.target.value === 'luminosidad') {
+    seleccionDeFondo = 'luminosity';
+  } else if (event.target.value === 'multiplicar') {
+    seleccionDeFondo = 'multiply';
   } else {
-    seleccionDeFondo = "normal";
+    seleccionDeFondo = 'normal';
   }
 
   aplicarFiltro(); //llamo a esta funcion que aplica los filtros

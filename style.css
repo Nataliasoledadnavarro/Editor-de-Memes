@@ -1,6 +1,6 @@
 body {
   margin: 0;
-  font-family: "Otomanopee One", sans-serif;
+  font-family: 'Otomanopee One', sans-serif;
   box-sizing: border-box;
   background-color: rgb(61, 59, 59);
 }
@@ -63,6 +63,7 @@ main {
   font-weight: bolder;
 }
 
+
 .imagen-src {
   height: 70%;
   background-color: black;
@@ -71,6 +72,7 @@ main {
 
 #img-meme {
   width: 100%;
+
 }
 
 .descargar {
@@ -95,7 +97,7 @@ main {
 
 /*//ESTILOS FORMULARIO IMAGEN ////*/
 
-#panel-img {
+.panel-img {
   height: 100%;
   width: 280px;
   font-family: Arial, Helvetica, sans-serif;
@@ -217,7 +219,7 @@ input[type="range"] {
 }
 /*//ESTILOS FORMULARIO TEXTO ////*/
 
-#panel-texto {
+.panel-texto {
   height: 100%;
   width: 280px;
   font-family: Arial, Helvetica, sans-serif;
@@ -230,6 +232,11 @@ input[type="range"] {
   overflow: scroll;
   
 }
+
+.ocultar {
+  display: none;
+}
+
 .titulo-panel-texto {
   text-align: center;
   color: white;
