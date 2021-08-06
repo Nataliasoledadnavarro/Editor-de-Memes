@@ -145,3 +145,41 @@ botonDescarga.onclick = () => {
     window.saveAs(blob, "elmejormeme.png");
   });
 };
+// FORMULARIO - TEXTO COLOR Y FONDO 
+// COLOR 
+
+let inputColorFormTexto = document.getElementById("input-color"); 
+let colorFondoFormTexto = document.querySelector("input-fondo"); 
+
+const colorFormTexto = (event) => {
+  inputColorFormTexto.textContent = event.target.value; 
+  aplicarFiltro(); //llama a la funcion que aplica los filtros
+};
+
+inputColorFormTexto.addEventListener("input", colorFormTexto);
+
+let aplicarFiltro = () => {
+  imagenFondo.style.mixBlendMode = seleccionDeFondo; //el mix necesita imagen y fondo
+  contenedorDeImagen.style.backgroundColor = inputColor.value;
+};
+
+//FONDO TRANSPARENTE CHECKBOX
+
+let fondoTransparenteSup = document.querySelector(".texto-superior")
+let fondoTransparenteInf = document.querySelector(".texto-inferior")
+
+const fondoTransparente = (event) => {
+  fondoTransparenteSup.remove = event.target; //ver si funciona remove para quitar el estilo 
+  aplicarTransparencia ();
+}
+
+fondoTransparenteSup.addEventListener("target", fondoTransparente);
+
+//textoSuperior es el nombre de la variable sugerida en la primer parte del formulario que se usaria para el fondo transparente
+let aplicarTransparencia = () =>{
+  textoSuperior.style.backgroundColor= superiorColor; //superiorColor es la funcion que se deberia usar para darle los estilos en texto superior
+}
+
+
+
+
