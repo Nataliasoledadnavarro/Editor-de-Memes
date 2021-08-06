@@ -46,7 +46,7 @@ const seleccionUsuario = (event) => {
   aplicarFiltro(); //llamo a esta funcion que aplica los filtros
 };
 
-elementoSelector.addEventListener("change", seleccionUsuario); //escucho cuando cambia el sector y se ejecuta la funcion seleccionUsuario
+elementoSelector.addEventListener("change", seleccionUsuario); //escucho cuando cambia el selector y se ejecuta la funcion seleccionUsuario
 
 let aplicarFiltro = () => {
   imagenFondo.style.mixBlendMode = seleccionDeFondo; //el mix necesita imagen y fondo
