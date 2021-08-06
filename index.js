@@ -146,16 +146,6 @@ botonFiltros.onclick = (event) => {
   
 }
 
-// Boton descargar meme
-
-const descargarMeme = document.querySelector('.conteiner-imagen');
-const botonDescarga = document.querySelector('.descargar');
-
-botonDescarga.onclick = () => {
-  domtoimage.toBlob(descargarMeme).then(function (blob) {
-    window.saveAs(blob, 'elmejormeme.png');
-  });
-};
 // FORMULARIO - TEXTO COLOR Y FONDO 
 // COLOR 
 
@@ -203,6 +193,7 @@ textoSuperiorUsuario.oninput = () => {
 textoInferiorUsuario.oninput = () => {
   textoInferior.textContent = textoInferiorUsuario.value;
 };
+
 //Funcion Sacar Texto Superior e Inferior
 const sinTextoSuperior = document.getElementById('sin-texto-superior');
 const sinTextoInferior = document.getElementById('sin-texto-inferior');
@@ -222,5 +213,13 @@ sinTextoInferior.oninput = () => {
   }
 };
 
+// Boton descargar meme
 
+const descargarMeme = document.querySelector('.conteiner-imagen');
+const botonDescarga = document.querySelector('.descargar');
 
+botonDescarga.onclick = () => {
+  domtoimage.toBlob(descargarMeme).then(function (blob) {
+    window.saveAs(blob, 'elmejormeme.png');
+  });
+}
