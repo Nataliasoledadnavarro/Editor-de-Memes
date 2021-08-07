@@ -149,8 +149,7 @@ botonFiltros.onclick = (event) => {
 // Boton descargar meme
 
 const descargarMeme = document.getElementById("contenedor-imagen");
-const botonDescarga = document.getElementById("boton-descaragar");
-
+const botonDescarga = document.getElementById("boton-descargar");
 
 
 botonDescarga.onclick = () => {
@@ -159,3 +158,34 @@ botonDescarga.onclick = () => {
       window.saveAs(blob, 'elmejormeme.png');
   });
 }
+
+//Funcion Texto Superior/Texto Inferior
+const textoSuperiorUsuario = document.getElementById('superior');
+const textoInferiorUsuario = document.getElementById('inferior');
+const textoSuperior = document.querySelector('.texto-superior');
+const textoInferior = document.querySelector('.texto-inferior');
+
+textoSuperiorUsuario.oninput = () => {
+  textoSuperior.textContent = textoSuperiorUsuario.value;
+};
+textoInferiorUsuario.oninput = () => {
+  textoInferior.textContent = textoInferiorUsuario.value;
+};
+//Funcion Sacar Texto Superior e Inferior
+const sinTextoSuperior = document.getElementById('sin-texto-superior');
+const sinTextoInferior = document.getElementById('sin-texto-inferior');
+
+sinTextoSuperior.oninput = () => {
+  if (sinTextoSuperior.checked) {
+    textoSuperior.style.display = 'none';
+  } else {
+    textoSuperior.style.display = 'flex';
+  }
+};
+sinTextoInferior.oninput = () => {
+  if (sinTextoInferior.checked) {
+    textoInferior.style.display = "none";
+  } else {
+    textoInferior.style.display = 'flex';
+  }
+};
