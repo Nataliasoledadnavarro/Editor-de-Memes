@@ -60,10 +60,10 @@ const seleccionUsuario = (event) => {
     seleccionDeFondo = 'normal';
   }
 
-  aplicarFiltro(); //llamo a esta funcion que aplica los filtro
+  aplicarFiltro(); //llamo a esta funcion que aplica los filtros
 };
 
-elementoSelector.addEventListener('change', seleccionUsuario); //escucho cuando cambia el sector y se ejecuta la funcion seleccionUsuario
+elementoSelector.addEventListener("change", seleccionUsuario); //escucho cuando cambia el selector y se ejecuta la funcion seleccionUsuario
 
 let aplicarFiltro = () => {
   imagenFondo.style.mixBlendMode = seleccionDeFondo; //el mix necesita imagen y fondo
@@ -179,6 +179,17 @@ fondoTransparenteSup.addEventListener("target", fondoTransparente);
 //textoSuperior es el nombre de la variable sugerida en la primer parte del formulario que se usaria para el fondo transparente
 let aplicarTransparencia = () =>{
   textoSuperior.style.backgroundColor= superiorColor; //superiorColor es la funcion que se deberia usar para darle los estilos en texto superior
+// Boton descargar meme
+
+const descargarMeme = document.getElementById("contenedor-imagen");
+const botonDescarga = document.getElementById("boton-descargar");
+
+
+botonDescarga.onclick = () => {
+  domtoimage.toBlob(descargarMeme)
+  .then(function (blob) {
+      window.saveAs(blob, 'elmejormeme.png');
+  });
 }
 
 //Funcion Texto Superior/Texto Inferior
@@ -211,15 +222,5 @@ sinTextoInferior.oninput = () => {
   } else {
     textoInferior.style.display = 'flex';
   }
-};
-
-// Boton descargar meme
-
-const descargarMeme = document.querySelector('.conteiner-imagen');
-const botonDescarga = document.querySelector('.descargar');
-
-botonDescarga.onclick = () => {
-  domtoimage.toBlob(descargarMeme).then(function (blob) {
-    window.saveAs(blob, 'elmejormeme.png');
-  });
+}
 }
