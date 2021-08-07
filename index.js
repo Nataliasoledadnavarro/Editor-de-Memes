@@ -189,3 +189,6 @@ sinTextoInferior.oninput = () => {
     textoInferior.style.display = 'flex';
   }
 };
+ //NUEVA RAMA FORMULARIO-TEXTO-MECHA 
+ 
+
