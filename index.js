@@ -60,10 +60,10 @@ const seleccionUsuario = (event) => {
     seleccionDeFondo = 'normal';
   }
 
-  aplicarFiltro(); //llamo a esta funcion que aplica los filtro
+  aplicarFiltro(); //llamo a esta funcion que aplica los filtros
 };
 
-elementoSelector.addEventListener('change', seleccionUsuario); //escucho cuando cambia el sector y se ejecuta la funcion seleccionUsuario
+elementoSelector.addEventListener("change", seleccionUsuario); //escucho cuando cambia el selector y se ejecuta la funcion seleccionUsuario
 
 let aplicarFiltro = () => {
   imagenFondo.style.mixBlendMode = seleccionDeFondo; //el mix necesita imagen y fondo
@@ -148,79 +148,14 @@ botonFiltros.onclick = (event) => {
 
 // Boton descargar meme
 
-const descargarMeme = document.querySelector('.conteiner-imagen');
-const botonDescarga = document.querySelector('.descargar');
+const descargarMeme = document.getElementById("contenedor-imagen");
+const botonDescarga = document.getElementById("boton-descaragar");
+
+
 
 botonDescarga.onclick = () => {
-  domtoimage.toBlob(descargarMeme).then(function (blob) {
-    window.saveAs(blob, 'elmejormeme.png');
+  domtoimage.toBlob(descargarMeme)
+  .then(function (blob) {
+      window.saveAs(blob, 'elmejormeme.png');
   });
-};
-// FORMULARIO - TEXTO COLOR Y FONDO 
-// COLOR 
-
-let inputColorFormTexto = document.getElementById("input-color"); 
-let colorFondoFormTexto = document.querySelector("input-fondo"); 
-
-const colorFormTexto = (event) => {
-  inputColorFormTexto.textContent = event.target.value; 
-  aplicarFiltro(); //llama a la funcion que aplica los filtros
-};
-
-inputColorFormTexto.addEventListener("input", colorFormTexto);
-
-let aplicarFiltro = () => {
-  imagenFondo.style.mixBlendMode = seleccionDeFondo; //el mix necesita imagen y fondo
-  contenedorDeImagen.style.backgroundColor = inputColor.value;
-};
-
-//FONDO TRANSPARENTE CHECKBOX
-
-let fondoTransparenteSup = document.querySelector(".texto-superior")
-let fondoTransparenteInf = document.querySelector(".texto-inferior")
-
-const fondoTransparente = (event) => {
-  fondoTransparenteSup.remove = event.target; //ver si funciona remove para quitar el estilo 
-  aplicarTransparencia ();
 }
-
-fondoTransparenteSup.addEventListener("target", fondoTransparente);
-
-//textoSuperior es el nombre de la variable sugerida en la primer parte del formulario que se usaria para el fondo transparente
-let aplicarTransparencia = () =>{
-  textoSuperior.style.backgroundColor= superiorColor; //superiorColor es la funcion que se deberia usar para darle los estilos en texto superior
-}
-
-//Funcion Texto Superior/Texto Inferior
-const textoSuperiorUsuario = document.getElementById('superior');
-const textoInferiorUsuario = document.getElementById('inferior');
-const textoSuperior = document.querySelector('.texto-superior');
-const textoInferior = document.querySelector('.texto-inferior');
-
-textoSuperiorUsuario.oninput = () => {
-  textoSuperior.textContent = textoSuperiorUsuario.value;
-};
-textoInferiorUsuario.oninput = () => {
-  textoInferior.textContent = textoInferiorUsuario.value;
-};
-//Funcion Sacar Texto Superior e Inferior
-const sinTextoSuperior = document.getElementById('sin-texto-superior');
-const sinTextoInferior = document.getElementById('sin-texto-inferior');
-
-sinTextoSuperior.oninput = () => {
-  if (sinTextoSuperior.checked) {
-    textoSuperior.style.display = 'none';
-  } else {
-    textoSuperior.style.display = 'flex';
-  }
-};
-sinTextoInferior.oninput = () => {
-  if (sinTextoInferior.checked) {
-    textoInferior.style.display = "none";
-  } else {
-    textoInferior.style.display = 'flex';
-  }
-};
-
-
-
