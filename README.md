@@ -32,6 +32,8 @@ Link al **[editor]** 🏃‍♀️
 
 • Javascript
 
+• Git y Github para compartir el código en sus diferentes versiones. 
+
 Realizado por: [Eliana Kern](https://github.com/ElianaKern), [Gaby](https://github.com/GabytaDev), [Mecha](https://github.com/mecha-default) y [Naty Navarro](https://github.com/Nataliasoledadnavarro)
 
 ---
