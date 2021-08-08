@@ -189,3 +189,51 @@ sinTextoInferior.oninput = () => {
     textoInferior.style.display = 'flex';
   }
 };
+//Funcion Cambio de Fuentes
+const selectFuentes = document.getElementById('tipos-de-fuentes');
+const selectArial = document.getElementById('Arial');
+const selectArialBlack = document.getElementById('Arial-Black');
+const selectAmericanTypewriter = document.getElementById('American-Typewriter');
+const selectAndaleMono = document.getElementById('Andale-Mono');
+const selctComicSansMS = document.getElementById('Comic-Sans-MS');
+const selectHelvetica = document.getElementById('Helvetica');
+const selectImpact = document.getElementById('Impact');
+const selectVerdana = document.getElementById('Verdana');
+const selectTimesNewRoman = document.getElementById('Times-New-Roman');
+
+const cambiarFuentes = (event) => {
+  if (event.target.value === 'Arial') {
+    textoSuperior.style.fontFamily = 'Arial, Helvetica, sans-serif';
+    textoInferior.style.fontFamily = 'Arial, Helvetica, sans-serif';
+  } else if (event.target.value === 'Arial Black') {
+    textoSuperior.style.fontFamily = 'Arial, Helvetica, sans-serif';
+    textoInferior.style.fontFamily = 'Arial, Helvetica, sans-serif';
+    textoSuperior.style.fontWeight = 'bolder';
+  }
+};
+
+selectFuentes.addEventListener('change', cambiarFuentes);
+ 
+
+/* Tamaño Letra Formulario Texto */
+const tamanioLetra = document.getElementById('tamanio-letra');
+
+/*Alineacion Formulario Texto */
+
+const alineacionIzquierda = document.getElementById('boton-izquierda');
+const alineacionCentro = document.getElementById('boton-centrado');
+const alineacionDerecha = document.getElementById('boton-derecha');
+
+
+alineacionIzquierda.onclick = () => {
+  textoSuperior.style.justifyContent = "flex-start"
+  textoInferior.style.justifyContent = "flex-start"
+};
+alineacionCentro.onclick = () => {
+  textoSuperior.style.justifyContent = 'center';
+  textoInferior.style.justifyContent = 'center';
+};
+alineacionDerecha.onclick = () => {
+  textoSuperior.style.justifyContent = 'flex-end';
+  textoInferior.style.justifyContent = 'flex-end';
+}
