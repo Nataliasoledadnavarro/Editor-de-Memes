@@ -56,7 +56,7 @@ main {
 
 .texto-superior,
 .texto-inferior {
- padding: 25px;
+  padding: 25px;
   background-color: white;
   display: flex;
   align-items: center;
@@ -193,6 +193,23 @@ input[type="range"] {
   font-size: 16px;
 }
 
+#icono-cruz {
+  color: rgba(255, 255, 255, 0.74);
+  position: absolute;
+  top: 10px;
+  left: 20px;
+  font-size: 20px;
+  display: none;
+}
+
+@media screen and (max-width: 1000px) {
+  #icono-cruz {
+    display: block;
+  }
+  #panel-img{ width: 100%;}
+
+  #panel-texto{ width: 100%;}
+}
 @media screen and (max-width: 600px) {
   h1 {
     font-size: 35px;

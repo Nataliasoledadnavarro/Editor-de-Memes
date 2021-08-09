@@ -16,6 +16,16 @@ const mostrarPanelImagen = () => {
 botonTexto.onclick = mostrarPanelTexto;
 botonImg.onclick = mostrarPanelImagen;
 
+// Función ocultar panel con icono cruz
+//Resolver que se vuelvan a abrir paneles
+const iconoCruz = document.getElementById("icono-cruz")
+
+iconoCruz.onclick = () =>{
+  panelImg.style.display = "none"
+  panelTexto.style.display = "none"
+}
+
+
 //funcion de url imagen
 
 const imagenMeme = document.getElementById("img-meme");
