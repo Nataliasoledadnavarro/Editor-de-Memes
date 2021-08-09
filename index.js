@@ -18,13 +18,25 @@ botonImg.onclick = mostrarPanelImagen;
 
 // Función ocultar panel con icono cruz
 //Resolver que se vuelvan a abrir paneles
-const iconoCruz = document.getElementById("icono-cruz")
+const iconoCruzImg = document.querySelector(".icono-cruz-img")
+const iconoCruzTexto = document.querySelector(".icono-cruz-texto")
 
-iconoCruz.onclick = () =>{
+iconoCruzImg.onclick = () =>{
   panelImg.style.display = "none"
+
+}
+
+iconoCruzTexto.onclick = () =>{
   panelTexto.style.display = "none"
 }
 
+botonImg.onclick = () =>{
+  panelImg.style.display = "flex"
+}
+
+botonTexto.onclick = () =>{
+  panelTexto.style.display = "flex"
+}
 
 //funcion de url imagen
 

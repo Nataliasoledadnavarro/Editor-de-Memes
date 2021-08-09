@@ -193,7 +193,16 @@ input[type="range"] {
   font-size: 16px;
 }
 
-#icono-cruz {
+.icono-cruz-img {
+  color: rgba(255, 255, 255, 0.74);
+  position: absolute;
+  top: 10px;
+  left: 20px;
+  font-size: 20px;
+  display: none;
+}
+
+.icono-cruz-texto {
   color: rgba(255, 255, 255, 0.74);
   position: absolute;
   top: 10px;
@@ -203,12 +212,20 @@ input[type="range"] {
 }
 
 @media screen and (max-width: 1000px) {
-  #icono-cruz {
+  .icono-cruz-img {
     display: block;
   }
-  #panel-img{ width: 100%;}
+  .icono-cruz-texto {
+    display: block;
+  }
 
-  #panel-texto{ width: 100%;}
+  #panel-img {
+    width: 100%;
+  }
+
+  #panel-texto {
+    width: 100%;
+  }
 }
 @media screen and (max-width: 600px) {
   h1 {
