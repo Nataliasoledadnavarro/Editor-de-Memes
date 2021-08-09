@@ -1,16 +1,16 @@
 // Boton imagen y Boton texto
-const botonImg = document.querySelector('.boton-imagen-nav');
-const botonTexto = document.querySelector('.boton-texto-nav');
-const panelImg = document.getElementById('panel-img');
-const panelTexto = document.getElementById('panel-texto');
+const botonImg = document.querySelector(".boton-imagen-nav");
+const botonTexto = document.querySelector(".boton-texto-nav");
+const panelImg = document.getElementById("panel-img");
+const panelTexto = document.getElementById("panel-texto");
 
 const mostrarPanelTexto = () => {
-  panelTexto.classList.remove('ocultar');
-  panelImg.classList.add('ocultar');
+  panelTexto.classList.remove("ocultar");
+  panelImg.classList.add("ocultar");
 };
 const mostrarPanelImagen = () => {
-  panelImg.classList.remove('ocultar');
-  panelTexto.classList.add('ocultar');
+  panelImg.classList.remove("ocultar");
+  panelTexto.classList.add("ocultar");
 };
 
 botonTexto.onclick = mostrarPanelTexto;
@@ -18,8 +18,8 @@ botonImg.onclick = mostrarPanelImagen;
 
 //funcion de url imagen
 
-const imagenMeme = document.getElementById('img-meme');
-const urlInput = document.getElementById('url');
+const imagenMeme = document.getElementById("img-meme");
+const urlInput = document.getElementById("url");
 
 urlInput.oninput = () => {
   imagenMeme.src = urlInput.value;
@@ -27,37 +27,37 @@ urlInput.oninput = () => {
 
 // funcion picker de color
 
-let inputColor = document.getElementById('color-fondo-img'); //selecciono el id de input
-let textoColorFondo = document.querySelector('.texto-color-fondo-img'); //selecciono la clase del texto
+let inputColor = document.getElementById("color-fondo-img"); //selecciono el id de input
+let textoColorFondo = document.querySelector(".texto-color-fondo-img"); //selecciono la clase del texto
 
 const colorPicker = (event) => {
   textoColorFondo.textContent = event.target.value; //toma al valor del evento input y cambiale el contenido de texto a textoColorfondo (target: objetivo)
   aplicarFiltro(); //llama a la funcion que aplica los filtros
 };
 
-inputColor.addEventListener('input', colorPicker);
+inputColor.addEventListener("input", colorPicker);
 
 //funcion selector
 
-const elementoSelector = document.getElementById('opciones-fondo-img'); //seleciono el sector
-const contenedorDeImagen = document.querySelector('.imagen-src'); //seleccion del contenedor al q le aplico el fondo
-const imagenFondo = document.querySelector('.imagen-fondo'); //seleciono la imagen
-let seleccionDeFondo = ' ';
+const elementoSelector = document.getElementById("opciones-fondo-img"); //seleciono el sector
+const contenedorDeImagen = document.querySelector(".imagen-src"); //seleccion del contenedor al q le aplico el fondo
+const imagenFondo = document.querySelector(".imagen-fondo"); //seleciono la imagen
+let seleccionDeFondo = " ";
 
 const seleccionUsuario = (event) => {
   //if q comprueba la seleccion del usuario del select y lo guarda el nombre del filtro en la variable que luego se utiliza en la funcion aplicarFiltro
-  if (event.target.value === 'aclarar') {
-    seleccionDeFondo = 'lighten';
-  } else if (event.target.value === 'oscurecer') {
-    seleccionDeFondo = 'darken';
-  } else if (event.target.value === 'diferencia') {
-    seleccionDeFondo = 'difference';
-  } else if (event.target.value === 'luminosidad') {
-    seleccionDeFondo = 'luminosity';
-  } else if (event.target.value === 'multiplicar') {
-    seleccionDeFondo = 'multiply';
+  if (event.target.value === "aclarar") {
+    seleccionDeFondo = "lighten";
+  } else if (event.target.value === "oscurecer") {
+    seleccionDeFondo = "darken";
+  } else if (event.target.value === "diferencia") {
+    seleccionDeFondo = "difference";
+  } else if (event.target.value === "luminosidad") {
+    seleccionDeFondo = "luminosity";
+  } else if (event.target.value === "multiplicar") {
+    seleccionDeFondo = "multiply";
   } else {
-    seleccionDeFondo = 'normal';
+    seleccionDeFondo = "normal";
   }
 
   aplicarFiltro(); //llamo a esta funcion que aplica los filtros
@@ -125,12 +125,10 @@ negativoInput.addEventListener("change", cambioFiltros);
 
 // FUNCION BOTON REESTABLECER FILTROS
 
-
 const botonFiltros = document.querySelector(".reestablecer-filtros");
 
 botonFiltros.onclick = (event) => {
-
-  event.preventDefault()
+  event.preventDefault();
 
   brilloInput.value = 1;
   opacidadInput.value = 1;
@@ -143,27 +141,24 @@ botonFiltros.onclick = (event) => {
   negativoInput.value = 0;
 
   imagenMeme.style.filter = "none";
-  
-}
+};
 
 // Boton descargar meme
 
 const descargarMeme = document.getElementById("contenedor-imagen");
 const botonDescarga = document.getElementById("boton-descargar");
 
-
 botonDescarga.onclick = () => {
-  domtoimage.toBlob(descargarMeme)
-  .then(function (blob) {
-      window.saveAs(blob, 'elmejormeme.png');
+  domtoimage.toBlob(descargarMeme).then(function (blob) {
+    window.saveAs(blob, "elmejormeme.png");
   });
-}
+};
 
 //Funcion Texto Superior/Texto Inferior
-const textoSuperiorUsuario = document.getElementById('superior');
-const textoInferiorUsuario = document.getElementById('inferior');
-const textoSuperior = document.querySelector('.texto-superior');
-const textoInferior = document.querySelector('.texto-inferior');
+const textoSuperiorUsuario = document.getElementById("superior");
+const textoInferiorUsuario = document.getElementById("inferior");
+const textoSuperior = document.querySelector(".texto-superior");
+const textoInferior = document.querySelector(".texto-inferior");
 
 textoSuperiorUsuario.oninput = () => {
   textoSuperior.textContent = textoSuperiorUsuario.value;
@@ -172,21 +167,21 @@ textoInferiorUsuario.oninput = () => {
   textoInferior.textContent = textoInferiorUsuario.value;
 };
 //Funcion Sacar Texto Superior e Inferior
-const sinTextoSuperior = document.getElementById('sin-texto-superior');
-const sinTextoInferior = document.getElementById('sin-texto-inferior');
+const sinTextoSuperior = document.getElementById("sin-texto-superior");
+const sinTextoInferior = document.getElementById("sin-texto-inferior");
 
 sinTextoSuperior.oninput = () => {
   if (sinTextoSuperior.checked) {
-    textoSuperior.style.display = 'none';
+    textoSuperior.style.display = "none";
   } else {
-    textoSuperior.style.display = 'flex';
+    textoSuperior.style.display = "flex";
   }
 };
 sinTextoInferior.oninput = () => {
   if (sinTextoInferior.checked) {
     textoInferior.style.display = "none";
   } else {
-    textoInferior.style.display = 'flex';
+    textoInferior.style.display = "flex";
   }
 };
 //Funcion Cambio de Fuentes
