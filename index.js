@@ -37,7 +37,6 @@ urlInput.oninput = () => {
   imagenMeme.src = urlInput.value;
 };
 
-
 // funcion picker de color
 
 let inputColor = document.getElementById("color-fondo-img"); //selecciono el id de input
