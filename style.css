@@ -203,7 +203,7 @@ input[type="range"] {
 }
 
 .icono-cruz-texto {
-  color: rgba(255, 255, 255, 0.74);
+  color: transparent;
   position: absolute;
   top: 10px;
   left: 20px;
@@ -214,9 +214,11 @@ input[type="range"] {
 @media screen and (max-width: 1000px) {
   .icono-cruz-img {
     display: block;
+    color: rgba(255, 255, 255, 0.74);
   }
   .icono-cruz-texto {
     display: block;
+    color: rgba(255, 255, 255, 0.74);
   }
 
   #panel-img {

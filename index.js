@@ -17,26 +17,24 @@ botonTexto.onclick = mostrarPanelTexto;
 botonImg.onclick = mostrarPanelImagen;
 
 // Función ocultar panel con icono cruz
-//Resolver que se vuelvan a abrir paneles
-const iconoCruzImg = document.querySelector(".icono-cruz-img")
-const iconoCruzTexto = document.querySelector(".icono-cruz-texto")
+const iconoCruzImg = document.querySelector(".icono-cruz-img");
+const iconoCruzTexto = document.querySelector(".icono-cruz-texto");
 
-iconoCruzImg.onclick = () =>{
-  panelImg.style.display = "none"
+iconoCruzImg.onclick = () => {
+  panelImg.style.display = "none";
+};
 
-}
+iconoCruzTexto.onclick = () => {
+  panelTexto.style.display = "none";
+};
 
-iconoCruzTexto.onclick = () =>{
-  panelTexto.style.display = "none"
-}
+botonImg.onclick = () => {
+  panelImg.style.display = "flex";
+};
 
-botonImg.onclick = () =>{
-  panelImg.style.display = "flex"
-}
-
-botonTexto.onclick = () =>{
-  panelTexto.style.display = "flex"
-}
+botonTexto.onclick = () => {
+  panelTexto.style.display = "flex";
+};
 
 //funcion de url imagen
 
@@ -206,7 +204,3 @@ sinTextoInferior.oninput = () => {
     textoInferior.style.display = "flex";
   }
 };
-
-
-
-
