@@ -32,10 +32,12 @@ Link al **[editor]** 🏃‍♀️
 
 • Javascript
 
-• Git y Github para compartir el código en sus diferentes versiones. 
+• Git y Github para compartir el código en sus diferentes versiones.
+
+• [Trello](https://trello.com/b/2O4fHEW6/tp-javascript-ada) para organizar y planificar las tareas.  
 
 Realizado por: [Eliana Kern](https://github.com/ElianaKern), [Gabriela Loyola](https://github.com/GabytaDev), [Mercedes Fresno](https://github.com/mecha-default) y [Naty Navarro](https://github.com/Nataliasoledadnavarro)
 
 ---
 
-                                            Hecho con 💗 💪 y en equipo!
+                     Hecho con 💗 💪 y en equipo!
