@@ -28,6 +28,16 @@ iconoCruzTexto.onclick = () => {
   panelTexto.classList.add("ocultar");
 };
 
+//funcion de url imagen
+
+const imagenMeme = document.getElementById("img-meme");
+const urlInput = document.getElementById("url");
+
+urlInput.oninput = () => {
+  imagenMeme.src = urlInput.value;
+};
+
+
 // funcion picker de color
 
 let inputColor = document.getElementById("color-fondo-img"); //selecciono el id de input
@@ -169,6 +179,7 @@ textoSuperiorUsuario.oninput = () => {
 textoInferiorUsuario.oninput = () => {
   textoInferior.textContent = textoInferiorUsuario.value;
 };
+
 //Funcion Sacar Texto Superior e Inferior
 const sinTextoSuperior = document.getElementById("sin-texto-superior");
 const sinTextoInferior = document.getElementById("sin-texto-inferior");
