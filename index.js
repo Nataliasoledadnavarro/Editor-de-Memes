@@ -21,28 +21,11 @@ const iconoCruzImg = document.querySelector(".icono-cruz-img");
 const iconoCruzTexto = document.querySelector(".icono-cruz-texto");
 
 iconoCruzImg.onclick = () => {
-  panelImg.style.display = "none";
+  panelImg.classList.add("ocultar");
 };
 
 iconoCruzTexto.onclick = () => {
-  panelTexto.style.display = "none";
-};
-
-botonImg.onclick = () => {
-  panelImg.style.display = "flex";
-};
-
-botonTexto.onclick = () => {
-  panelTexto.style.display = "flex";
-};
-
-//funcion de url imagen
-
-const imagenMeme = document.getElementById("img-meme");
-const urlInput = document.getElementById("url");
-
-urlInput.oninput = () => {
-  imagenMeme.src = urlInput.value;
+  panelTexto.classList.add("ocultar");
 };
 
 // funcion picker de color
