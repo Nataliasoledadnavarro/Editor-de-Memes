@@ -274,3 +274,26 @@ let aplicarTransparencia = () =>{
 */
 
 
+
+const botonModoOscuro = document.getElementById("boton-modo-oscuro");
+const fondoBody = document.querySelector("body");
+const fondoHeader = document.querySelector("header");
+const tituloPrincipal = document.querySelector("h1");
+const botonesNav = document.querySelector("nav");
+const formularios = document.querySelector("form");  //seleciona solo el primer form
+
+const cambiarModo = () => {
+  
+  fondoBody.classList.toggle("body-modo-claro")
+  fondoHeader.classList.toggle("clase-modo-claro")
+  tituloPrincipal.classList.toggle("clase-modo-claro")
+  botonesNav.classList.toggle("nav")
+  formularios.classList.toggle("form")
+}
+
+botonModoOscuro.onclick = cambiarModo;
+
+
+
+
+
