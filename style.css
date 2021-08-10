@@ -56,7 +56,6 @@ main {
 
 .texto-superior,
 .texto-inferior {
- padding: 25px;
   background-color: white;
   display: flex;
   align-items: center;
