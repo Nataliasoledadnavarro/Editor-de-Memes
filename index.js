@@ -16,6 +16,18 @@ const mostrarPanelImagen = () => {
 botonTexto.onclick = mostrarPanelTexto;
 botonImg.onclick = mostrarPanelImagen;
 
+// Función ocultar panel con icono cruz
+const iconoCruzImg = document.querySelector(".icono-cruz-img");
+const iconoCruzTexto = document.querySelector(".icono-cruz-texto");
+
+iconoCruzImg.onclick = () => {
+  panelImg.classList.add("ocultar");
+};
+
+iconoCruzTexto.onclick = () => {
+  panelTexto.classList.add("ocultar");
+};
+
 //funcion de url imagen
 
 const imagenMeme = document.getElementById("img-meme");
@@ -166,6 +178,7 @@ textoSuperiorUsuario.oninput = () => {
 textoInferiorUsuario.oninput = () => {
   textoInferior.textContent = textoInferiorUsuario.value;
 };
+
 //Funcion Sacar Texto Superior e Inferior
 const sinTextoSuperior = document.getElementById("sin-texto-superior");
 const sinTextoInferior = document.getElementById("sin-texto-inferior");
@@ -185,33 +198,55 @@ sinTextoInferior.oninput = () => {
   }
 };
 //Funcion Cambio de Fuentes
-const selectFuentes = document.getElementById('tipos-de-fuentes');
-const selectArial = document.getElementById('Arial');
-const selectArialBlack = document.getElementById('Arial-Black');
-const selectAmericanTypewriter = document.getElementById('American-Typewriter');
-const selectAndaleMono = document.getElementById('Andale-Mono');
-const selctComicSansMS = document.getElementById('Comic-Sans-MS');
-const selectHelvetica = document.getElementById('Helvetica');
-const selectImpact = document.getElementById('Impact');
-const selectVerdana = document.getElementById('Verdana');
-const selectTimesNewRoman = document.getElementById('Times-New-Roman');
-
+selectFuentes = document.getElementById("tipos-de-fuentes");
 const cambiarFuentes = (event) => {
   if (event.target.value === 'Arial') {
-    textoSuperior.style.fontFamily = 'Arial, Helvetica, sans-serif';
-    textoInferior.style.fontFamily = 'Arial, Helvetica, sans-serif';
-  } else if (event.target.value === 'Arial Black') {
-    textoSuperior.style.fontFamily = 'Arial, Helvetica, sans-serif';
-    textoInferior.style.fontFamily = 'Arial, Helvetica, sans-serif';
-    textoSuperior.style.fontWeight = 'bolder';
+    textoSuperior.style.fontFamily = 'Arial';
+    textoInferior.style.fontFamily = 'Arial';
+  } 
+  else if (event.target.value === 'Permanent Marker') {
+    textoSuperior.style.fontFamily = "'Permanent Marker', cursive";
+    textoInferior.style.fontFamily = "'Permanent Marker', cursive";
+  } 
+  else if (event.target.value === 'Palette Mosaic') {
+    textoSuperior.style.fontFamily = "'Palette Mosaic', cursive";
+    textoInferior.style.fontFamily = "'Palette Mosaic', cursive";
+  } 
+  else if (event.target.value === 'WindSong') {
+    textoSuperior.style.fontFamily = "'WindSong', cursive";
+    textoInferior.style.fontFamily = "'WindSong', cursive";
+  }
+   else if (event.target.value === 'Courier New') {
+    textoSuperior.style.fontFamily = "'Courier New', Courier, monospace";
+    textoInferior.style.fontFamily = "'Courier New', Courier, monospace";
+  } 
+  else if (event.target.value === "Unset") {
+    textoSuperior.style.fontFamily = "Unset";
+    textoInferior.style.fontFamily = "Unset";
+  }
+   else if (event.target.value === 'Shadows Into Light' ) {
+    textoSuperior.style.fontFamily = "'Shadows Into Light', cursive";
+    textoInferior.style.fontFamily = "'Shadows Into Light', cursive";
+  }
+   else if (event.target.value === 'Style Script') {
+    textoSuperior.style.fontFamily = "'Style Script', cursive";
+    textoInferior.style.fontFamily = "'Style Script', cursive";
+  }
+   else if (event.target.value === 'Times New Roman') {
+    textoSuperior.style.fontFamily = "'Times New Roman', Times, serif;";
+    textoInferior.style.fontFamily = "'Times New Roman', Times, serif;";
   }
 };
-
 selectFuentes.addEventListener('change', cambiarFuentes);
  
 
 /* Tamaño Letra Formulario Texto */
 const tamanioLetra = document.getElementById('tamanio-letra');
+
+tamanioLetra.oninput = () => {
+  textoSuperior.style.fontSize = tamanioLetra.value + "px"
+  textoInferior.style.fontSize = tamanioLetra.value + "px"
+}
 
 /*Alineacion Formulario Texto */
 
@@ -220,15 +255,18 @@ const alineacionCentro = document.getElementById('boton-centrado');
 const alineacionDerecha = document.getElementById('boton-derecha');
 
 
-alineacionIzquierda.onclick = () => {
+alineacionIzquierda.onclick = (event) => {
+   event.preventDefault();
   textoSuperior.style.justifyContent = "flex-start"
   textoInferior.style.justifyContent = "flex-start"
 };
-alineacionCentro.onclick = () => {
+alineacionCentro.onclick = (event) => {
+  event.preventDefault();
   textoSuperior.style.justifyContent = 'center';
   textoInferior.style.justifyContent = 'center';
 };
-alineacionDerecha.onclick = () => {
+alineacionDerecha.onclick = (event) => {
+  event.preventDefault();
   textoSuperior.style.justifyContent = 'flex-end';
   textoInferior.style.justifyContent = 'flex-end';
 }
@@ -236,41 +274,70 @@ alineacionDerecha.onclick = () => {
  // FORMULARIO - TEXTO COLOR Y FONDO
 // COLOR
  
+let parrafoInferior= document.querySelector (".parrafo-inferior")// texto del input texto inferior
+let parrafoSuperior= document.querySelector(".parrafo-superior") //Texto del input texto superior
 
-/* let inputColorFormTexto = document.getElementById("input-color");
-let colorFondoFormTexto = document.querySelector("input-fondo");
- 
-const colorFormTexto = (event) => {
- inputColorFormTexto.textContent = event.target.value;
- aplicarFiltro(); //llama a la funcion que aplica los filtros
-};
- 
-inputColorFormTexto.addEventListener("input", colorFormTexto);
- 
-/*
-let aplicarFiltro = () => {
- imagenFondo.style.mixBlendMode = seleccionDeFondo; //el mix necesita imagen y fondo
- contenedorDeImagen.style.backgroundColor = inputColor.value;
-};
+let inputFondoTexto= document.getElementById("input-color-fondo") //picker de color de fondo
+let inputColorTexto= document.getElementById ("input-color-texto") //picker de color del texto 
 
+let spanColorTexto= document.querySelector(".span-color-texto") //el codigo del color que se elije 
+let spanFondoTexto= document.querySelector(".span-fondo-texto") // el codigo del color del fondo
+
+//FUNCION PARA CAMBIAR EL CODIGO DEL COLOR DEL INPUT COLOR PICKER 
+
+const codigoDeColor= (event) => {
+spanColorTexto.textContent= event.target.value;
+    
+}
+inputColorTexto.addEventListener ("input", codigoDeColor)
+
+const codigoColorFondo= (event)=>{
+  spanFondoTexto.textContent= event.target.value;
+  //console.log (colorFondoTexto)
+}
+inputFondoTexto.addEventListener ("input", codigoColorFondo)
+
+// FUNCION PARA CAMBIAR EL COLOR DEL TEXTO 
+const cambiarColorTexto= (event) =>{
+  parrafoSuperior.style.color=inputColorTexto.value
+  parrafoInferior.style.color=inputColorTexto.value
+  
+}
+
+inputColorTexto.addEventListener ("input", cambiarColorTexto)
+
+//FUNCION PARA APLICAR EL COLOR DE FONDO 
+const cambiarColorFondoTexto= (event)=>{
+
+  textoSuperior.style.backgroundColor= inputFondoTexto.value
+  textoInferior.style.backgroundColor= inputFondoTexto.value
+
+}
+
+inputFondoTexto.addEventListener ("input", cambiarColorFondoTexto)
 
 //FONDO TRANSPARENTE CHECKBOX
- 
-let fondoTransparenteSup = document.querySelector(".texto-superior")
-let fondoTransparenteInf = document.querySelector(".texto-inferior")
- 
 
-const fondoTransparente = (event) => {
- fondoTransparenteSup.remove = event.target; //ver si funciona remove para quitar el estilo
- aplicarTransparencia ();
+let checkboxTransparente=document.getElementById("fondo-transparente")
+//llamar a la clase del p 
+//poner el p en zindex cuando es fondo transparente
+//sacar el div 
+
+checkboxTransparente.oninput= ()=> {
+  if (checkboxTransparente.checked){
+    textoSuperior.style.display="none"
+    textoInferior.style.display="none"
+  }
+  else{
+    textoSuperior.style.backgroundColor="white"
+    textoInferior.style.backgroundColor="white"
+    textoSuperior.style.display="flex"
+    textoInferior.style.display="flex"
+
+  }
 }
- 
-fondoTransparenteSup.addEventListener("target", fondoTransparente);
- 
-//textoSuperior es el nombre de la variable sugerida en la primer parte del formulario que se usaria para el fondo transparente
-let aplicarTransparencia = () =>{
- textoSuperior.style.backgroundColor= superiorColor; //superiorColor es la funcion que se deberia usar para darle los estilos en texto superior
-}
-*/
+
+
+
 
 
