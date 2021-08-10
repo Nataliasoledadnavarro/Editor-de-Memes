@@ -185,33 +185,55 @@ sinTextoInferior.oninput = () => {
   }
 };
 //Funcion Cambio de Fuentes
-const selectFuentes = document.getElementById('tipos-de-fuentes');
-const selectArial = document.getElementById('Arial');
-const selectArialBlack = document.getElementById('Arial-Black');
-const selectAmericanTypewriter = document.getElementById('American-Typewriter');
-const selectAndaleMono = document.getElementById('Andale-Mono');
-const selctComicSansMS = document.getElementById('Comic-Sans-MS');
-const selectHelvetica = document.getElementById('Helvetica');
-const selectImpact = document.getElementById('Impact');
-const selectVerdana = document.getElementById('Verdana');
-const selectTimesNewRoman = document.getElementById('Times-New-Roman');
-
+selectFuentes = document.getElementById("tipos-de-fuentes");
 const cambiarFuentes = (event) => {
   if (event.target.value === 'Arial') {
-    textoSuperior.style.fontFamily = 'Arial, Helvetica, sans-serif';
-    textoInferior.style.fontFamily = 'Arial, Helvetica, sans-serif';
-  } else if (event.target.value === 'Arial Black') {
-    textoSuperior.style.fontFamily = 'Arial, Helvetica, sans-serif';
-    textoInferior.style.fontFamily = 'Arial, Helvetica, sans-serif';
-    textoSuperior.style.fontWeight = 'bolder';
+    textoSuperior.style.fontFamily = 'Arial';
+    textoInferior.style.fontFamily = 'Arial';
+  } 
+  else if (event.target.value === 'Permanent Marker') {
+    textoSuperior.style.fontFamily = "'Permanent Marker', cursive";
+    textoInferior.style.fontFamily = "'Permanent Marker', cursive";
+  } 
+  else if (event.target.value === 'Palette Mosaic') {
+    textoSuperior.style.fontFamily = "'Palette Mosaic', cursive";
+    textoInferior.style.fontFamily = "'Palette Mosaic', cursive";
+  } 
+  else if (event.target.value === 'WindSong') {
+    textoSuperior.style.fontFamily = "'WindSong', cursive";
+    textoInferior.style.fontFamily = "'WindSong', cursive";
+  }
+   else if (event.target.value === 'Courier New') {
+    textoSuperior.style.fontFamily = "'Courier New', Courier, monospace";
+    textoInferior.style.fontFamily = "'Courier New', Courier, monospace";
+  } 
+  else if (event.target.value === "Unset") {
+    textoSuperior.style.fontFamily = "Unset";
+    textoInferior.style.fontFamily = "Unset";
+  }
+   else if (event.target.value === 'Shadows Into Light' ) {
+    textoSuperior.style.fontFamily = "'Shadows Into Light', cursive";
+    textoInferior.style.fontFamily = "'Shadows Into Light', cursive";
+  }
+   else if (event.target.value === 'Style Script') {
+    textoSuperior.style.fontFamily = "'Style Script', cursive";
+    textoInferior.style.fontFamily = "'Style Script', cursive";
+  }
+   else if (event.target.value === 'Times New Roman') {
+    textoSuperior.style.fontFamily = "'Times New Roman', Times, serif;";
+    textoInferior.style.fontFamily = "'Times New Roman', Times, serif;";
   }
 };
-
 selectFuentes.addEventListener('change', cambiarFuentes);
  
 
 /* Tamaño Letra Formulario Texto */
 const tamanioLetra = document.getElementById('tamanio-letra');
+
+tamanioLetra.oninput = () => {
+  textoSuperior.style.fontSize = tamanioLetra.value + "px"
+  textoInferior.style.fontSize = tamanioLetra.value + "px"
+}
 
 /*Alineacion Formulario Texto */
 
@@ -220,15 +242,18 @@ const alineacionCentro = document.getElementById('boton-centrado');
 const alineacionDerecha = document.getElementById('boton-derecha');
 
 
-alineacionIzquierda.onclick = () => {
+alineacionIzquierda.onclick = (event) => {
+   event.preventDefault();
   textoSuperior.style.justifyContent = "flex-start"
   textoInferior.style.justifyContent = "flex-start"
 };
-alineacionCentro.onclick = () => {
+alineacionCentro.onclick = (event) => {
+  event.preventDefault();
   textoSuperior.style.justifyContent = 'center';
   textoInferior.style.justifyContent = 'center';
 };
-alineacionDerecha.onclick = () => {
+alineacionDerecha.onclick = (event) => {
+  event.preventDefault();
   textoSuperior.style.justifyContent = 'flex-end';
   textoInferior.style.justifyContent = 'flex-end';
 }
