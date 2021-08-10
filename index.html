@@ -35,17 +35,17 @@
 
 <main>
   <section class="conteiner-imagen" id="contenedor-imagen">
-    <div class="texto-superior"><p class="parrafo-superior">SUPERIOR</p></div>
+    <div class="texto-superior"><p class="parrafo-superior">TEXTO SUPERIOR</p></div>
     <div class="imagen-src"><img src="" alt="Imagen para editar el meme" id="img-meme" class="imagen-fondo"></div>
-    <div class="texto-inferior"><p class="parrafo-inferior ">TEXTO INFERIOR</p></div>
+    <div class="texto-inferior"><p class="parrafo-inferior">TEXTO INFERIOR</p></div>
   </section>
 
   <button class="descargar" id="boton-descargar" aria-label="Descargar meme"><i class="fas fa-download"></i>Descargar meme</button>
 
 </main>
 
-<aside id="panel-img" Aria-labelledby="Menu imagen" class="panel-img">
-  <div class="contenedor-icono-cruz" aria-label="Cerrar menu imagen"><i class="far fa-window-close icono-cruz-img"></i></div>
+<aside id="panel-img"  class="panel-img">
+  <button class="boton-cerrar-menu-imagen" aria-label="Cerrar menu imagen"><i class="far fa-window-close icono-cruz-img"></i></button>
   <form class="form-img">
   <h2 class="titulo-panel">IMAGEN</h2>
   
@@ -78,39 +78,39 @@
   <h3 class="filtros">FILTROS</h3>
 
   <label for="rango-brillo">BRILLO
-    <input type="range" id="rango-brillo" min="0" max="1" step="0.1" value="1" name="brillo" aria-label="Rango para modificar el brillo de la imagen">
+    <input type="range" id="rango-brillo" min="0" max="1" step="0.1" value="1" name="brillo">
   </label>
 
   <label for="rango-opacidad">OPACIDAD
-    <input type="range" id="rango-opacidad"min="0" max="1" step="0.1" value="1"  name="opacidad" aria-label="Rango para modificar la opacidad de la imagen" >
+    <input type="range" id="rango-opacidad"min="0" max="1" step="0.1" value="1"  name="opacidad">
   </label>
   
   <label for="rango-contraste">CONTRASTE
-    <input type="range" id="rango-contraste" min="100" max="1000" step="1" value="100" name="contraste" aria-label="Rango para modificar el contraste de la imagen">
+    <input type="range" id="rango-contraste" min="100" max="1000" step="1" value="100" name="contraste">
   </label>
 
   <label for="rango-desenfoque">DESENFOQUE
-    <input type="range" id="rango-desenfoque" min="0" max="10" step="0.1" value="0"  name="desenfoque" aria-label="Rango para modificar el desenfoque de la imagen" >
+    <input type="range" id="rango-desenfoque" min="0" max="10" step="0.1" value="0"  name="desenfoque">
   </label>
 
   <label for="rango-grises">ESCALA DE GRISES
-    <input type="range" id="rango-grises" min="0" max="100" step="1" value="0"  name="grises" aria-label="Rango para modificar escala de grises de la imagen">
+    <input type="range" id="rango-grises" min="0" max="100" step="1" value="0"  name="grises">
   </label>
 
   <label for="rango-sepia">SEPIA
-    <input type="range" id="rango-sepia" min="0" max="100" step="1" value="0"  name="sepia" aria-label="Rango para modificar sepia de la imagen" >
+    <input type="range" id="rango-sepia" min="0" max="100" step="1" value="0"  name="sepia">
   </label>
 
   <label for="rango-hue">HUE
-    <input type="range" id="rango-hue" min="0" max="359" step="1" value="0"  name="hue" aria-label="Rango para modifcar el hue de la imagen" > 
+    <input type="range" id="rango-hue" min="0" max="359" step="1" value="0"  name="hue"> 
   </label>
 
   <label for="rango-saturado">SATURADO
-    <input type="range" id="rango-saturado" min="100" max="1000" step="10" value="100"  name="saturado" aria-label="Rango para editar el saturado de la imagen">
+    <input type="range" id="rango-saturado" min="100" max="1000" step="10" value="100"  name="saturado">
   </label>
 
   <label for="rango-negativo">Negativo
-    <input type="range" id="rango-negativo" min="0" max="1" step="0.1" value="0" name="negativo"aria-label="Rango para editar el negativo de la imagen" >
+    <input type="range" id="rango-negativo" min="0" max="1" step="0.1" value="0" name="negativo">
   </label>
 
   <button class="reestablecer-filtros" aria-label="Reestablecer Filtros">Reestablecer Filtros</button>
@@ -118,30 +118,35 @@
 </form>
 </aside>
 
-<aside class="panel-texto ocultar" id="panel-texto" Aria-labelledby="Menu Texto" >
+<aside class="panel-texto ocultar" id="panel-texto">
 
-  <div class="contenedor-icono-cruz" aria-label="Cerrar menu texto"><i class="far fa-window-close icono-cruz-texto"></i></div>
+  <button class="boton-cerrar-menu-texto" aria-label="Cerrar menu texto"><i class="far fa-window-close icono-cruz-texto"></i></button>
   <form class="form-texto">
 
   <h2 class="titulo-panel-texto">TEXTO</h2>
 
   <div>
-  <h3>SUPERIOR</h3>
-    <textarea name="texto" id="superior" cols="10" rows="2">TOP TEXT</textarea>
-    <input type="checkbox" id="sin-texto-superior">
-    <label for="sin-texto" id="superior">Sin texto superior</label> 
+    <h3>SUPERIOR</h3>
+      <textarea name="texto" id="superior" cols="10" rows="2" aria-label="Escribir texto superior">TOP TEXT</textarea>
+      
+      <label for="sin-texto-superior" id="superior">Sin texto superior
+        <input type="checkbox" id="sin-texto-superior">
+      </label> <!-- rodeo el input con el label y modificfo el for para que sea igual al id-->
   </div>
+
 
   <div>
     <h3>INFERIOR</h3>
-    <textarea name="texto" id="inferior" cols="10" rows="2">BOTTOM TEXT</textarea>
-    <input type="checkbox" id="sin-texto-inferior">
-    <label for="sin-texto" id="inferior">Sin texto inferior</label> 
+    <textarea name="texto" id="inferior" cols="10" rows="2" aria-label="Escribir texto inferior">BOTTOM TEXT</textarea>
+   
+    <label for="sin-texto-inferior" id="inferior">Sin texto inferior
+      <input type="checkbox" id="sin-texto-inferior" aria-label="Sin texto inferior">
+    </label> <!-- rodeo el input con el label y modificfo el for para que sea igual al id-->
   </div>
   
 
   <h3>FUENTE</h3>
-    <select name="fuente" id="tipos-de-fuentes">
+    <select name="fuente" id="tipos-de-fuentes" aria-label="Seleccionar tipo de fuentes"><!-- agrero aria label por no tener label-->
       <option value="Arial">Arial</option>
       <option value="Permanent Marker">Permanent Marker</option>
       <option value="Palette Mosaic">Palette Mosaic</option>
@@ -154,11 +159,11 @@
     </select>
 
   <div class="tamanio-letra">
-    <input type="number"id="tamanio-letra" min="12">
+    <input type="number" id="tamanio-letra" min="12" value="30" aria-label="Tamaño de letra"><!-- agrego aria label por no tener label y agrego value-->
     <div class="alineacion">
-    <button id="boton-izquierda"><i class="fas fa-align-left" aria-hidden="true"></i></button>
-    <button id="boton-centrado"><i class="fas fa-align-center" aria-hidden="true"></i></button>
-    <button id="boton-derecha"><i class="fas fa-align-right" aria-hidden="true"></i></button>
+    <button id="boton-izquierda"><i class="fas fa-align-left"></i></button><!-- saco area hidden por ser redundante -->
+    <button id="boton-centrado"><i class="fas fa-align-center"></i></button>
+    <button id="boton-derecha"><i class="fas fa-align-right"></i></button>
     </div>
   </div>
 
@@ -168,7 +173,7 @@
       <h3>COLOR </h3>
       <div class="color-color">
         <input name="Color de texto" type="color" id="input-color-texto" value="#000000" aria-label="Color de texto">
-        <span class="span-color-texto">#000000</span>
+        <span class="span-color-texto" aria-hidden="true">#000000</span>
       </div>
     </div>
 
@@ -176,14 +181,16 @@
       <h3>FONDO</h3>
       <div class="fondo-fondo">
         <input name="Color de fondo" type="color" id="input-color-fondo" value="#FFFFFF" aria-label="Color de fondo">
-        <span class="span-fondo-texto">#FFFFFF</span>
+        <span class="span-fondo-texto" aria-hidden="true">#FFFFFF</span>
       </div>
     </div>
 
   </div>
 
-    <input type="checkbox" id="fondo-transparente">
-    <label for="fondo-transparente">Fondo transparente</label> 
+    
+    <label for="fondo-transparente">Fondo transparente
+      <input type="checkbox" id="fondo-transparente">
+    </label> <!-- rodeo el input con el label y modificfo el for para que sea igual al id-->
 
   <div class="tipos-contorno">
   <h3>CONTORNO</h3>
@@ -198,7 +205,7 @@
   </label>
 
   <label for="interlineado">
-    <h3>INTERLINEADO</h3>
+    <h3>INTERLINEADO</h3><!-- no lo lee como el label. chequear si puede sacarse-->
     <select name="interlineado" id="interlineado">
     <option value="0.8">0.8</option>
     <option value="1">1</option>

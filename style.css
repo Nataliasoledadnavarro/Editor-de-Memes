@@ -60,9 +60,12 @@ main {
   display: flex;
   align-items: center;
   justify-content: center;
-  font-size: 28px;
+  font-size: 30px; /* este numero coincide con el valor de input tamanio-letra*/
   font-weight: bolder;
 }
+
+.parrafo-superior{margin: 15px;}
+.parrafo-inferior{margin: 15px;} /* acomodo margenes de los p*/
 
 .imagen-src {
   height: 100%;
@@ -192,18 +195,38 @@ input[type="range"] {
   font-size: 16px;
 }
 
-.fa-window-close{
-  color: rgba(255, 255, 255, 0.74);
+.boton-cerrar-menu-imagen {
   position: absolute;
   top: 10px;
-  left: 20px;
+  left: 10px;
+  border: none;
+  background-color: transparent;
+  display: none;
+}
+
+.boton-cerrar-menu-texto {
+  position: absolute;
+  top: 10px;
+  left: 10px;
+  border: none;
+  background-color: transparent;
+  display: none;
+}
+
+.fa-window-close {
+  color: rgba(255, 255, 255, 0.74);
   font-size: 20px;
 }
-.contenedor-icono-cruz{display: none;}
 
 @media screen and (max-width: 1000px) {
-  .contenedor-icono-cruz{display: block;}
-  
+  .boton-cerrar-menu-imagen {
+    display: block;
+  }
+
+  .boton-cerrar-menu-texto {
+    display: block;
+  }
+
   #panel-img {
     width: 100%;
   }
@@ -226,8 +249,8 @@ input[type="range"] {
   .conteiner-imagen {
     height: 500px;
   }
-  .texto-superior,
-  .texto-inferior {
+  .parrafo-superior,
+  .parrafo-inferior {
     font-size: 30px;
   }
 }
@@ -271,7 +294,6 @@ input[type="range"] {
   border: none;
   border-radius: 5px;
   font-family: sans-serif;
-  
 }
 #tamanio-letra {
   width: 45%;
@@ -345,20 +367,20 @@ span {
   border-radius: 3px;
 }
 
-textarea,select,input,h3,span {
+textarea,
+select,
+input,
+h3,
+span {
   color: white;
 }
 
 h3 {
   font-size: 14px;
 }
-.parrafo-superior, .parrafo-inferior{
-  margin:0px;
-}
-
 
 /* Clase para modo oscuro */
 /* FUENTES*/
-.arial{
+.arial {
   font-family: Arial, Helvetica, sans-serif;
 }
