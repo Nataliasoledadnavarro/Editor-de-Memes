@@ -236,41 +236,70 @@ alineacionDerecha.onclick = () => {
  // FORMULARIO - TEXTO COLOR Y FONDO
 // COLOR
  
+let parrafoInferior= document.querySelector (".parrafo-inferior")// texto del input texto inferior
+let parrafoSuperior= document.querySelector(".parrafo-superior") //Texto del input texto superior
 
-/* let inputColorFormTexto = document.getElementById("input-color");
-let colorFondoFormTexto = document.querySelector("input-fondo");
- 
-const colorFormTexto = (event) => {
- inputColorFormTexto.textContent = event.target.value;
- aplicarFiltro(); //llama a la funcion que aplica los filtros
-};
- 
-inputColorFormTexto.addEventListener("input", colorFormTexto);
- 
-/*
-let aplicarFiltro = () => {
- imagenFondo.style.mixBlendMode = seleccionDeFondo; //el mix necesita imagen y fondo
- contenedorDeImagen.style.backgroundColor = inputColor.value;
-};
+let inputFondoTexto= document.getElementById("input-color-fondo") //picker de color de fondo
+let inputColorTexto= document.getElementById ("input-color-texto") //picker de color del texto 
 
+let spanColorTexto= document.querySelector(".span-color-texto") //el codigo del color que se elije 
+let spanFondoTexto= document.querySelector(".span-fondo-texto") // el codigo del color del fondo
+
+//FUNCION PARA CAMBIAR EL CODIGO DEL COLOR DEL INPUT COLOR PICKER 
+
+const codigoDeColor= (event) => {
+spanColorTexto.textContent= event.target.value;
+    
+}
+inputColorTexto.addEventListener ("input", codigoDeColor)
+
+const codigoColorFondo= (event)=>{
+  spanFondoTexto.textContent= event.target.value;
+  //console.log (colorFondoTexto)
+}
+inputFondoTexto.addEventListener ("input", codigoColorFondo)
+
+// FUNCION PARA CAMBIAR EL COLOR DEL TEXTO 
+const cambiarColorTexto= (event) =>{
+  parrafoSuperior.style.color=inputColorTexto.value
+  parrafoInferior.style.color=inputColorTexto.value
+  
+}
+
+inputColorTexto.addEventListener ("input", cambiarColorTexto)
+
+//FUNCION PARA APLICAR EL COLOR DE FONDO 
+const cambiarColorFondoTexto= (event)=>{
+
+  textoSuperior.style.backgroundColor= inputFondoTexto.value
+  textoInferior.style.backgroundColor= inputFondoTexto.value
+
+}
+
+inputFondoTexto.addEventListener ("input", cambiarColorFondoTexto)
 
 //FONDO TRANSPARENTE CHECKBOX
- 
-let fondoTransparenteSup = document.querySelector(".texto-superior")
-let fondoTransparenteInf = document.querySelector(".texto-inferior")
- 
 
-const fondoTransparente = (event) => {
- fondoTransparenteSup.remove = event.target; //ver si funciona remove para quitar el estilo
- aplicarTransparencia ();
+let checkboxTransparente=document.getElementById("fondo-transparente")
+//llamar a la clase del p 
+//poner el p en zindex cuando es fondo transparente
+//sacar el div 
+
+checkboxTransparente.oninput= ()=> {
+  if (checkboxTransparente.checked){
+    textoSuperior.style.display="none"
+    textoInferior.style.display="none"
+  }
+  else{
+    textoSuperior.style.backgroundColor="white"
+    textoInferior.style.backgroundColor="white"
+    textoSuperior.style.display="flex"
+    textoInferior.style.display="flex"
+
+  }
 }
- 
-fondoTransparenteSup.addEventListener("target", fondoTransparente);
- 
-//textoSuperior es el nombre de la variable sugerida en la primer parte del formulario que se usaria para el fondo transparente
-let aplicarTransparencia = () =>{
- textoSuperior.style.backgroundColor= superiorColor; //superiorColor es la funcion que se deberia usar para darle los estilos en texto superior
-}
-*/
+
+
+
 
 
