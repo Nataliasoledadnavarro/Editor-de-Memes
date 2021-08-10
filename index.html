@@ -4,13 +4,16 @@
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-
     <link href="style.css" rel="stylesheet"></li>
     <script src="https://kit.fontawesome.com/0ca0e55b9a.js" crossorigin="anonymous"></script>
-
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Otomanopee+One&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Style+Script&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=WindSong:wght@500&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Shadows+Into+Light&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Permanent+Marker&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Palette+Mosaic&display=swap" rel="stylesheet">
     <script src="https://cdnjs.cloudflare.com/ajax/libs/FileSaver.js/2.0.0/FileSaver.min.js" integrity="sha512-csNcFYJniKjJxRWRV1R7fvnXrycHP6qDR21mgz1ZP55xY5d+aHLfo9/FcGDQLfn2IfngbAHd8LdfsagcCqgTcQ==" crossorigin="anonymous"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/dom-to-image/2.6.0/dom-to-image.min.js" integrity="sha512-01CJ9/g7e8cUmY0DFTMcUw/ikS799FHiOA0eyHsUWfOetgbx/t6oV4otQ5zXKQyIrQGTHSmRVPIgrgLcZi/WMA==" crossorigin="anonymous"></script>
     <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -18,6 +21,7 @@
   <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@100&display=swap" rel="stylesheet">
     <title>¡CREÁ TU PROPIO MEME!</title>
   </head>
+ 
 <body>
 <header>
   <h1> Generador de Memes</h1>
@@ -30,9 +34,9 @@
 
 <main>
   <section class="conteiner-imagen" id="contenedor-imagen">
-    <div class="texto-superior">TEXTO SUPERIOR</div>
+    <div class="texto-superior"><p class="parrafo-superior">SUPERIOR</p></div>
     <div class="imagen-src"><img src="" alt="Imagen para editar el meme" id="img-meme" class="imagen-fondo"></div>
-    <div class="texto-inferior">TEXTO INFERIOR</div>
+    <div class="texto-inferior"><p class="parrafo-inferior ">TEXTO INFERIOR</p></div>
   </section>
 
   <button class="descargar" id="boton-descargar" aria-label="Descargar meme"><i class="fas fa-download"></i>Descargar meme</button>
@@ -40,7 +44,8 @@
 </main>
 
 <aside id="panel-img" Aria-labelledby="Menu imagen" class="panel-img">
-<form class="form-img">
+  <div class="contenedor-icono-cruz"><i class="far fa-window-close icono-cruz-img"></i></div>
+  <form class="form-img">
   <h2 class="titulo-panel">IMAGEN</h2>
   
   <label for="url">URL
@@ -112,7 +117,8 @@
 </form>
 </aside>
 
-<aside class="panel-texto ocultar" Aria-labelledby="Menu Texto" id="panel-texto">
+<div class="panel-texto ocultar" Aria-labelledby="Menu Texto" id="panel-texto">
+  <div class="contenedor-icono-cruz"><i class="far fa-window-close icono-cruz-texto"></i></div>
   <form class="form-texto">
 
   <h2 class="titulo-panel-texto">TEXTO</h2>
@@ -134,15 +140,15 @@
 
   <h3>FUENTE</h3>
     <select name="fuente" id="tipos-de-fuentes">
-      <option id="Arial" value="Arial">Arial</option>
-      <option id="Arial-Black" value="Arial Black">Arial Black</option>
-      <option id="American-Typewriter" value="American Typewriter">American Typewriter</option>
-      <option id="Andale-Mono" value="Andale Mono">Andale Mono</option>
-      <option id="Comic-Sans-MS" value="Comic Sans MS">Comic Sans MS</option>
-      <option id="Helvetica" value="Helvetica">Helvetica</option>
-      <option id="Impact" value="Impact" selected="">Impact</option>
-      <option id="Verdana" value="Verdana">Verdana</option>
-      <option id="Times-New-Roman" value="Times New Roman">Times New Roman</option>
+      <option value="Arial">Arial</option>
+      <option value="Permanent Marker">Permanent Marker</option>
+      <option value="Palette Mosaic">Palette Mosaic</option>
+      <option value="WindSong">WindSong</option>
+      <option value="Courier New">Courier New</option>
+      <option value="Unset">Unset</option>
+      <option value="Shadows Into Light">Shadows Into Light</option>
+      <option value="Style Script">Style Script</option>
+      <option value="Times New Roman">Times New Roman</option>
     </select>
 
   <div class="tamanio-letra">
@@ -159,16 +165,16 @@
     <div class="color">
       <h3>COLOR </h3>
       <div class="color-color">
-        <input name="Color de texto" type="color" id="input-color" value="#000000" aria-label="Color de texto">
-        <span>#000000</span>
+        <input name="Color de texto" type="color" id="input-color-texto" value="#000000" aria-label="Color de texto">
+        <span class="span-color-texto">#000000</span>
       </div>
     </div>
 
     <div class="fondo">
       <h3>FONDO</h3>
       <div class="fondo-fondo">
-        <input name="Color de fondo" type="color" id="input-fondo" value="#FFFFFF" aria-label="Color de fondo">
-        <span>#FFFFFF</span>
+        <input name="Color de fondo" type="color" id="input-color-fondo" value="#FFFFFF" aria-label="Color de fondo">
+        <span class="span-fondo-texto">#FFFFFF</span>
       </div>
     </div>
 
@@ -203,7 +209,6 @@
 
   </form>
 </aside>
-
 <script src="index.js"></script>
 </body>
 </html> 
