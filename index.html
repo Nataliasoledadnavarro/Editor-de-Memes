@@ -17,8 +17,8 @@
     <script src="https://cdnjs.cloudflare.com/ajax/libs/FileSaver.js/2.0.0/FileSaver.min.js" integrity="sha512-csNcFYJniKjJxRWRV1R7fvnXrycHP6qDR21mgz1ZP55xY5d+aHLfo9/FcGDQLfn2IfngbAHd8LdfsagcCqgTcQ==" crossorigin="anonymous"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/dom-to-image/2.6.0/dom-to-image.min.js" integrity="sha512-01CJ9/g7e8cUmY0DFTMcUw/ikS799FHiOA0eyHsUWfOetgbx/t6oV4otQ5zXKQyIrQGTHSmRVPIgrgLcZi/WMA==" crossorigin="anonymous"></script>
     <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@100&display=swap" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@100&display=swap" rel="stylesheet">
     <title>¡CREÁ TU PROPIO MEME!</title>
   </head>
  
@@ -46,7 +46,7 @@
 <aside id="panel-img" Aria-labelledby="Menu imagen" class="panel-img">
   <div class="contenedor-icono-cruz"><i class="far fa-window-close icono-cruz-img"></i></div>
   <form class="form-img">
-  <h2 class="titulo-panel">IMAGEN</h2>
+  <h2 class="titulo-panel" id="titulo-formulario">IMAGEN</h2>
   
   <label for="url">URL
     <input type="text" id="url" name="url">
@@ -117,28 +117,28 @@
 </form>
 </aside>
 
-<div class="panel-texto ocultar" Aria-labelledby="Menu Texto" id="panel-texto">
+<aside class="panel-texto ocultar" Aria-labelledby="Menu Texto" id="panel-texto">
   <div class="contenedor-icono-cruz"><i class="far fa-window-close icono-cruz-texto"></i></div>
   <form class="form-texto">
 
-  <h2 class="titulo-panel-texto">TEXTO</h2>
+  <h2 class="titulo-panel-texto" id="titulo-formulario-texto">TEXTO</h2>
 
   <div>
-  <h3>SUPERIOR</h3>
+  <h3 id="titulo-texto-superior">SUPERIOR</h3>
     <textarea name="texto" id="superior" cols="10" rows="2">TOP TEXT</textarea>
     <input type="checkbox" id="sin-texto-superior">
     <label for="sin-texto" id="superior">Sin texto superior</label> 
   </div>
 
   <div>
-    <h3>INFERIOR</h3>
+    <h3 id="titulo-texto-inferior">INFERIOR</h3>
     <textarea name="texto" id="inferior" cols="10" rows="2">BOTTOM TEXT</textarea>
     <input type="checkbox" id="sin-texto-inferior">
     <label for="sin-texto" id="inferior">Sin texto inferior</label> 
   </div>
   
 
-  <h3>FUENTE</h3>
+  <h3 id="titulo-fuente">FUENTE</h3>
     <select name="fuente" id="tipos-de-fuentes">
       <option value="Arial">Arial</option>
       <option value="Permanent Marker">Permanent Marker</option>
@@ -163,7 +163,7 @@
   <div class="color-y-fondo">
     
     <div class="color">
-      <h3>COLOR </h3>
+      <h3 id="titulo-color">COLOR </h3>
       <div class="color-color">
         <input name="Color de texto" type="color" id="input-color-texto" value="#000000" aria-label="Color de texto">
         <span class="span-color-texto">#000000</span>
@@ -171,7 +171,7 @@
     </div>
 
     <div class="fondo">
-      <h3>FONDO</h3>
+      <h3 id="titulo-fondo">FONDO</h3>
       <div class="fondo-fondo">
         <input name="Color de fondo" type="color" id="input-color-fondo" value="#FFFFFF" aria-label="Color de fondo">
         <span class="span-fondo-texto">#FFFFFF</span>
@@ -184,19 +184,19 @@
     <label for="fondo-transparente">Fondo transparente</label> 
 
   <div class="tipos-contorno">
-  <h3>CONTORNO</h3>
+  <h3 id="titulo-contorno">CONTORNO</h3>
   <button id="ninguno">Ninguno</button>
   <button id="claro">Claro</button>
   <button id="oscuro">Oscuro</button>
   </div>
 
   <label for="espaciado">
-    <h3>ESPACIADO</h3>
+    <h3 id="titulo-espaciado">ESPACIADO</h3>
     <input type="number" id="espaciado">
   </label>
 
   <label for="interlineado">
-    <h3>INTERLINEADO</h3>
+    <h3 id="titulo-interlineado">INTERLINEADO</h3>
     <select name="interlineado" id="interlineado">
     <option value="0.8">0.8</option>
     <option value="1">1</option>

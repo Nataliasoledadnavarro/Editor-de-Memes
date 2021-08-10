@@ -340,25 +340,53 @@ checkboxTransparente.oninput= ()=> {
 
 
 
-
+//Funcion modo oscuro-claro
 
 const botonModoOscuro = document.getElementById("boton-modo-oscuro");
+
 const fondoBody = document.querySelector("body");
 const fondoHeader = document.querySelector("header");
 const tituloPrincipal = document.querySelector("h1");
 const botonesNav = document.querySelector("nav");
-const formularios = document.querySelector("form");  //seleciona solo el primer form
+const panelFondo = document.querySelector("#panel-img"); //aside con el id si
+const panelTextoModoClaro = document.querySelector("#panel-texto")//aside
+
+//fuentes modo claro
+const tituloFormularioImg = document.querySelector("#titulo-formulario") //titulo formulario imagen
+
+const tituloFormularioTexto = document.querySelector("#titulo-formulario-texto") //titulo formulario texto
+const tituloTextoSuperior = document.querySelector("#titulo-texto-superior")
+const tituloTextoInferior = document.querySelector("#titulo-texto-inferior")
+const tituloFuente = document.querySelector("#titulo-fuente")
+const tituloColor = document.querySelector("#titulo-color")
 
 const cambiarModo = () => {
-  
-  fondoBody.classList.toggle("body-modo-claro")
-  fondoHeader.classList.toggle("clase-modo-claro")
-  tituloPrincipal.classList.toggle("clase-modo-claro")
-  botonesNav.classList.toggle("nav")
-  formularios.classList.toggle("form")
+  fondoBody.classList.toggle("clase-modo-claro") //ok
+  fondoHeader.classList.toggle("clase-modo-claro") //ok
+  tituloPrincipal.classList.toggle("clase-modo-claro") //ok
+  botonesNav.classList.toggle("nav") //ok
+  panelFondo.classList.toggle("panel-fondo-claro")
+  panelTextoModoClaro.classList.toggle("panel-fondo-claro")
+  // tituloFormularioImg.classList.toggle("fuentes-modo-claro")
+  // tituloFormularioTexto.classList.toggle("fuentes-modo-claro")
+  // tituloTextoSuperior.classList.toggle("fuentes-modo-claro")
+  // tituloTextoInferior.classList.toggle("fuentes-modo-claro")
+  // tituloFuente.classList.toggle("fuentes-modo-claro")
+  // tituloColor.classList.toggle("fuentes-modo-claro")
+  fuentesModoClaro()
 }
 
 botonModoOscuro.onclick = cambiarModo;
+
+const fuentesModoClaro = () =>{
+  tituloFormularioImg.classList.toggle("fuentes-modo-claro")
+  tituloFormularioTexto.classList.toggle("fuentes-modo-claro")
+  tituloTextoSuperior.classList.toggle("fuentes-modo-claro")
+  tituloTextoInferior.classList.toggle("fuentes-modo-claro")
+  tituloFuente.classList.toggle("fuentes-modo-claro")
+  tituloColor.classList.toggle("fuentes-modo-claro")
+}
+
 
 
 

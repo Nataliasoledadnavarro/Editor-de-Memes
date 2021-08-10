@@ -357,24 +357,26 @@ h3 {
 }
 
 
-/* Clase para modo claro */
-.body-modo-claro{
-  background-color:#eeeeee;
+/* Clases para modo claro */
 
-}
+
 .clase-modo-claro{
   background-color:#e0e0e0;
   color: rgb(46, 45, 45);
-
 }
+
 .nav > button{ 
   background-color: transparent;
   color: rgb(46, 45, 45);
 } 
 
-.form > h2{
+.fuentes-modo-claro{
+  color:rgb(46, 45, 45);
+}
+
+.panel-fondo-claro {
+  background-color: #fafafa;
   color: rgb(46, 45, 45);
-  
 }
 
 
