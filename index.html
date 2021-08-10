@@ -16,8 +16,13 @@
     <link href="https://fonts.googleapis.com/css2?family=Palette+Mosaic&display=swap" rel="stylesheet">
     <script src="https://cdnjs.cloudflare.com/ajax/libs/FileSaver.js/2.0.0/FileSaver.min.js" integrity="sha512-csNcFYJniKjJxRWRV1R7fvnXrycHP6qDR21mgz1ZP55xY5d+aHLfo9/FcGDQLfn2IfngbAHd8LdfsagcCqgTcQ==" crossorigin="anonymous"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/dom-to-image/2.6.0/dom-to-image.min.js" integrity="sha512-01CJ9/g7e8cUmY0DFTMcUw/ikS799FHiOA0eyHsUWfOetgbx/t6oV4otQ5zXKQyIrQGTHSmRVPIgrgLcZi/WMA==" crossorigin="anonymous"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@100&display=swap" rel="stylesheet">
+
     <title>¡CREÁ TU PROPIO MEME!</title>
   </head>
+ 
 <body>
 <header>
   <h1> Generador de Memes</h1>
@@ -40,7 +45,8 @@
 </main>
 
 <aside id="panel-img" Aria-labelledby="Menu imagen" class="panel-img">
-<form class="form-img">
+  <div class="contenedor-icono-cruz"><i class="far fa-window-close icono-cruz-img"></i></div>
+  <form class="form-img">
   <h2 class="titulo-panel">IMAGEN</h2>
   
   <label for="url">URL
@@ -112,7 +118,8 @@
 </form>
 </aside>
 
-<aside class="panel-texto ocultar" Aria-labelledby="Menu Texto" id="panel-texto">
+<div class="panel-texto ocultar" Aria-labelledby="Menu Texto" id="panel-texto">
+  <div class="contenedor-icono-cruz"><i class="far fa-window-close icono-cruz-texto"></i></div>
   <form class="form-texto">
 
   <h2 class="titulo-panel-texto">TEXTO</h2>

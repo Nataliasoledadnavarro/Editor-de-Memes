@@ -192,6 +192,26 @@ input[type="range"] {
   font-size: 16px;
 }
 
+.fa-window-close{
+  color: rgba(255, 255, 255, 0.74);
+  position: absolute;
+  top: 10px;
+  left: 20px;
+  font-size: 20px;
+}
+.contenedor-icono-cruz{display: none;}
+
+@media screen and (max-width: 1000px) {
+  .contenedor-icono-cruz{display: block;}
+  
+  #panel-img {
+    width: 100%;
+  }
+
+  #panel-texto {
+    width: 100%;
+  }
+}
 @media screen and (max-width: 600px) {
   h1 {
     font-size: 35px;
@@ -335,6 +355,7 @@ h3 {
 .parrafo-superior, .parrafo-inferior{
   margin:0px;
 }
+
 
 /* Clase para modo oscuro */
 /* FUENTES*/

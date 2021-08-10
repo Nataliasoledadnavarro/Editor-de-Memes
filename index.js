@@ -16,6 +16,18 @@ const mostrarPanelImagen = () => {
 botonTexto.onclick = mostrarPanelTexto;
 botonImg.onclick = mostrarPanelImagen;
 
+// Función ocultar panel con icono cruz
+const iconoCruzImg = document.querySelector(".icono-cruz-img");
+const iconoCruzTexto = document.querySelector(".icono-cruz-texto");
+
+iconoCruzImg.onclick = () => {
+  panelImg.classList.add("ocultar");
+};
+
+iconoCruzTexto.onclick = () => {
+  panelTexto.classList.add("ocultar");
+};
+
 //funcion de url imagen
 
 const imagenMeme = document.getElementById("img-meme");
@@ -166,6 +178,7 @@ textoSuperiorUsuario.oninput = () => {
 textoInferiorUsuario.oninput = () => {
   textoInferior.textContent = textoInferiorUsuario.value;
 };
+
 //Funcion Sacar Texto Superior e Inferior
 const sinTextoSuperior = document.getElementById("sin-texto-superior");
 const sinTextoInferior = document.getElementById("sin-texto-inferior");
