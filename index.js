@@ -243,7 +243,7 @@ selectFuentes.addEventListener('change', cambiarFuentes);
 /* Tamaño Letra Formulario Texto */
 const tamanioLetra = document.getElementById('tamanio-letra');
 
-tamanioLetra.oninput = () => {
+tamanioLetra.oninput = () => {//onchange probar
   textoSuperior.style.fontSize = tamanioLetra.value + "px"
   textoInferior.style.fontSize = tamanioLetra.value + "px"
 }
@@ -336,8 +336,5 @@ checkboxTransparente.oninput= ()=> {
 
   }
 }
-
-
-
 
 
