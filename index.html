@@ -211,12 +211,18 @@
   <label for="interlineado">
     <h3>INTERLINEADO</h3><!-- no lo lee como el label. chequear si puede sacarse-->
     <select name="interlineado" id="interlineado">
+    <input type="number" id="espaciado" min="10" max="50">
+  </label>
+
+  <label for="interlineado">
+    <h3>INTERLINEADO</h3>
+    <select name="interlineado" id="interlineado" min="0.5" max="2.5">
     <option value="0.8">0.8</option>
     <option value="1">1</option>
     <option value="1.2">1.2</option>
     <option value="1.5">1.5</option>
     <option value="2">2</option>
-    <option value="2.5">2.5</option>
+    <option value="2.5">2.5</option> 
     </select>
   </label>
   </form>
