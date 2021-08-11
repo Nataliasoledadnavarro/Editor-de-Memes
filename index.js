@@ -236,10 +236,11 @@ selectFuentes.addEventListener("change", cambiarFuentes);
 /* Tamaño Letra Formulario Texto */
 const tamanioLetra = document.getElementById("tamanio-letra");
 
-tamanioLetra.oninput = () => {//onchange probar
-  textoSuperior.style.fontSize = tamanioLetra.value + "px"
-  textoInferior.style.fontSize = tamanioLetra.value + "px"
-}
+tamanioLetra.oninput = () => {
+  //onchange probar
+  textoSuperior.style.fontSize = tamanioLetra.value + "px";
+  textoInferior.style.fontSize = tamanioLetra.value + "px";
+};
 
 /*Alineacion Formulario Texto */
 
@@ -276,17 +277,15 @@ let spanColorTexto = document.querySelector(".span-color-texto"); //el codigo de
 let spanFondoTexto = document.querySelector(".span-fondo-texto"); // el codigo del color del fondo
 
 //FUNCION PARA CAMBIAR EL CODIGO DEL COLOR DEL INPUT COLOR PICKER
-const codigoDeColor= (event) => {
-spanColorTexto.textContent= event.target.value;
-    
-}
-inputColorTexto.addEventListener ("input", codigoDeColor)
+const codigoDeColor = (event) => {
+  spanColorTexto.textContent = event.target.value;
+};
+inputColorTexto.addEventListener("input", codigoDeColor);
 
-const codigoColorFondo= (event)=>{
-  spanFondoTexto.textContent= event.target.value;
- 
-}
-inputFondoTexto.addEventListener ("input", codigoColorFondo)
+const codigoColorFondo = (event) => {
+  spanFondoTexto.textContent = event.target.value;
+};
+inputFondoTexto.addEventListener("input", codigoColorFondo);
 
 const codigoDeColor = (event) => {
   spanColorTexto.textContent = event.target.value;
@@ -317,73 +316,65 @@ inputFondoTexto.addEventListener("input", cambiarColorFondoTexto);
 
 //FUNCION PARA FONDO TRANSPARENTE CHECKBOX
 
-let checkboxTransparente=document.getElementById("fondo-transparente")
+let checkboxTransparente = document.getElementById("fondo-transparente");
 
-checkboxTransparente.oninput= ()=> {
-  if (checkboxTransparente.checked){
-    textoSuperior.style.position="relative"
-    textoInferior.style.position="relative"   
-    textoSuperior.style.height="0"
-    textoInferior.style.height="0"
-    parrafoSuperior.style.position="absolute"
-    parrafoInferior.style.position="absolute"
-    parrafoSuperior.style.top="0"
-    parrafoInferior.style.bottom="0"
+checkboxTransparente.oninput = () => {
+  if (checkboxTransparente.checked) {
+    textoSuperior.style.position = "relative";
+    textoInferior.style.position = "relative";
+    textoSuperior.style.height = "0";
+    textoInferior.style.height = "0";
+    parrafoSuperior.style.position = "absolute";
+    parrafoInferior.style.position = "absolute";
+    parrafoSuperior.style.top = "0";
+    parrafoInferior.style.bottom = "0";
+  } else {
+    textoSuperior.style.position = "static";
+    textoInferior.style.position = "static";
+    textoSuperior.style.height = "";
+    textoInferior.style.height = "";
+    parrafoSuperior.style.position = "static";
+    parrafoInferior.style.position = "static";
+    parrafoSuperior.style.top = "";
+    parrafoInferior.style.bottom = "";
   }
+};
 
-  else{
+// FUNCION PARA CONTORNOS
 
-    textoSuperior.style.position="static"
-    textoInferior.style.position="static"   
-    textoSuperior.style.height=""
-    textoInferior.style.height=""
-    parrafoSuperior.style.position="static"
-    parrafoInferior.style.position="static"
-    parrafoSuperior.style.top=""
-    parrafoInferior.style.bottom=""  
-    
-  }
-}
-
-// FUNCION PARA CONTORNOS 
-
-let botonNinguno= document.getElementById ("ninguno")
-let botonClaro= document.getElementById("claro")
-let botonOscuro= document.getElementById("oscuro")
+let botonNinguno = document.getElementById("ninguno");
+let botonClaro = document.getElementById("claro");
+let botonOscuro = document.getElementById("oscuro");
 
 botonNinguno.onclick = (event) => {
   event.preventDefault();
-  parrafoSuperior.style.textShadow = "none"
-  parrafoInferior.style.textShadow = "none"
- }
- 
-  botonClaro.onclick = (event) => {
-    event.preventDefault();
-    parrafoSuperior.style.textShadow= "2px 2px 2px white";
-    parrafoInferior.style.textShadow= "2px 2px 2px white";
-  }
+  parrafoSuperior.style.textShadow = "none";
+  parrafoInferior.style.textShadow = "none";
+};
 
- botonOscuro.onclick = (event) => {
-    event.preventDefault();
-    parrafoSuperior.style.textShadow = "2px 2px 2px black";
-    parrafoInferior.style.textShadow = "2px 2px 2px black";
-  }
+botonClaro.onclick = (event) => {
+  event.preventDefault();
+  parrafoSuperior.style.textShadow = "2px 2px 2px white";
+  parrafoInferior.style.textShadow = "2px 2px 2px white";
+};
 
-// FUNCION PARA ESPACIADO 
+botonOscuro.onclick = (event) => {
+  event.preventDefault();
+  parrafoSuperior.style.textShadow = "2px 2px 2px black";
+  parrafoInferior.style.textShadow = "2px 2px 2px black";
+};
 
-let espaciadoTexto = document.getElementById("espaciado")
-espaciadoTexto.oninput =()=>{
-  textoSuperior.style.padding= espaciadoTexto.value + "px"
-  textoInferior.style.padding= espaciadoTexto.value + "px"
+// FUNCION PARA ESPACIADO
 
-}
-// FUNCION PARA INTERLINEADO 
+let espaciadoTexto = document.getElementById("espaciado");
+espaciadoTexto.oninput = () => {
+  textoSuperior.style.padding = espaciadoTexto.value + "px";
+  textoInferior.style.padding = espaciadoTexto.value + "px";
+};
+// FUNCION PARA INTERLINEADO
 
-let interlineadoTexto = document.getElementById("interlineado")
-interlineadoTexto.oninput= () => {
-textoSuperior.style.lineHeight= interlineadoTexto.value 
-textoInferior.style.lineHeight= interlineadoTexto.value
-}
-
-
-
+let interlineadoTexto = document.getElementById("interlineado");
+interlineadoTexto.oninput = () => {
+  textoSuperior.style.lineHeight = interlineadoTexto.value;
+  textoInferior.style.lineHeight = interlineadoTexto.value;
+};
