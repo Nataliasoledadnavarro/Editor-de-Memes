@@ -342,23 +342,35 @@ checkboxTransparente.oninput= ()=> {
 
 //Funcion modo oscuro-claro
 
-const botonModoOscuro = document.getElementById("boton-modo-oscuro");
+const botonModoOscuro = document.getElementById("boton-modo-oscuro"); //boton 
 
+//body 
 const fondoBody = document.querySelector("body");
 const fondoHeader = document.querySelector("header");
 const tituloPrincipal = document.querySelector("h1");
 const botonesNav = document.querySelector("nav");
-const panelFondo = document.querySelector("#panel-img"); //aside con el id si
-const panelTextoModoClaro = document.querySelector("#panel-texto")//aside
+const panelFondo = document.querySelector("#panel-img"); //aside con el id 
+const panelTextoModoClaro = document.querySelector("#panel-texto");//aside
 
 //fuentes modo claro
-const tituloFormularioImg = document.querySelector("#titulo-formulario") //titulo formulario imagen
-
-const tituloFormularioTexto = document.querySelector("#titulo-formulario-texto") //titulo formulario texto
+const tituloFormularioImg = document.querySelector("#titulo-formulario-imagen") //formulario imagen
+const tituloFondoImagen = document.querySelector("#titulo-fondo-img")
+const tituloFiltros = document.querySelector("#titulo-filtros")
+ 
+const tituloFormularioTexto = document.querySelector("#titulo-formulario-texto") //formulario texto
 const tituloTextoSuperior = document.querySelector("#titulo-texto-superior")
 const tituloTextoInferior = document.querySelector("#titulo-texto-inferior")
 const tituloFuente = document.querySelector("#titulo-fuente")
 const tituloColor = document.querySelector("#titulo-color")
+const tituloFondo = document.querySelector("#titulo-fondo")
+const tituloContorno = document.querySelector("#titulo-contorno")
+const tituloEspaciado = document.querySelector("#titulo-espaciado")
+const tituloInterlineado = document.querySelector("#titulo-interlineado")
+
+//labels
+const labelUrl = document.querySelector("#label-url") //formulario imagen
+const labelCheckboxSuperior = document.querySelector("#label-checkbox-superior")
+
 
 const cambiarModo = () => {
   fondoBody.classList.toggle("clase-modo-claro") //ok
@@ -367,28 +379,34 @@ const cambiarModo = () => {
   botonesNav.classList.toggle("nav") //ok
   panelFondo.classList.toggle("panel-fondo-claro")
   panelTextoModoClaro.classList.toggle("panel-fondo-claro")
-  // tituloFormularioImg.classList.toggle("fuentes-modo-claro")
-  // tituloFormularioTexto.classList.toggle("fuentes-modo-claro")
-  // tituloTextoSuperior.classList.toggle("fuentes-modo-claro")
-  // tituloTextoInferior.classList.toggle("fuentes-modo-claro")
-  // tituloFuente.classList.toggle("fuentes-modo-claro")
-  // tituloColor.classList.toggle("fuentes-modo-claro")
+
   fuentesModoClaro()
+  cambiarClaseALabels()
 }
 
 botonModoOscuro.onclick = cambiarModo;
 
 const fuentesModoClaro = () =>{
   tituloFormularioImg.classList.toggle("fuentes-modo-claro")
+  tituloFondoImagen.classList.toggle("fuentes-modo-claro")
+  tituloFiltros.classList.toggle("fuentes-modo-claro")
+
   tituloFormularioTexto.classList.toggle("fuentes-modo-claro")
   tituloTextoSuperior.classList.toggle("fuentes-modo-claro")
   tituloTextoInferior.classList.toggle("fuentes-modo-claro")
   tituloFuente.classList.toggle("fuentes-modo-claro")
   tituloColor.classList.toggle("fuentes-modo-claro")
+  tituloFondo.classList.toggle("fuentes-modo-claro")
+  tituloContorno.classList.toggle("fuentes-modo-claro")
+  tituloEspaciado.classList.toggle("fuentes-modo-claro")
+  tituloInterlineado.classList.toggle("fuentes-modo-claro")
+ 
 }
 
+const cambiarClaseALabels = () =>{
+  labelUrl.classList.toggle("clase-labels") //form imagen
+  labelCheckboxSuperior.classList.toggle("clase-labels")
 
 
-
-
+}
 

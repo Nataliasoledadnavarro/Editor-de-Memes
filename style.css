@@ -273,6 +273,16 @@ input[type="range"] {
   font-family: sans-serif;
   
 }
+
+#label-checkbox-superior{
+  background-color: transparent;
+  
+}
+#label-ckeckbox-inferior{
+  background-color:transparent;
+ 
+}
+
 #tamanio-letra {
   width: 45%;
   height: 35px;
@@ -379,6 +389,9 @@ h3 {
   color: rgb(46, 45, 45);
 }
 
+.clase-labels{
+  color: rgb(46, 45, 45);
+}
 
 
 /* FUENTES*/
