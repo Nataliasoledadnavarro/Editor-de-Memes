@@ -127,26 +127,28 @@
 
   <div>
     <h3>SUPERIOR</h3>
-      <textarea name="texto" id="superior" cols="10" rows="2" aria-label="Escribir texto superior">TOP TEXT</textarea>
+      <textarea name="texto" id="superior" cols="10" rows="2" aria-label="Escribir texto superior">TEXTO SUPERIOR</textarea>
       
-      <label for="sin-texto-superior" id="superior">Sin texto superior
+      <label for="sin-texto-superior" id="superior">
         <input type="checkbox" id="sin-texto-superior">
-      </label> <!-- rodeo el input con el label y modificfo el for para que sea igual al id-->
+        Sin texto superior
+      </label>
   </div>
 
 
   <div>
     <h3>INFERIOR</h3>
-    <textarea name="texto" id="inferior" cols="10" rows="2" aria-label="Escribir texto inferior">BOTTOM TEXT</textarea>
+    <textarea name="texto" id="inferior" cols="10" rows="2" aria-label="Escribir texto inferior">TEXTO INFERIOR</textarea>
    
-    <label for="sin-texto-inferior" id="inferior">Sin texto inferior
+    <label for="sin-texto-inferior" id="inferior">
       <input type="checkbox" id="sin-texto-inferior" aria-label="Sin texto inferior">
-    </label> <!-- rodeo el input con el label y modificfo el for para que sea igual al id-->
+      Sin texto inferior
+    </label> 
   </div>
   
 
   <h3>FUENTE</h3>
-    <select name="fuente" id="tipos-de-fuentes" aria-label="Seleccionar tipo de fuentes"><!-- agrero aria label por no tener label-->
+    <select name="fuente" id="tipos-de-fuentes" aria-label="Seleccionar tipo de fuentes">
       <option value="Arial">Arial</option>
       <option value="Permanent Marker">Permanent Marker</option>
       <option value="Palette Mosaic">Palette Mosaic</option>
@@ -159,11 +161,12 @@
     </select>
 
   <div class="tamanio-letra">
-    <input type="number" id="tamanio-letra" min="12" value="30" aria-label="Tamaño de letra"><!-- agrego aria label por no tener label y agrego value-->
+    <input type="number" id="tamanio-letra" min="12" value="30" aria-label="Tamaño de letra">
+
     <div class="alineacion">
-    <button id="boton-izquierda"><i class="fas fa-align-left"></i></button><!-- saco area hidden por ser redundante -->
-    <button id="boton-centrado"><i class="fas fa-align-center"></i></button>
-    <button id="boton-derecha"><i class="fas fa-align-right"></i></button>
+    <button id="boton-izquierda" aria-label="Alinear texto a la izquierda"><i class="fas fa-align-left"></i></button>
+    <button id="boton-centrado" aria-label="Centrar texto"><i class="fas fa-align-center"></i></button>
+    <button id="boton-derecha" aria-label="Alinear texto a la derecha"><i class="fas fa-align-right"></i></button>
     </div>
   </div>
 
@@ -188,9 +191,10 @@
   </div>
 
     
-    <label for="fondo-transparente">Fondo transparente
+    <label for="fondo-transparente">
       <input type="checkbox" id="fondo-transparente">
-    </label> <!-- rodeo el input con el label y modificfo el for para que sea igual al id-->
+      Fondo transparente
+    </label>
 
   <div class="tipos-contorno">
   <h3>CONTORNO</h3>
@@ -201,7 +205,7 @@
 
   <label for="espaciado">
     <h3>ESPACIADO</h3>
-    <input type="number" id="espaciado">
+    <input type="number" id="espaciado" value=22>
   </label>
 
   <label for="interlineado">

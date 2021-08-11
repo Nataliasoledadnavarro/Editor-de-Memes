@@ -60,12 +60,17 @@ main {
   display: flex;
   align-items: center;
   justify-content: center;
-  font-size: 30px; /* este numero coincide con el valor de input tamanio-letra*/
+  font-size: 30px; 
   font-weight: bolder;
 }
 
-.parrafo-superior{margin: 15px;}
-.parrafo-inferior{margin: 15px;} /* acomodo margenes de los p*/
+.parrafo-superior {
+  margin: 15px;
+  text-align: center;
+}
+.parrafo-inferior {
+  margin: 15px;
+} /* acomodo margenes de los p*/
 
 .imagen-src {
   height: 100%;
