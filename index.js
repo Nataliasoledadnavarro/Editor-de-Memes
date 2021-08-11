@@ -236,10 +236,10 @@ selectFuentes.addEventListener("change", cambiarFuentes);
 /* Tamaño Letra Formulario Texto */
 const tamanioLetra = document.getElementById("tamanio-letra");
 
-tamanioLetra.oninput = () => {
-  textoSuperior.style.fontSize = tamanioLetra.value + "px";
-  textoInferior.style.fontSize = tamanioLetra.value + "px";
-};
+tamanioLetra.oninput = () => {//onchange probar
+  textoSuperior.style.fontSize = tamanioLetra.value + "px"
+  textoInferior.style.fontSize = tamanioLetra.value + "px"
+}
 
 /*Alineacion Formulario Texto */
 
@@ -321,4 +321,6 @@ checkboxTransparente.oninput = () => {
     textoSuperior.style.display = "flex";
     textoInferior.style.display = "flex";
   }
-};
+}
+
+

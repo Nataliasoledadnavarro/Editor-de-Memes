@@ -163,6 +163,11 @@ label,
   border: none;
   background-color: transparent;
 }
+.input-color-texto, .input-color-fondo {
+  width: 30px;
+  border: none;
+  background-color: transparent;
+}
 
 .texto-color-fondo-img {
   color: white;
