@@ -341,6 +341,45 @@ checkboxTransparente.oninput= ()=> {
 
 //agego lineas
 
+// FUNCION PARA CONTORNOS
+
+let botonNinguno = document.getElementById("ninguno");
+let botonClaro = document.getElementById("claro");
+let botonOscuro = document.getElementById("oscuro");
+
+botonNinguno.onclick = (event) => {
+  event.preventDefault();
+  parrafoSuperior.style.textShadow = "none";
+  parrafoInferior.style.textShadow = "none";
+};
+
+botonClaro.onclick = (event) => {
+  event.preventDefault();
+  parrafoSuperior.style.textShadow = "2px 2px 2px white";
+  parrafoInferior.style.textShadow = "2px 2px 2px white";
+};
+
+botonOscuro.onclick = (event) => {
+  event.preventDefault();
+  parrafoSuperior.style.textShadow = "2px 2px 2px black";
+  parrafoInferior.style.textShadow = "2px 2px 2px black";
+};
+
+// FUNCION PARA ESPACIADO
+
+let espaciadoTexto = document.getElementById("espaciado");
+espaciadoTexto.oninput = () => {
+  textoSuperior.style.padding = espaciadoTexto.value + "px";
+  textoInferior.style.padding = espaciadoTexto.value + "px";
+};
+// FUNCION PARA INTERLINEADO
+
+let interlineadoTexto = document.getElementById("interlineado");
+interlineadoTexto.oninput = () => {
+  textoSuperior.style.lineHeight = interlineadoTexto.value;
+  textoInferior.style.lineHeight = interlineadoTexto.value;
+};
+
 //seccion modo oscuro-claro
 
 const botonModoOscuro = document.getElementById("boton-modo-oscuro"); //boton 
@@ -379,7 +418,7 @@ const labelHue = document.querySelector("#label-hue")
 const labelSaturado = document.querySelector("#label-saturado")
 const labelNegativo = document.querySelector("#label-negativo")
 const labelCheckboxSuperior = document.querySelector("#label-checkbox-superior") //formulario texto
-const labelCkeckboxInferior = document.querySelector("#label-ckeckbox-inferior")
+const labelCheckboxInferior = document.querySelector("#label-checkbox-inferior")
 const labelCheckboxFondoTransparente = document.querySelector("#label-checkbox-fondo-transparente")
 
 
@@ -404,7 +443,7 @@ const fuentesModoClaro = () =>{
 const cambiarClaseLabels = () =>{
   labelUrl.classList.toggle("clase-labels") 
   labelCheckboxSuperior.classList.toggle("clase-labels")
-  labelCkeckboxInferior.classList.toggle("clase-labels")
+  labelCheckboxInferior.classList.toggle("clase-labels")
   labelCheckboxFondoTransparente.classList.toggle("clase-labels")
   labelBrillo.classList.toggle("clase-labels")
   labelOpacidad.classList.toggle("clase-labels")
