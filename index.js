@@ -287,7 +287,6 @@ const codigoColorFondo = (event) => {
 };
 inputFondoTexto.addEventListener("input", codigoColorFondo);
 
-
 // FUNCION PARA CAMBIAR EL COLOR DEL TEXTO
 const cambiarColorTexto = (event) => {
   parrafoSuperior.style.color = inputColorTexto.value;

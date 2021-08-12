@@ -18,9 +18,8 @@
     <script src="https://cdnjs.cloudflare.com/ajax/libs/FileSaver.js/2.0.0/FileSaver.min.js" integrity="sha512-csNcFYJniKjJxRWRV1R7fvnXrycHP6qDR21mgz1ZP55xY5d+aHLfo9/FcGDQLfn2IfngbAHd8LdfsagcCqgTcQ==" crossorigin="anonymous"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/dom-to-image/2.6.0/dom-to-image.min.js" integrity="sha512-01CJ9/g7e8cUmY0DFTMcUw/ikS799FHiOA0eyHsUWfOetgbx/t6oV4otQ5zXKQyIrQGTHSmRVPIgrgLcZi/WMA==" crossorigin="anonymous"></script>
     <link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@100&display=swap" rel="stylesheet">
-
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@100&display=swap" rel="stylesheet">
     <title>¡CREÁ TU PROPIO MEME!</title>
   </head>
  
@@ -30,7 +29,7 @@
   <nav>
   <button class="boton-imagen-nav" aria-label="Menu Imagen"><i class="far fa-images" ></i>  Imagen </button>
   <button class="boton-texto-nav"><i class="fas fa-font" aria-label="Menu Texto"></i>  Texto</button>  
-  <button class="boton-modo-oscuro" ><i class="far fa-lightbulb" aria-label="Modo Oscuro"></i>  Modo oscuro</button>
+  <button class="boton-modo-oscuro" id="boton-modo-oscuro"><i class="far fa-lightbulb" aria-label="Modo Oscuro"></i>  Modo oscuro</button>
   </nav>
 </header>
 
@@ -48,13 +47,13 @@
 <aside id="panel-img"  class="panel-img">
   <button class="boton-cerrar-menu-imagen" aria-label="Cerrar menu imagen"><i class="far fa-window-close icono-cruz-img"></i></button>
   <form class="form-img">
-  <h2 class="titulo-panel">IMAGEN</h2>
+  <h2 class="titulo-panel" id="titulo-formulario-imagen">IMAGEN</h2>
   
-  <label for="url">URL
+  <label for="url" id="label-url">URL
     <input type="text" id="url" name="url" aria-label="Url de imágen">
   </label>
 
-  <h3 class="titulo-fondo">FONDO</h3>
+  <h3 class="titulo-fondo" id="titulo-fondo-img">FONDO</h3>
 
 <div class="color-fondo-img">
 
@@ -76,41 +75,41 @@
   </select>
 </div>
 
-  <h3 class="filtros">FILTROS</h3>
+  <h3 class="filtros" id="titulo-filtros">FILTROS</h3>
 
-  <label for="rango-brillo">BRILLO
+  <label for="rango-brillo" id="label-brillo">BRILLO
     <input type="range" id="rango-brillo" min="0" max="1" step="0.1" value="1" name="brillo">
   </label>
 
-  <label for="rango-opacidad">OPACIDAD
+  <label for="rango-opacidad" id="label-opacidad">OPACIDAD
     <input type="range" id="rango-opacidad"min="0" max="1" step="0.1" value="1"  name="opacidad">
   </label>
   
-  <label for="rango-contraste">CONTRASTE
+  <label for="rango-contraste" id="label-contraste">CONTRASTE
     <input type="range" id="rango-contraste" min="100" max="1000" step="1" value="100" name="contraste">
   </label>
 
-  <label for="rango-desenfoque">DESENFOQUE
+  <label for="rango-desenfoque" id="label-desenfoque">DESENFOQUE
     <input type="range" id="rango-desenfoque" min="0" max="10" step="0.1" value="0"  name="desenfoque">
   </label>
 
-  <label for="rango-grises">ESCALA DE GRISES
+  <label for="rango-grises" id="label-escala-grises">ESCALA DE GRISES
     <input type="range" id="rango-grises" min="0" max="100" step="1" value="0"  name="grises">
   </label>
 
-  <label for="rango-sepia">SEPIA
+  <label for="rango-sepia" id="label-sepia">SEPIA
     <input type="range" id="rango-sepia" min="0" max="100" step="1" value="0"  name="sepia">
   </label>
 
-  <label for="rango-hue">HUE
+  <label for="rango-hue" id="label-hue">HUE
     <input type="range" id="rango-hue" min="0" max="359" step="1" value="0"  name="hue"> 
   </label>
 
-  <label for="rango-saturado">SATURADO
+  <label for="rango-saturado" id="label-saturado">SATURADO
     <input type="range" id="rango-saturado" min="100" max="1000" step="10" value="100"  name="saturado">
   </label>
 
-  <label for="rango-negativo">Negativo
+  <label for="rango-negativo" id="label-negativo">NEGATIVO
     <input type="range" id="rango-negativo" min="0" max="1" step="0.1" value="0" name="negativo">
   </label>
 
@@ -124,13 +123,13 @@
   <button class="boton-cerrar-menu-texto" aria-label="Cerrar menu texto"><i class="far fa-window-close icono-cruz-texto"></i></button>
   <form class="form-texto">
 
-  <h2 class="titulo-panel-texto">TEXTO</h2>
+  <h2 class="titulo-panel-texto" id="titulo-formulario-texto">TEXTO</h2>
 
   <div>
-    <h3>SUPERIOR</h3>
+    <h3 id="titulo-texto-superior">SUPERIOR</h3>
       <textarea name="texto" id="superior" cols="10" rows="2" aria-label="Escribir texto superior">TEXTO SUPERIOR</textarea>
       
-      <label for="sin-texto-superior" id="superior">
+      <label for="sin-texto-superior" id="superior" id="label-checkbox-superior">
         <input type="checkbox" id="sin-texto-superior">
         Sin texto superior
       </label>
@@ -138,17 +137,17 @@
 
 
   <div>
-    <h3>INFERIOR</h3>
+    <h3 id="titulo-texto-inferior">INFERIOR</h3>
     <textarea name="texto" id="inferior" cols="10" rows="2" aria-label="Escribir texto inferior">TEXTO INFERIOR</textarea>
    
-    <label for="sin-texto-inferior" id="inferior">
+    <label for="sin-texto-inferior" id="inferior" id="label-ckeckbox-inferior">
       <input type="checkbox" id="sin-texto-inferior" aria-label="Sin texto inferior">
       Sin texto inferior
     </label> 
   </div>
   
 
-  <h3>FUENTE</h3>
+  <h3 id="titulo-fuente">FUENTE</h3>
     <select name="fuente" id="tipos-de-fuentes" aria-label="Seleccionar tipo de fuentes">
       <option value="Arial">Arial</option>
       <option value="Permanent Marker">Permanent Marker</option>
@@ -174,7 +173,7 @@
   <div class="color-y-fondo">
     
     <div class="color">
-      <h3>COLOR </h3>
+      <h3 id="titulo-color">COLOR </h3>
       <div class="conteiner-input-color-fondo-texto">
         <input name="Color de texto" type="color" id="input-color-texto" value="#000000" aria-label="Color de texto">
         <span class="span-color-texto" aria-hidden="true">#000000</span>
@@ -182,7 +181,7 @@
     </div>
 
     <div class="fondo">
-      <h3>FONDO</h3>
+      <h3 id="titulo-fondo">FONDO</h3>
       <div class="conteiner-input-color-fondo-texto">
         <input name="Color de fondo" type="color" id="input-color-fondo" value="#FFFFFF" aria-label="Color de fondo">
         <span class="span-fondo-texto" aria-hidden="true">#FFFFFF</span>
@@ -192,25 +191,25 @@
   </div>
 
     
-    <label for="fondo-transparente">
+    <label for="fondo-transparente" id="label-checkbox-fondo-transparente">
       <input type="checkbox" id="fondo-transparente">
       Fondo transparente
     </label>
 
   <div class="tipos-contorno">
-  <h3>CONTORNO</h3>
+  <h3 id="titulo-contorno">CONTORNO</h3>
   <button id="ninguno">Ninguno</button>
   <button id="claro">Claro</button>
   <button id="oscuro">Oscuro</button>
   </div>
 
   <label for="espaciado">
-    <h3>ESPACIADO</h3>
+    <h3 id="titulo-espaciado">ESPACIADO</h3>
     <input type="number" id="espaciado" min="0" max="50" value="0">
   </label>
 
   <label for="interlineado">
-    <h3>INTERLINEADO</h3>
+    <h3 id="titulo-interlineado">INTERLINEADO</h3>
     <select name="interlineado" id="interlineado" min="0.5" max="2.5">
     <option value="0.8">0.8</option>
     <option value="1">1</option>
