@@ -163,8 +163,8 @@ label,
   border: none;
   background-color: transparent;
 }
-.input-color-texto,
-.input-color-fondo {
+
+input[type="color"] {
   width: 30px;
   border: none;
   background-color: transparent;
@@ -300,6 +300,7 @@ input[type="range"] {
   text-align: center;
   color: white;
 }
+
 #superior,
 #inferior,
 #tipos-de-fuentes,
@@ -312,6 +313,7 @@ input[type="range"] {
   border-radius: 5px;
   font-family: sans-serif;
 }
+
 #tamanio-letra {
   width: 45%;
   height: 35px;
@@ -324,8 +326,10 @@ input[type="range"] {
 .tamanio-letra,
 .color-y-fondo {
   display: flex;
-  margin-top: 8px;
+  align-items: center;
+  justify-content: space-between;
 }
+
 #input-fondo,
 #input-color {
   width: 30px;
@@ -334,8 +338,18 @@ input[type="range"] {
 }
 
 span {
-  margin: 8px;
   font-size: 15px;
+}
+
+.conteiner-input-color-fondo-texto {
+  display: flex;
+  align-items: center;
+  width: 100%;
+  height: 30px;
+  background-color: rgb(46, 45, 45);
+  padding-right: 3px;
+  border-radius: 5px;
+  margin-bottom: 7px;
 }
 
 .fas {
@@ -345,6 +359,7 @@ span {
   padding: 5px;
   font-size: 15px;
 }
+
 #boton-izquierda,
 #boton-centrado,
 #boton-derecha {
@@ -352,6 +367,7 @@ span {
   background-color: rgb(46, 45, 45);
   border-radius: 5px;
 }
+
 .alineacion {
   display: flex;
   justify-content: space-around;
@@ -359,19 +375,12 @@ span {
   margin-bottom: 7px;
   margin-left: 5px;
 }
-.color-color,
-.fondo-fondo {
-  display: flex;
-  background-color: rgb(46, 45, 45);
-  border-radius: 5px;
-  width: 115px;
-  margin-right: 5px;
-  margin-bottom: 3px;
-}
+
 .tipos-contorno {
   margin-top: 25px;
   margin-bottom: 30px;
 }
+
 #claro,
 #ninguno,
 #oscuro {
