@@ -406,7 +406,7 @@ const labelHue = document.querySelector("#label-hue")
 const labelSaturado = document.querySelector("#label-saturado")
 const labelNegativo = document.querySelector("#label-negativo")
 const labelCheckboxSuperior = document.querySelector("#label-checkbox-superior") //formulario texto
-const labelCkeckboxInferior = document.querySelector("#label-ckeckbox-inferior")
+const labelCheckboxInferior = document.querySelector("#label-checkbox-inferior")
 const labelCheckboxFondoTransparente = document.querySelector("#label-checkbox-fondo-transparente")
 
 
@@ -423,13 +423,15 @@ const fuentesModoClaro = () =>{
   tituloContorno.classList.toggle("fuentes-modo-claro")
   tituloEspaciado.classList.toggle("fuentes-modo-claro")
   tituloInterlineado.classList.toggle("fuentes-modo-claro")
+
+  //labelBrillo.classList.toggle("fuentes-modo-claro")
  
 }
 
-const cambiarClaseALabels = () =>{
+const cambiarClaseLabels = () =>{
   labelUrl.classList.toggle("clase-labels") 
   labelCheckboxSuperior.classList.toggle("clase-labels")
-  labelCkeckboxInferior.classList.toggle("clase-labels")
+  labelCheckboxInferior.classList.toggle("clase-labels")
   labelCheckboxFondoTransparente.classList.toggle("clase-labels")
   labelBrillo.classList.toggle("clase-labels")
   labelOpacidad.classList.toggle("clase-labels")
@@ -453,7 +455,7 @@ const cambiarModo = () => {
   panelTextoModoClaro.classList.toggle("panel-fondo-claro")
 
   fuentesModoClaro()
-  cambiarClaseALabels()
+  cambiarClaseLabels()
 }
 
 botonModoOscuro.onclick = cambiarModo;
