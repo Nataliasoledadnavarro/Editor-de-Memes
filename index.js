@@ -319,9 +319,6 @@ inputFondoTexto.addEventListener ("input", cambiarColorFondoTexto)
 //FONDO TRANSPARENTE CHECKBOX
 
 let checkboxTransparente=document.getElementById("fondo-transparente")
-//llamar a la clase del p 
-//poner el p en zindex cuando es fondo transparente
-//sacar el div 
 
 checkboxTransparente.oninput= ()=> {
   if (checkboxTransparente.checked){
@@ -336,138 +333,6 @@ checkboxTransparente.oninput= ()=> {
 
   }
 }
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
 
 
@@ -531,10 +396,12 @@ const fuentesModoClaro = () =>{
   tituloContorno.classList.toggle("fuentes-modo-claro")
   tituloEspaciado.classList.toggle("fuentes-modo-claro")
   tituloInterlineado.classList.toggle("fuentes-modo-claro")
+
+  //labelBrillo.classList.toggle("fuentes-modo-claro")
  
 }
 
-const cambiarClaseALabels = () =>{
+const cambiarClaseLabels = () =>{
   labelUrl.classList.toggle("clase-labels") 
   labelCheckboxSuperior.classList.toggle("clase-labels")
   labelCkeckboxInferior.classList.toggle("clase-labels")
@@ -561,7 +428,7 @@ const cambiarModo = () => {
   panelTextoModoClaro.classList.toggle("panel-fondo-claro")
 
   fuentesModoClaro()
-  cambiarClaseALabels()
+  cambiarClaseLabels()
 }
 
 botonModoOscuro.onclick = cambiarModo;
