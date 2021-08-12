@@ -287,16 +287,6 @@ const codigoColorFondo = (event) => {
 };
 inputFondoTexto.addEventListener("input", codigoColorFondo);
 
-const codigoDeColor = (event) => {
-  spanColorTexto.textContent = event.target.value;
-};
-inputColorTexto.addEventListener("input", codigoDeColor);
-
-const codigoColorFondo = (event) => {
-  spanFondoTexto.textContent = event.target.value;
-  //console.log (colorFondoTexto)
-};
-inputFondoTexto.addEventListener("input", codigoColorFondo);
 
 // FUNCION PARA CAMBIAR EL COLOR DEL TEXTO
 const cambiarColorTexto = (event) => {

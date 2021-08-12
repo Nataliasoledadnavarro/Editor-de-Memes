@@ -60,7 +60,7 @@ main {
   display: flex;
   align-items: center;
   justify-content: center;
-  font-size: 30px; 
+  font-size: 30px;
   font-weight: bolder;
 }
 
@@ -163,7 +163,8 @@ label,
   border: none;
   background-color: transparent;
 }
-.input-color-texto, .input-color-fondo {
+.input-color-texto,
+.input-color-fondo {
   width: 30px;
   border: none;
   background-color: transparent;
@@ -254,20 +255,26 @@ input[type="range"] {
 
 @media screen and (max-width: 500px) {
   h1 {
-    font-size: 26px;
+    font-size: 24px;
   }
   .conteiner-imagen {
     height: 500px;
   }
   .parrafo-superior,
   .parrafo-inferior {
-    font-size: 30px;
+    font-size: 27px;
   }
 }
 
 @media screen and (max-width: 400px) {
   .conteiner-imagen {
     height: 380px;
+  }
+
+  nav button {
+    padding: 5px;
+    margin-bottom: 3px;
+    font-size: 12px;
   }
 }
 /*//ESTILOS FORMULARIO TEXTO ////*/
