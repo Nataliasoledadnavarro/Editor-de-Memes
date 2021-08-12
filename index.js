@@ -17,14 +17,16 @@ botonTexto.onclick = mostrarPanelTexto;
 botonImg.onclick = mostrarPanelImagen;
 
 // Función ocultar panel con icono cruz
-const iconoCruzImg = document.querySelector(".icono-cruz-img");
-const iconoCruzTexto = document.querySelector(".icono-cruz-texto");
+const botonCerrarMenuImagen = document.querySelector(
+  ".boton-cerrar-menu-imagen"
+);
+const botonCerrarMenuTexto = document.querySelector(".boton-cerrar-menu-texto");
 
-iconoCruzImg.onclick = () => {
+botonCerrarMenuImagen.onclick = () => {
   panelImg.classList.add("ocultar");
 };
 
-iconoCruzTexto.onclick = () => {
+botonCerrarMenuTexto.onclick = () => {
   panelTexto.classList.add("ocultar");
 };
 
@@ -200,146 +202,132 @@ sinTextoInferior.oninput = () => {
 //Funcion Cambio de Fuentes
 selectFuentes = document.getElementById("tipos-de-fuentes");
 const cambiarFuentes = (event) => {
-  if (event.target.value === 'Arial') {
-    textoSuperior.style.fontFamily = 'Arial';
-    textoInferior.style.fontFamily = 'Arial';
-  } 
-  else if (event.target.value === 'Permanent Marker') {
+  if (event.target.value === "Arial") {
+    textoSuperior.style.fontFamily = "Arial";
+    textoInferior.style.fontFamily = "Arial";
+  } else if (event.target.value === "Permanent Marker") {
     textoSuperior.style.fontFamily = "'Permanent Marker', cursive";
     textoInferior.style.fontFamily = "'Permanent Marker', cursive";
-  } 
-  else if (event.target.value === 'Palette Mosaic') {
+  } else if (event.target.value === "Palette Mosaic") {
     textoSuperior.style.fontFamily = "'Palette Mosaic', cursive";
     textoInferior.style.fontFamily = "'Palette Mosaic', cursive";
-  } 
-  else if (event.target.value === 'WindSong') {
+  } else if (event.target.value === "WindSong") {
     textoSuperior.style.fontFamily = "'WindSong', cursive";
     textoInferior.style.fontFamily = "'WindSong', cursive";
-  }
-   else if (event.target.value === 'Courier New') {
+  } else if (event.target.value === "Courier New") {
     textoSuperior.style.fontFamily = "'Courier New', Courier, monospace";
     textoInferior.style.fontFamily = "'Courier New', Courier, monospace";
-  } 
-  else if (event.target.value === "Unset") {
+  } else if (event.target.value === "Unset") {
     textoSuperior.style.fontFamily = "Unset";
     textoInferior.style.fontFamily = "Unset";
-  }
-   else if (event.target.value === 'Shadows Into Light' ) {
+  } else if (event.target.value === "Shadows Into Light") {
     textoSuperior.style.fontFamily = "'Shadows Into Light', cursive";
     textoInferior.style.fontFamily = "'Shadows Into Light', cursive";
-  }
-   else if (event.target.value === 'Style Script') {
+  } else if (event.target.value === "Style Script") {
     textoSuperior.style.fontFamily = "'Style Script', cursive";
     textoInferior.style.fontFamily = "'Style Script', cursive";
-  }
-   else if (event.target.value === 'Times New Roman') {
+  } else if (event.target.value === "Times New Roman") {
     textoSuperior.style.fontFamily = "'Times New Roman', Times, serif;";
     textoInferior.style.fontFamily = "'Times New Roman', Times, serif;";
   }
 };
-selectFuentes.addEventListener('change', cambiarFuentes);
- 
+selectFuentes.addEventListener("change", cambiarFuentes);
 
 /* Tamaño Letra Formulario Texto */
-const tamanioLetra = document.getElementById('tamanio-letra');
+const tamanioLetra = document.getElementById("tamanio-letra");
 
 tamanioLetra.oninput = () => {
-  textoSuperior.style.fontSize = tamanioLetra.value + "px"
-  textoInferior.style.fontSize = tamanioLetra.value + "px"
-}
+  //onchange probar
+  textoSuperior.style.fontSize = tamanioLetra.value + "px";
+  textoInferior.style.fontSize = tamanioLetra.value + "px";
+};
 
 /*Alineacion Formulario Texto */
 
-const alineacionIzquierda = document.getElementById('boton-izquierda');
-const alineacionCentro = document.getElementById('boton-centrado');
-const alineacionDerecha = document.getElementById('boton-derecha');
-
+const alineacionIzquierda = document.getElementById("boton-izquierda");
+const alineacionCentro = document.getElementById("boton-centrado");
+const alineacionDerecha = document.getElementById("boton-derecha");
 
 alineacionIzquierda.onclick = (event) => {
-   event.preventDefault();
-  textoSuperior.style.justifyContent = "flex-start"
-  textoInferior.style.justifyContent = "flex-start"
+  event.preventDefault();
+  textoSuperior.style.justifyContent = "flex-start";
+  textoInferior.style.justifyContent = "flex-start";
 };
 alineacionCentro.onclick = (event) => {
   event.preventDefault();
-  textoSuperior.style.justifyContent = 'center';
-  textoInferior.style.justifyContent = 'center';
+  textoSuperior.style.justifyContent = "center";
+  textoInferior.style.justifyContent = "center";
 };
 alineacionDerecha.onclick = (event) => {
   event.preventDefault();
-  textoSuperior.style.justifyContent = 'flex-end';
-  textoInferior.style.justifyContent = 'flex-end';
-}
- //NUEVA RAMA FORMULARIO-TEXTO-MECHA 
- // FORMULARIO - TEXTO COLOR Y FONDO
+  textoSuperior.style.justifyContent = "flex-end";
+  textoInferior.style.justifyContent = "flex-end";
+};
+//NUEVA RAMA FORMULARIO-TEXTO-MECHA
+// FORMULARIO - TEXTO COLOR Y FONDO
 // COLOR
- 
-let parrafoInferior= document.querySelector (".parrafo-inferior")// texto del input texto inferior
-let parrafoSuperior= document.querySelector(".parrafo-superior") //Texto del input texto superior
 
-let inputFondoTexto= document.getElementById("input-color-fondo") //picker de color de fondo
-let inputColorTexto= document.getElementById ("input-color-texto") //picker de color del texto 
+let parrafoInferior = document.querySelector(".parrafo-inferior"); // texto del input texto inferior
+let parrafoSuperior = document.querySelector(".parrafo-superior"); //Texto del input texto superior
 
-let spanColorTexto= document.querySelector(".span-color-texto") //el codigo del color que se elije 
-let spanFondoTexto= document.querySelector(".span-fondo-texto") // el codigo del color del fondo
+let inputFondoTexto = document.getElementById("input-color-fondo"); //picker de color de fondo
+let inputColorTexto = document.getElementById("input-color-texto"); //picker de color del texto
 
-//FUNCION PARA CAMBIAR EL CODIGO DEL COLOR DEL INPUT COLOR PICKER 
+let spanColorTexto = document.querySelector(".span-color-texto"); //el codigo del color que se elije
+let spanFondoTexto = document.querySelector(".span-fondo-texto"); // el codigo del color del fondo
 
-const codigoDeColor= (event) => {
-spanColorTexto.textContent= event.target.value;
-    
-}
-inputColorTexto.addEventListener ("input", codigoDeColor)
+//FUNCION PARA CAMBIAR EL CODIGO DEL COLOR DEL INPUT COLOR PICKER
+const codigoDeColor = (event) => {
+  spanColorTexto.textContent = event.target.value;
+};
+inputColorTexto.addEventListener("input", codigoDeColor);
 
-const codigoColorFondo= (event)=>{
-  spanFondoTexto.textContent= event.target.value;
-  //console.log (colorFondoTexto)
-}
-inputFondoTexto.addEventListener ("input", codigoColorFondo)
+const codigoColorFondo = (event) => {
+  spanFondoTexto.textContent = event.target.value;
+};
+inputFondoTexto.addEventListener("input", codigoColorFondo);
 
-// FUNCION PARA CAMBIAR EL COLOR DEL TEXTO 
-const cambiarColorTexto= (event) =>{
-  parrafoSuperior.style.color=inputColorTexto.value
-  parrafoInferior.style.color=inputColorTexto.value
-  
-}
+// FUNCION PARA CAMBIAR EL COLOR DEL TEXTO
+const cambiarColorTexto = (event) => {
+  parrafoSuperior.style.color = inputColorTexto.value;
+  parrafoInferior.style.color = inputColorTexto.value;
+};
 
-inputColorTexto.addEventListener ("input", cambiarColorTexto)
+inputColorTexto.addEventListener("input", cambiarColorTexto);
 
-//FUNCION PARA APLICAR EL COLOR DE FONDO 
-const cambiarColorFondoTexto= (event)=>{
+//FUNCION PARA APLICAR EL COLOR DE FONDO
+const cambiarColorFondoTexto = (event) => {
+  textoSuperior.style.backgroundColor = inputFondoTexto.value;
+  textoInferior.style.backgroundColor = inputFondoTexto.value;
+};
 
-  textoSuperior.style.backgroundColor= inputFondoTexto.value
-  textoInferior.style.backgroundColor= inputFondoTexto.value
+inputFondoTexto.addEventListener("input", cambiarColorFondoTexto);
 
-}
+//FUNCION PARA FONDO TRANSPARENTE CHECKBOX
 
-inputFondoTexto.addEventListener ("input", cambiarColorFondoTexto)
+let checkboxTransparente = document.getElementById("fondo-transparente");
 
-//FONDO TRANSPARENTE CHECKBOX
-
-let checkboxTransparente=document.getElementById("fondo-transparente")
-
-checkboxTransparente.oninput= ()=> {
-  if (checkboxTransparente.checked){
-    textoSuperior.style.display="none"
-    textoInferior.style.display="none"
+checkboxTransparente.oninput = () => {
+  if (checkboxTransparente.checked) {
+    textoSuperior.style.position = "relative";
+    textoInferior.style.position = "relative";
+    textoSuperior.style.height = "0";
+    textoInferior.style.height = "0";
+    parrafoSuperior.style.position = "absolute";
+    parrafoInferior.style.position = "absolute";
+    parrafoSuperior.style.top = "0";
+    parrafoInferior.style.bottom = "0";
+  } else {
+    textoSuperior.style.position = "static";
+    textoInferior.style.position = "static";
+    textoSuperior.style.height = "";
+    textoInferior.style.height = "";
+    parrafoSuperior.style.position = "static";
+    parrafoInferior.style.position = "static";
+    parrafoSuperior.style.top = "";
+    parrafoInferior.style.bottom = "";
   }
-  else{
-    textoSuperior.style.backgroundColor="white"
-    textoInferior.style.backgroundColor="white"
-    textoSuperior.style.display="flex"
-    textoInferior.style.display="flex"
-
-  }
-}
-
-
-
-
-
-
-//agego lineas
+};
 
 // FUNCION PARA CONTORNOS
 

@@ -60,9 +60,17 @@ main {
   display: flex;
   align-items: center;
   justify-content: center;
-  font-size: 28px;
+  font-size: 30px;
   font-weight: bolder;
 }
+
+.parrafo-superior {
+  margin: 15px;
+  text-align: center;
+}
+.parrafo-inferior {
+  margin: 15px;
+} /* acomodo margenes de los p*/
 
 .imagen-src {
   height: 100%;
@@ -156,6 +164,12 @@ label,
   background-color: transparent;
 }
 
+input[type="color"] {
+  width: 30px;
+  border: none;
+  background-color: transparent;
+}
+
 .texto-color-fondo-img {
   color: white;
   font-size: 14px;
@@ -192,18 +206,38 @@ input[type="range"] {
   font-size: 16px;
 }
 
-.fa-window-close{
-  color: rgba(255, 255, 255, 0.74);
+.boton-cerrar-menu-imagen {
   position: absolute;
   top: 10px;
-  left: 20px;
+  left: 10px;
+  border: none;
+  background-color: transparent;
+  display: none;
+}
+
+.boton-cerrar-menu-texto {
+  position: absolute;
+  top: 10px;
+  left: 10px;
+  border: none;
+  background-color: transparent;
+  display: none;
+}
+
+.fa-window-close {
+  color: rgba(255, 255, 255, 0.74);
   font-size: 20px;
 }
-.contenedor-icono-cruz{display: none;}
 
 @media screen and (max-width: 1000px) {
-  .contenedor-icono-cruz{display: block;}
-  
+  .boton-cerrar-menu-imagen {
+    display: block;
+  }
+
+  .boton-cerrar-menu-texto {
+    display: block;
+  }
+
   #panel-img {
     width: 100%;
   }
@@ -221,20 +255,26 @@ input[type="range"] {
 
 @media screen and (max-width: 500px) {
   h1 {
-    font-size: 26px;
+    font-size: 24px;
   }
   .conteiner-imagen {
     height: 500px;
   }
-  .texto-superior,
-  .texto-inferior {
-    font-size: 30px;
+  .parrafo-superior,
+  .parrafo-inferior {
+    font-size: 27px;
   }
 }
 
 @media screen and (max-width: 400px) {
   .conteiner-imagen {
     height: 380px;
+  }
+
+  nav button {
+    padding: 5px;
+    margin-bottom: 3px;
+    font-size: 12px;
   }
 }
 /*//ESTILOS FORMULARIO TEXTO ////*/
@@ -260,6 +300,7 @@ input[type="range"] {
   text-align: center;
   color: white;
 }
+
 #superior,
 #inferior,
 #tipos-de-fuentes,
@@ -271,7 +312,6 @@ input[type="range"] {
   border: none;
   border-radius: 5px;
   font-family: sans-serif;
-  
 }
 
 #label-checkbox-superior{
@@ -295,8 +335,10 @@ input[type="range"] {
 .tamanio-letra,
 .color-y-fondo {
   display: flex;
-  margin-top: 8px;
+  align-items: center;
+  justify-content: space-between;
 }
+
 #input-fondo,
 #input-color {
   width: 30px;
@@ -305,8 +347,18 @@ input[type="range"] {
 }
 
 span {
-  margin: 8px;
   font-size: 15px;
+}
+
+.conteiner-input-color-fondo-texto {
+  display: flex;
+  align-items: center;
+  width: 100%;
+  height: 30px;
+  background-color: rgb(46, 45, 45);
+  padding-right: 3px;
+  border-radius: 5px;
+  margin-bottom: 7px;
 }
 
 .fas {
@@ -316,6 +368,7 @@ span {
   padding: 5px;
   font-size: 15px;
 }
+
 #boton-izquierda,
 #boton-centrado,
 #boton-derecha {
@@ -323,6 +376,7 @@ span {
   background-color: rgb(46, 45, 45);
   border-radius: 5px;
 }
+
 .alineacion {
   display: flex;
   justify-content: space-around;
@@ -330,19 +384,12 @@ span {
   margin-bottom: 7px;
   margin-left: 5px;
 }
-.color-color,
-.fondo-fondo {
-  display: flex;
-  background-color: rgb(46, 45, 45);
-  border-radius: 5px;
-  width: 115px;
-  margin-right: 5px;
-  margin-bottom: 3px;
-}
+
 .tipos-contorno {
   margin-top: 25px;
   margin-bottom: 30px;
 }
+
 #claro,
 #ninguno,
 #oscuro {
@@ -355,17 +402,17 @@ span {
   border-radius: 3px;
 }
 
-textarea,select,input,h3,span {
+textarea,
+select,
+input,
+h3,
+span {
   color: white;
 }
 
 h3 {
   font-size: 14px;
 }
-.parrafo-superior, .parrafo-inferior{
-  margin:0px;
-}
-
 
 /* Clases para modo claro */
 
@@ -395,6 +442,6 @@ h3 {
 
 
 /* FUENTES*/
-.arial{
+.arial {
   font-family: Arial, Helvetica, sans-serif;
 }
