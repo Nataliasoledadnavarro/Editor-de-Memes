@@ -52,6 +52,7 @@ main {
   height: 430px;
   display: flex;
   flex-direction: column;
+  margin-top: 10px;
 }
 
 .texto-superior,
