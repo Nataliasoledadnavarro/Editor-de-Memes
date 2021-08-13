@@ -249,18 +249,14 @@ input[type="range"]::-webkit-slider-thumb {
     display: block;
   }
 
-  #panel-img {
-    width: 100%;
-  }
-
-  #panel-texto {
-    width: 100%;
+  #panel-img, #panel-texto {
+    width: 50%;
   }
   .tamanio-letra {
-    width: 60%;
+    width: 90%;
   }
-  .color-y-fondo {
-    width: 50%;
+    .color-y-fondo {
+    width: 90%;
   }
 }
 @media screen and (max-width: 600px) {
@@ -281,7 +277,8 @@ input[type="range"]::-webkit-slider-thumb {
   .parrafo-inferior {
     font-size: 27px;
   }
-  .color-y-fondo {
+
+  #panel-img, #panel-texto {
     width: 70%;
   }
 }
@@ -297,10 +294,10 @@ input[type="range"]::-webkit-slider-thumb {
     font-size: 12px;
   }
   .tamanio-letra {
-    width: 80%;
+    width: 100%;
   }
   .color-y-fondo {
-    width: 80%;
+    width: 100%;
   }
 }
 /*//ESTILOS FORMULARIO TEXTO ////*/
