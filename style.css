@@ -194,6 +194,16 @@ input[type="range"] {
   appearance: none;
   background-color: gray;
   border-radius: 10px;
+  cursor: pointer;
+}
+
+input[type="range"]::-webkit-slider-thumb {
+  appearance: none;
+  background-color: rgb(190, 138, 196);
+  height: 13px;
+  width: 13px;
+  border-radius: 50%;
+  cursor: pointer;
 }
 
 .reestablecer-filtros {
