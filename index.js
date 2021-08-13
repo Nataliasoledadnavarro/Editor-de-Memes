@@ -17,9 +17,7 @@ botonTexto.onclick = mostrarPanelTexto;
 botonImg.onclick = mostrarPanelImagen;
 
 // Función ocultar panel con icono cruz
-const botonCerrarMenuImagen = document.querySelector(
-  ".boton-cerrar-menu-imagen"
-);
+const botonCerrarMenuImagen = document.querySelector(".boton-cerrar-menu-imagen");
 const botonCerrarMenuTexto = document.querySelector(".boton-cerrar-menu-texto");
 
 botonCerrarMenuImagen.onclick = () => {
@@ -39,7 +37,7 @@ urlInput.oninput = () => {
   imagenMeme.src = urlInput.value;
 };
 
-// funcion picker de color
+// funcion picker de color formulario imagen
 
 let inputColor = document.getElementById("color-fondo-img"); //selecciono el id de input
 let textoColorFondo = document.querySelector(".texto-color-fondo-img"); //selecciono la clase del texto
@@ -51,7 +49,7 @@ const colorPicker = (event) => {
 
 inputColor.addEventListener("input", colorPicker);
 
-//funcion selector
+//funcion selector formulario imagen
 
 const elementoSelector = document.getElementById("opciones-fondo-img"); //seleciono el sector
 const contenedorDeImagen = document.querySelector(".imagen-src"); //seleccion del contenedor al q le aplico el fondo
@@ -169,16 +167,16 @@ botonDescarga.onclick = () => {
 };
 
 //Funcion Texto Superior/Texto Inferior
-const textoSuperiorUsuario = document.getElementById("superior");
+const textoSuperiorUsuario = document.getElementById("superior"); 
 const textoInferiorUsuario = document.getElementById("inferior");
-const textoSuperior = document.querySelector(".texto-superior");
-const textoInferior = document.querySelector(".texto-inferior");
+const textoSuperior = document.querySelector(".texto-superior");  //no se usan para el P
+const textoInferior = document.querySelector(".texto-inferior");  // no se usan para el P, va parrafoSuperior e inferior que ya esta selecionada mas abajo
 
 textoSuperiorUsuario.oninput = () => {
-  textoSuperior.textContent = textoSuperiorUsuario.value;
+  parrafoSuperior.textContent = textoSuperiorUsuario.value;
 };
 textoInferiorUsuario.oninput = () => {
-  textoInferior.textContent = textoInferiorUsuario.value;
+  parrafoInferior.textContent = textoInferiorUsuario.value;
 };
 
 //Funcion Sacar Texto Superior e Inferior
@@ -393,6 +391,8 @@ const tituloFondo = document.querySelector("#titulo-fondo")
 const tituloContorno = document.querySelector("#titulo-contorno")
 const tituloEspaciado = document.querySelector("#titulo-espaciado")
 const tituloInterlineado = document.querySelector("#titulo-interlineado")
+const botonCierraMenuTexto = document.querySelector("#cerrar-menu-texto-claro") //boton cierra menu imagen
+const btonCierraMenuImagen = document.querySelector("#cerrar-menu-imagen-claro")
 
 //labels
 const labelUrl = document.querySelector("#label-url") //formulario imagen
@@ -423,8 +423,7 @@ const fuentesModoClaro = () =>{
   tituloContorno.classList.toggle("fuentes-modo-claro")
   tituloEspaciado.classList.toggle("fuentes-modo-claro")
   tituloInterlineado.classList.toggle("fuentes-modo-claro")
-
-  //labelBrillo.classList.toggle("fuentes-modo-claro")
+  
  
 }
 
@@ -453,7 +452,8 @@ const cambiarModo = () => {
   botonesNav.classList.toggle("nav") 
   panelFondo.classList.toggle("panel-fondo-claro")
   panelTextoModoClaro.classList.toggle("panel-fondo-claro")
-
+  botonCierraMenuTexto.classList.toggle("clase-modo-claro")
+  btonCierraMenuImagen.classList.toggle("clase-modo-claro")
   fuentesModoClaro()
   cambiarClaseLabels()
 }
