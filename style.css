@@ -71,7 +71,7 @@ main {
 }
 .parrafo-inferior {
   margin: 15px;
-} /* acomodo margenes de los p*/
+}
 
 .imagen-src {
   height: 100%;
@@ -246,6 +246,12 @@ input[type="range"] {
   #panel-texto {
     width: 100%;
   }
+  .tamanio-letra {
+    width: 60%;
+  }
+  .color-y-fondo {
+    width: 50%;
+  }
 }
 @media screen and (max-width: 600px) {
   h1 {
@@ -265,6 +271,9 @@ input[type="range"] {
   .parrafo-inferior {
     font-size: 27px;
   }
+  .color-y-fondo {
+    width: 70%;
+  }
 }
 
 @media screen and (max-width: 400px) {
@@ -276,6 +285,12 @@ input[type="range"] {
     padding: 5px;
     margin-bottom: 3px;
     font-size: 12px;
+  }
+  .tamanio-letra {
+    width: 80%;
+  }
+  .color-y-fondo {
+    width: 80%;
   }
 }
 /*//ESTILOS FORMULARIO TEXTO ////*/
@@ -315,13 +330,11 @@ input[type="range"] {
   font-family: sans-serif;
 }
 
-#label-checkbox-superior{
+#label-checkbox-superior {
   background-color: transparent;
-  
 }
-#label-ckeckbox-inferior{
-  background-color:transparent;
- 
+#label-ckeckbox-inferior {
+  background-color: transparent;
 }
 
 #tamanio-letra {
@@ -417,30 +430,28 @@ h3 {
 
 /* Clases para modo claro */
 
-
-.clase-modo-claro{
-  background-color:#e0e0e0;
+.clase-modo-claro {
+  background-color: #e0e0e0;
   color: rgb(46, 45, 45);
 }
 
-.nav > button{ 
+.nav > button {
   background-color: transparent;
   color: rgb(46, 45, 45);
-} 
-
-.fuentes-modo-claro{
-  color:rgb(46, 45, 45);
 }
 
-.panel-fondo-claro{
+.fuentes-modo-claro {
+  color: rgb(46, 45, 45);
+}
+
+.panel-fondo-claro {
   background-color: #fafafa;
   color: rgb(46, 45, 45);
 }
 
-.clase-labels{
+.clase-labels {
   color: rgb(46, 45, 45);
 }
-
 
 /* FUENTES*/
 .arial {
