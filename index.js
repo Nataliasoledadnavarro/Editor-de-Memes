@@ -1,15 +1,3 @@
-///////////////////////////FUNCIONES DEL MAIN////////////////////////////////////////
-
-// Boton descargar meme
-
-const descargarMeme = document.getElementById("contenedor-imagen");
-const botonDescarga = document.getElementById("boton-descargar");
-
-botonDescarga.onclick = () => {
-  domtoimage.toBlob(descargarMeme).then(function (blob) {
-    window.saveAs(blob, "elmejormeme.png");
-  });
-};
 
 ///////////////////////////FUNCIONES BOTON IMAGEN Y TEXTO//////////////////////////////
 
@@ -466,3 +454,16 @@ const cambiarModo = () => {
 }
 
 botonModoOscuro.onclick = cambiarModo;
+
+///////////////////////////FUNCIONES DEL MAIN////////////////////////////////////////
+
+// Boton descargar meme
+
+const descargarMeme = document.getElementById("contenedor-imagen");
+const botonDescarga = document.getElementById("boton-descargar");
+
+botonDescarga.onclick = () => {
+  domtoimage.toBlob(descargarMeme).then(function (blob) {
+    window.saveAs(blob, "elmejormeme.png");
+  });
+};
