@@ -1,8 +1,24 @@
-// Boton imagen y Boton texto
+///////////////////////////FUNCIONES DEL MAIN////////////////////////////////////////
+
+// Boton descargar meme
+
+const descargarMeme = document.getElementById("contenedor-imagen");
+const botonDescarga = document.getElementById("boton-descargar");
+
+botonDescarga.onclick = () => {
+  domtoimage.toBlob(descargarMeme).then(function (blob) {
+    window.saveAs(blob, "elmejormeme.png");
+  });
+};
+
+///////////////////////////FUNCIONES BOTON IMAGEN Y TEXTO//////////////////////////////
+
 const botonImg = document.querySelector(".boton-imagen-nav");
 const botonTexto = document.querySelector(".boton-texto-nav");
 const panelImg = document.getElementById("panel-img");
 const panelTexto = document.getElementById("panel-texto");
+
+// ABRIR FORMULARIOS TEXTO E IMAGEN
 
 const mostrarPanelTexto = () => {
   panelTexto.classList.remove("ocultar");
@@ -28,7 +44,9 @@ botonCerrarMenuTexto.onclick = () => {
   panelTexto.classList.add("ocultar");
 };
 
-//funcion de url imagen
+///////////////////////////FUNCIONES DEL FORMULARIO IMAGEN///////////////////////////////
+
+//URL
 
 const imagenMeme = document.getElementById("img-meme");
 const urlInput = document.getElementById("url");
@@ -37,27 +55,26 @@ urlInput.oninput = () => {
   imagenMeme.src = urlInput.value;
 };
 
-// funcion picker de color formulario imagen
+// PICKER COLOR
 
-let inputColor = document.getElementById("color-fondo-img"); //selecciono el id de input
-let textoColorFondo = document.querySelector(".texto-color-fondo-img"); //selecciono la clase del texto
+let inputColor = document.getElementById("color-fondo-img");
+let textoColorFondo = document.querySelector(".texto-color-fondo-img");
 
 const colorPicker = (event) => {
-  textoColorFondo.textContent = event.target.value; //toma al valor del evento input y cambiale el contenido de texto a textoColorfondo (target: objetivo)
-  aplicarFiltro(); //llama a la funcion que aplica los filtros
+  textoColorFondo.textContent = event.target.value;
+  aplicarFiltro();
 };
 
 inputColor.addEventListener("input", colorPicker);
 
-//funcion selector formulario imagen
+//SELECT COLOR FONDO
 
-const elementoSelector = document.getElementById("opciones-fondo-img"); //seleciono el sector
-const contenedorDeImagen = document.querySelector(".imagen-src"); //seleccion del contenedor al q le aplico el fondo
-const imagenFondo = document.querySelector(".imagen-fondo"); //seleciono la imagen
+const elementoSelector = document.getElementById("opciones-fondo-img");
+const contenedorDeImagen = document.querySelector(".imagen-src");
+const imagenFondo = document.querySelector(".imagen-fondo");
 let seleccionDeFondo = " ";
 
 const seleccionUsuario = (event) => {
-  //if q comprueba la seleccion del usuario del select y lo guarda el nombre del filtro en la variable que luego se utiliza en la funcion aplicarFiltro
   if (event.target.value === "aclarar") {
     seleccionDeFondo = "lighten";
   } else if (event.target.value === "oscurecer") {
@@ -72,17 +89,17 @@ const seleccionUsuario = (event) => {
     seleccionDeFondo = "normal";
   }
 
-  aplicarFiltro(); //llamo a esta funcion que aplica los filtros
+  aplicarFiltro();
 };
 
-elementoSelector.addEventListener("change", seleccionUsuario); //escucho cuando cambia el selector y se ejecuta la funcion seleccionUsuario
+elementoSelector.addEventListener("change", seleccionUsuario);
 
 let aplicarFiltro = () => {
-  imagenFondo.style.mixBlendMode = seleccionDeFondo; //el mix necesita imagen y fondo
+  imagenFondo.style.mixBlendMode = seleccionDeFondo;
   contenedorDeImagen.style.backgroundColor = inputColor.value;
 };
 
-// Funciones Input de Rango
+// INPUTS DE RANGO
 
 const brilloInput = document.getElementById("rango-brillo");
 const opacidadInput = document.getElementById("rango-opacidad");
@@ -135,7 +152,7 @@ hueInput.addEventListener("change", cambioFiltros);
 saturadoInput.addEventListener("change", cambioFiltros);
 negativoInput.addEventListener("change", cambioFiltros);
 
-// FUNCION BOTON REESTABLECER FILTROS
+//BOTON REESTABLECER FILTROS
 
 const botonFiltros = document.querySelector(".reestablecer-filtros");
 
@@ -155,22 +172,13 @@ botonFiltros.onclick = (event) => {
   imagenMeme.style.filter = "none";
 };
 
-// Boton descargar meme
+///////////////////////////FUNCIONES DEL DORMULARIO TEXTO////////////////////////////////
 
-const descargarMeme = document.getElementById("contenedor-imagen");
-const botonDescarga = document.getElementById("boton-descargar");
-
-botonDescarga.onclick = () => {
-  domtoimage.toBlob(descargarMeme).then(function (blob) {
-    window.saveAs(blob, "elmejormeme.png");
-  });
-};
-
-//Funcion Texto Superior/Texto Inferior
-const textoSuperiorUsuario = document.getElementById("superior"); 
+//INGRESAR TEXTO SUPERIOR E INFERIOR
+const textoSuperiorUsuario = document.getElementById("superior");
 const textoInferiorUsuario = document.getElementById("inferior");
-const textoSuperior = document.querySelector(".texto-superior");  //no se usan para el P
-const textoInferior = document.querySelector(".texto-inferior");  // no se usan para el P, va parrafoSuperior e inferior que ya esta selecionada mas abajo
+const textoSuperior = document.querySelector(".texto-superior"); 
+const textoInferior = document.querySelector(".texto-inferior");  
 
 textoSuperiorUsuario.oninput = () => {
   parrafoSuperior.textContent = textoSuperiorUsuario.value;
@@ -179,7 +187,7 @@ textoInferiorUsuario.oninput = () => {
   parrafoInferior.textContent = textoInferiorUsuario.value;
 };
 
-//Funcion Sacar Texto Superior e Inferior
+//ELIMINAR TEXTO SUPERIOR Y/O INFERIOR
 const sinTextoSuperior = document.getElementById("sin-texto-superior");
 const sinTextoInferior = document.getElementById("sin-texto-inferior");
 
@@ -197,8 +205,11 @@ sinTextoInferior.oninput = () => {
     textoInferior.style.display = "flex";
   }
 };
-//Funcion Cambio de Fuentes
-selectFuentes = document.getElementById("tipos-de-fuentes");
+
+//CAMBIO DE FUENTES
+
+const selectFuentes = document.getElementById("tipos-de-fuentes");
+
 const cambiarFuentes = (event) => {
   if (event.target.value === "Arial") {
     textoSuperior.style.fontFamily = "Arial";
@@ -231,16 +242,15 @@ const cambiarFuentes = (event) => {
 };
 selectFuentes.addEventListener("change", cambiarFuentes);
 
-/* Tamaño Letra Formulario Texto */
+// TAMAÑO DE LA LETRA
 const tamanioLetra = document.getElementById("tamanio-letra");
 
 tamanioLetra.oninput = () => {
-  //onchange probar
   textoSuperior.style.fontSize = tamanioLetra.value + "px";
   textoInferior.style.fontSize = tamanioLetra.value + "px";
 };
 
-/*Alineacion Formulario Texto */
+// ALINEACIÓN DEL PARRAFO
 
 const alineacionIzquierda = document.getElementById("boton-izquierda");
 const alineacionCentro = document.getElementById("boton-centrado");
@@ -261,20 +271,18 @@ alineacionDerecha.onclick = (event) => {
   textoSuperior.style.justifyContent = "flex-end";
   textoInferior.style.justifyContent = "flex-end";
 };
-//NUEVA RAMA FORMULARIO-TEXTO-MECHA
-// FORMULARIO - TEXTO COLOR Y FONDO
-// COLOR
 
-let parrafoInferior = document.querySelector(".parrafo-inferior"); // texto del input texto inferior
-let parrafoSuperior = document.querySelector(".parrafo-superior"); //Texto del input texto superior
+// COLOR Y FONDO
+let parrafoInferior = document.querySelector(".parrafo-inferior");
+let parrafoSuperior = document.querySelector(".parrafo-superior");
 
-let inputFondoTexto = document.getElementById("input-color-fondo"); //picker de color de fondo
-let inputColorTexto = document.getElementById("input-color-texto"); //picker de color del texto
+let inputFondoTexto = document.getElementById("input-color-fondo");
+let inputColorTexto = document.getElementById("input-color-texto");
 
-let spanColorTexto = document.querySelector(".span-color-texto"); //el codigo del color que se elije
-let spanFondoTexto = document.querySelector(".span-fondo-texto"); // el codigo del color del fondo
+let spanColorTexto = document.querySelector(".span-color-texto");
+let spanFondoTexto = document.querySelector(".span-fondo-texto");
 
-//FUNCION PARA CAMBIAR EL CODIGO DEL COLOR DEL INPUT COLOR PICKER
+// APLICAR CODIGO DE COLOR Y FONDO EN SPAN
 const codigoDeColor = (event) => {
   spanColorTexto.textContent = event.target.value;
 };
@@ -285,7 +293,7 @@ const codigoColorFondo = (event) => {
 };
 inputFondoTexto.addEventListener("input", codigoColorFondo);
 
-// FUNCION PARA CAMBIAR EL COLOR DEL TEXTO
+// APLICAR EL COLOR DE LA LETRA
 const cambiarColorTexto = (event) => {
   parrafoSuperior.style.color = inputColorTexto.value;
   parrafoInferior.style.color = inputColorTexto.value;
@@ -293,7 +301,7 @@ const cambiarColorTexto = (event) => {
 
 inputColorTexto.addEventListener("input", cambiarColorTexto);
 
-//FUNCION PARA APLICAR EL COLOR DE FONDO
+//APLICAR EL COLOR DE FONDO
 const cambiarColorFondoTexto = (event) => {
   textoSuperior.style.backgroundColor = inputFondoTexto.value;
   textoInferior.style.backgroundColor = inputFondoTexto.value;
@@ -301,8 +309,7 @@ const cambiarColorFondoTexto = (event) => {
 
 inputFondoTexto.addEventListener("input", cambiarColorFondoTexto);
 
-//FUNCION PARA FONDO TRANSPARENTE CHECKBOX
-
+//FONDO TRANSPARENTE
 let checkboxTransparente = document.getElementById("fondo-transparente");
 
 checkboxTransparente.oninput = () => {
@@ -327,7 +334,7 @@ checkboxTransparente.oninput = () => {
   }
 };
 
-// FUNCION PARA CONTORNOS
+// CONTORNOS
 
 let botonNinguno = document.getElementById("ninguno");
 let botonClaro = document.getElementById("claro");
@@ -351,14 +358,14 @@ botonOscuro.onclick = (event) => {
   parrafoInferior.style.textShadow = "2px 2px 2px black";
 };
 
-// FUNCION PARA ESPACIADO
+// ESPACIADO
 
 let espaciadoTexto = document.getElementById("espaciado");
 espaciadoTexto.oninput = () => {
   textoSuperior.style.padding = espaciadoTexto.value + "px";
   textoInferior.style.padding = espaciadoTexto.value + "px";
 };
-// FUNCION PARA INTERLINEADO
+// INTERLINEADO
 
 let interlineadoTexto = document.getElementById("interlineado");
 interlineadoTexto.oninput = () => {
@@ -366,17 +373,17 @@ interlineadoTexto.oninput = () => {
   textoInferior.style.lineHeight = interlineadoTexto.value;
 };
 
-//seccion modo oscuro-claro
+//MODO OSCURO-CLARO
 
-const botonModoOscuro = document.getElementById("boton-modo-oscuro"); //boton 
+const botonModoOscuro = document.getElementById("boton-modo-oscuro"); //boton
 
-//body 
+//body
 const fondoBody = document.querySelector("body");
 const fondoHeader = document.querySelector("header");
 const tituloPrincipal = document.querySelector("h1");
 const botonesNav = document.querySelector("nav");
-const panelFondo = document.querySelector("#panel-img"); //aside 
-const panelTextoModoClaro = document.querySelector("#panel-texto");//aside
+const panelFondo = document.querySelector("#panel-img"); //aside
+const panelTextoModoClaro = document.querySelector("#panel-texto"); //aside
 
 //llamado a elementos para fuentes modo claro
 const tituloFormularioImg = document.querySelector("#titulo-formulario-imagen") //formulario imagen
