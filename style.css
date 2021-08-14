@@ -394,13 +394,6 @@ h3 {
   color: rgb(46, 45, 45);
 }
 
-
-/* FUENTES*/
-.arial {
-  font-family: Arial, Helvetica, sans-serif;
-}
-
-
 /** MEDIA QUERY **/
 
 @media screen and (max-width: 1000px) {
