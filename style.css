@@ -5,37 +5,37 @@ body {
   background-color: rgb(61, 59, 59);
 }
 
-/*/// Estilos del Header ////*/
+/*/// ESTILOS DEL HEADER ////*/
 
 header {
   display: flex;
   align-items: center;
   flex-direction: column;
-  background-color: black;
+  background-color: rgb(0, 0, 0);
 }
 
 h1 {
-  color: blanchedalmond;
-  font-size: 40px;
   margin-top: 5px;
   margin-bottom: 5px;
+  font-size: 40px;
+  color: rgb(255, 235, 205);
 }
 
 nav button {
-  color: white;
-  border-radius: 5px;
-  background-color: black;
   padding: 10px;
   margin-bottom: 5px;
+  border-radius: 5px;
   border: none;
   font-size: 16px;
+  color: rgb(255, 255, 255);
+  background-color: rgb(0, 0, 0);
 }
 
 nav button:hover {
   background-color: rgb(85, 81, 81);
 }
 
-/*/// Estilos Main ////*/
+/*/// ESTILOS MAIN ////*/
 
 main {
   display: flex;
@@ -47,21 +47,22 @@ main {
 /*/// ESTILOS SECCIÓN .conteiner-imagen ////*/
 
 .conteiner-imagen {
+  display: flex;
+  flex-direction: column;
   width: 95%;
   max-width: 430px;
   height: 430px;
-  display: flex;
-  flex-direction: column;
+  margin-top: 10px;
 }
 
 .texto-superior,
 .texto-inferior {
-  background-color: white;
   display: flex;
   align-items: center;
   justify-content: center;
   font-size: 30px;
   font-weight: bolder;
+  background-color: rgb(255, 255, 255);
 }
 
 .parrafo-superior {
@@ -70,52 +71,53 @@ main {
 }
 .parrafo-inferior {
   margin: 15px;
-} /* acomodo margenes de los p*/
+  text-align: center;
+} 
 
 .imagen-src {
   height: 100%;
-  background-color: black;
   overflow: hidden;
+  background-color: rgb(0, 0, 0);
 }
 
-#img-meme {
+#img-meme{
   width: 100%;
   height: 100%;
   object-fit: cover;
 }
 .descargar {
-  width: 180px;
-  height: 45px;
-  background-color: green;
-  border-radius: 5px;
-  border: none;
-  color: white;
-  font-size: 16px;
-  font-family: Arial, Helvetica, sans-serif;
-  margin-top: 15px;
   display: flex;
   justify-content: space-around;
   align-items: center;
+  width: 180px;
+  height: 45px;
+  border-radius: 5px;
+  border: none;
+  margin-top: 15px;
+  font-size: 16px;
+  font-family: Arial, Helvetica, sans-serif;
+  background-color: rgb(0, 128, 0);
+  color: rgb(255, 255, 255);
 }
 
 .descargar i {
-  background-color: transparent;
   font-size: 18px;
+  background-color: transparent;
 }
 
 /*//ESTILOS FORMULARIO IMAGEN ////*/
 
 .panel-img {
+  display: flex;
+  justify-content: center;
   height: 100%;
   width: 280px;
-  font-family: Arial, Helvetica, sans-serif;
-  background-color: black;
   position: fixed;
   top: 0;
   right: 0;
-  display: flex;
-  justify-content: center;
   overflow: scroll;
+  font-family: Arial, Helvetica, sans-serif;
+  background-color: rgb(0, 0, 0);
 }
 
 form {
@@ -125,37 +127,37 @@ form {
 
 .titulo-panel {
   text-align: center;
-  color: white;
+  color: rgb(255, 255, 255);
 }
 
 #url {
   width: 98%;
   height: 35px;
-  background-color: rgb(46, 45, 45);
   border: none;
   border-radius: 5px;
   margin-top: 10px;
-  color: white;
+  background-color: rgb(46, 45, 45);
+  color: rgb(255, 255, 255);
 }
 
 label,
 .titulo-fondo,
 .filtros {
-  color: white;
   margin-top: 20px;
   margin-bottom: 10px;
   font-size: 14px;
   font-weight: lighter;
+  color: rgb(255, 255, 255);
 }
 
 .conteiner-color-fondo {
   display: flex;
   align-items: center;
   justify-content: space-around;
-  background-color: rgb(46, 45, 45);
+  width: 48%;
   height: 35px;
   border-radius: 5px;
-  width: 48%;
+  background-color: rgb(46, 45, 45);
 }
 
 #color-fondo-img {
@@ -171,16 +173,18 @@ input[type="color"] {
 }
 
 .texto-color-fondo-img {
-  color: white;
   font-size: 14px;
+  color: rgb(255, 255, 255); 
 }
+
 #opciones-fondo-img {
   width: 48%;
-  background-color: rgb(46, 45, 45);
   border: none;
-  color: white;
   border-radius: 5px;
+  background-color: rgb(46, 45, 45);
+  color: rgb(255, 255, 255);
 }
+
 .color-fondo-img {
   display: flex;
   justify-content: space-around;
@@ -189,10 +193,19 @@ input[type="color"] {
 input[type="range"] {
   width: 100%;
   height: 6px;
+  border-radius: 10px;
   margin-bottom: 15px;
   appearance: none;
-  background-color: gray;
-  border-radius: 10px;
+  background-color: rgb(128, 128, 128);
+}
+
+input[type="range"]::-webkit-slider-thumb {
+  appearance: none;
+  background-color: rgb(190, 138, 196);
+  height: 13px;
+  width: 13px;
+  border-radius: 50%;
+  cursor: pointer;
 }
 
 .reestablecer-filtros {
@@ -201,9 +214,9 @@ input[type="range"] {
   height: 35px;
   border-radius: 5px;
   border: none;
-  background-color: rgb(46, 45, 45);
-  color: white;
   font-size: 16px;
+  background-color: rgb(46, 45, 45);
+  color: rgb(255, 255, 255);
 }
 
 .boton-cerrar-menu-imagen {
@@ -225,70 +238,23 @@ input[type="range"] {
 }
 
 .fa-window-close {
-  color: rgba(255, 255, 255, 0.74);
   font-size: 20px;
+  color: rgba(255, 255, 255, 0.74);
 }
 
-@media screen and (max-width: 1000px) {
-  .boton-cerrar-menu-imagen {
-    display: block;
-  }
 
-  .boton-cerrar-menu-texto {
-    display: block;
-  }
-
-  #panel-img {
-    width: 100%;
-  }
-
-  #panel-texto {
-    width: 100%;
-  }
-}
-@media screen and (max-width: 600px) {
-  h1 {
-    font-size: 35px;
-    text-align: center;
-  }
-}
-
-@media screen and (max-width: 500px) {
-  h1 {
-    font-size: 24px;
-  }
-  .conteiner-imagen {
-    height: 500px;
-  }
-  .parrafo-superior,
-  .parrafo-inferior {
-    font-size: 27px;
-  }
-}
-
-@media screen and (max-width: 400px) {
-  .conteiner-imagen {
-    height: 380px;
-  }
-
-  nav button {
-    padding: 5px;
-    margin-bottom: 3px;
-    font-size: 12px;
-  }
-}
 /*//ESTILOS FORMULARIO TEXTO ////*/
 
 .panel-texto {
+  display: flex;
+  justify-content: center;
   height: 100%;
   width: 280px;
-  font-family: Arial, Helvetica, sans-serif;
-  background-color: black;
   position: fixed;
   top: 0;
   right: 0;
-  display: flex;
-  justify-content: center;
+  font-family: Arial, Helvetica, sans-serif;
+  background-color: rgb(0, 0, 0);
   overflow: scroll;
 }
 
@@ -298,7 +264,7 @@ input[type="range"] {
 
 .titulo-panel-texto {
   text-align: center;
-  color: white;
+  color: rgb(255, 255, 255);
 }
 
 #superior,
@@ -308,28 +274,26 @@ input[type="range"] {
 #espaciado {
   width: 100%;
   height: 35px;
-  background-color: rgb(46, 45, 45);
   border: none;
   border-radius: 5px;
   font-family: sans-serif;
+  background-color: rgb(46, 45, 45);
 }
 
-#label-checkbox-superior{
+#label-checkbox-superior {
   background-color: transparent;
-  
 }
-#label-ckeckbox-inferior{
-  background-color:transparent;
- 
+#label-ckeckbox-inferior {
+  background-color: transparent;
 }
 
 #tamanio-letra {
   width: 45%;
   height: 35px;
-  background-color: rgb(46, 45, 45);
   border: none;
   border-radius: 5px;
   margin-top: 7px;
+  background-color: rgb(46, 45, 45);
 }
 
 .tamanio-letra,
@@ -355,26 +319,26 @@ span {
   align-items: center;
   width: 100%;
   height: 30px;
-  background-color: rgb(46, 45, 45);
   padding-right: 3px;
   border-radius: 5px;
   margin-bottom: 7px;
+  background-color: rgb(46, 45, 45);
 }
 
 .fas {
-  background-color: rgb(46, 45, 45);
-  color: white;
   border-radius: 5px;
   padding: 5px;
   font-size: 15px;
+  color: rgb(255, 255, 255);
+  background-color: rgb(46, 45, 45);
 }
 
 #boton-izquierda,
 #boton-centrado,
 #boton-derecha {
   margin: 3px;
-  background-color: rgb(46, 45, 45);
   border-radius: 5px;
+  background-color: rgb(46, 45, 45);
 }
 
 .alineacion {
@@ -393,13 +357,13 @@ span {
 #claro,
 #ninguno,
 #oscuro {
-  font-family: sans-serif;
-  background-color: rgb(46, 45, 45);
-  border: none;
-  color: white;
   width: 60px;
   height: 30px;
   border-radius: 3px;
+  border: none;
+  font-family: sans-serif;
+  color: rgb(255, 255, 255);
+  background-color: rgb(46, 45, 45);
 }
 
 textarea,
@@ -414,20 +378,19 @@ h3 {
   font-size: 14px;
 }
 
-/* Clases para modo claro */
+/* ESTILOS MODO CLARO */
 
-
-.clase-modo-claro{
+.clase-modo-claro {
   background-color:#e0e0e0;
   color: rgb(46, 45, 45);
 }
 
-.nav > button{ 
+.nav > button { 
   background-color: transparent;
   color: rgb(46, 45, 45);
-} 
+}
 
-.fuentes-modo-claro{
+.fuentes-modo-claro {
   color:rgb(46, 45, 45);
 }
 
@@ -436,14 +399,71 @@ h3 {
   color: rgb(46, 45, 45);
 }
 
-.clase-labels{
+.clase-labels {
   color: rgb(46, 45, 45);
 }
 
+/* MEDIA QUERY */
 
-/* FUENTES*/
-.arial {
-  font-family: Arial, Helvetica, sans-serif;
+@media screen and (max-width: 1000px) {
+  .boton-cerrar-menu-imagen {
+    display: block;
+  }
+
+  .boton-cerrar-menu-texto {
+    display: block;
+  }
+
+  #panel-img, #panel-texto {
+    width: 50%;
+  }
+  .tamanio-letra {
+    width: 90%;
+  }
+    .color-y-fondo {
+    width: 90%;
+  }
+}
+@media screen and (max-width: 600px) {
+  h1 {
+    font-size: 35px;
+    text-align: center;
+  }
+}
+
+@media screen and (max-width: 500px) {
+  h1 {
+    font-size: 24px;
+  }
+  .conteiner-imagen {
+    height: 500px;
+  }
+  .parrafo-superior,
+  .parrafo-inferior {
+    font-size: 27px;
+  }
+
+  #panel-img, #panel-texto {
+    width: 70%;
+  }
+}
+
+@media screen and (max-width: 400px) {
+  .conteiner-imagen {
+    height: 380px;
+  }
+
+  nav button {
+    padding: 5px;
+    margin-bottom: 3px;
+    font-size: 12px;
+  }
+  .tamanio-letra {
+    width: 100%;
+  }
+  .color-y-fondo {
+    width: 100%;
+  }
 }
 .prueba{
   color: aqua;
