@@ -1,6 +1,7 @@
 body {
   margin: 0;
   font-family: "Otomanopee One", sans-serif;
+  /* Esto no se hereda, y el body no lo necesita. */
   box-sizing: border-box;
   background-color: rgb(61, 59, 59);
 }

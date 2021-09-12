@@ -17,6 +17,8 @@
     <link href="https://fonts.googleapis.com/css2?family=Palette+Mosaic&display=swap" rel="stylesheet">
     <script src="https://cdnjs.cloudflare.com/ajax/libs/FileSaver.js/2.0.0/FileSaver.min.js" integrity="sha512-csNcFYJniKjJxRWRV1R7fvnXrycHP6qDR21mgz1ZP55xY5d+aHLfo9/FcGDQLfn2IfngbAHd8LdfsagcCqgTcQ==" crossorigin="anonymous"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/dom-to-image/2.6.0/dom-to-image.min.js" integrity="sha512-01CJ9/g7e8cUmY0DFTMcUw/ikS799FHiOA0eyHsUWfOetgbx/t6oV4otQ5zXKQyIrQGTHSmRVPIgrgLcZi/WMA==" crossorigin="anonymous"></script>
+<!-- No es necesario repetir estos links de google fonts: con uno alcanza. Los que si se necesitan son los de cada 
+font en particular. Repetirlos impacta negativamente en el tiempo de carga de la pagina.  -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@100&display=swap" rel="stylesheet">
@@ -24,6 +26,7 @@
   </head>
  
 <body>
+  <!-- Ojo con el tabulado. Todo lo que esta dentro de header deberia estar dos espacios a la derecha.  -->
   <header>
   <h1> Generador de Memes</h1>
   <nav>
@@ -36,6 +39,7 @@
   <main>
   <section class="conteiner-imagen" id="contenedor-imagen">
     <div class="texto-superior"><p class="parrafo-superior">TEXTO SUPERIOR</p></div>
+    <!-- Eliminen el atributo src de la imagen para que no se vea rota apenas carga la pagina -->
     <div class="imagen-src"><img src="" alt="Imagen para editar el meme" id="img-meme" class="imagen-fondo"></div>
     <div class="texto-inferior"><p class="parrafo-inferior">TEXTO INFERIOR</p></div>
   </section>
@@ -48,12 +52,14 @@
     <form class="form-img">
       <h2 class="titulo-panel" id="titulo-formulario-imagen">IMAGEN</h2>  
 
+      <!-- No es necesario el for si el label rodea al input -->
         <label for="url" id="label-url">URL
           <input type="text" id="url" name="url" aria-label="Url de imágen">
         </label>
 
       <h3 class="titulo-fondo" id="titulo-fondo-img">FONDO</h3>
       <div class="color-fondo-img">
+        <!-- Ojo con el tabulado aca -->
         <div class="conteiner-color-fondo">
         <input type="color" id="color-fondo-img" value="#FFFFFF" aria-label="Seleccionar color fondo de imagen">
         <span class="texto-color-fondo-img" aria-hidden="true">#FFFFFF</span>
