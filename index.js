@@ -19,6 +19,15 @@ const panelImg = document.getElementById("panel-img");
 const panelTexto = document.getElementById("panel-texto");
 
 // ABRIR FORMULARIOS TEXTO E IMAGEN
+// Como estas funciones se van a usar una sola vez, mejor asociarlas al onclick: 
+// botonTexto.onclick = () => {
+//   panelTexto.classList.remove("ocultar");
+//   panelImg.classList.add("ocultar");
+// };
+// botonImg.onclick = () => {
+//   panelImg.classList.remove("ocultar");
+//   panelTexto.classList.add("ocultar");
+// };
 
 const mostrarPanelTexto = () => {
   panelTexto.classList.remove("ocultar");
@@ -72,9 +81,27 @@ inputColor.addEventListener("input", colorPicker);
 const elementoSelector = document.getElementById("opciones-fondo-img");
 const contenedorDeImagen = document.querySelector(".imagen-src");
 const imagenFondo = document.querySelector(".imagen-fondo");
+// Deberia ser un string vacio, no un string con un espacio dentro
 let seleccionDeFondo = " ";
 
 const seleccionUsuario = (event) => {
+  // Esta funcion podria ser muchisimo mas breve si usaran el potencial del value del select. 
+  // en el HTML, modificamos el select:
+
+  // <option value="normal">Ninguno</option>
+  // <option value="lighten">Aclarar</option>
+  // <option value="darken">Oscurecer</option>
+  // <option value="difference">Diferencia</option>
+  // <option value="luminosity">Luminosidad</option>
+  // <option value="multiply">Multiplicar</option>
+  // Y luego la funcion pasa a ser super breve:
+
+  // const seleccionUsuario = (event) => {
+  //   seleccionDeFondo = event.target.value
+  // aplicarFiltro();
+  // }
+
+
   if (event.target.value === "aclarar") {
     seleccionDeFondo = "lighten";
   } else if (event.target.value === "oscurecer") {
@@ -110,6 +137,17 @@ const sepiaInput = document.getElementById("rango-sepia");
 const hueInput = document.getElementById("rango-hue");
 const saturadoInput = document.getElementById("rango-saturado");
 const negativoInput = document.getElementById("rango-negativo");
+
+// Esto seria mucho mejor usando backticks e interpolacion de variables:
+// imagenMeme.style.filter = `brightness(${brilloInput.value})
+//   opacity(${opacidadInput.value})
+//   contrast(${contrasteInput.value}%)
+//   blur(${desenfoqueInput.value}px)
+//   grayscale(${escalaDeGrisesInput.value}%)
+//   sepia(${sepiaInput.value}%)
+//   hue-rotate(${hueInput.value}deg)
+//   saturate(${saturadoInput.value}%)
+//   invert(${negativoInput.value})`;
 
 const cambioFiltros = () => {
   imagenMeme.style.filter =
@@ -211,6 +249,14 @@ sinTextoInferior.oninput = () => {
 const selectFuentes = document.getElementById("tipos-de-fuentes");
 
 const cambiarFuentes = (event) => {
+  // Aca tienen toda la informacion que necesitan en el event.target.value, no necesitan este if!
+  // La funcion podria ser asi:
+
+  // const cambiarFuentes = (event) => {
+  //   textoSuperior.style.fontFamily = event.target.value;
+  //   textoInferior.style.fontFamily = event.target.value;
+  // }
+
   if (event.target.value === "Arial") {
     textoSuperior.style.fontFamily = "Arial";
     textoInferior.style.fontFamily = "Arial";
@@ -283,6 +329,15 @@ let spanColorTexto = document.querySelector(".span-color-texto");
 let spanFondoTexto = document.querySelector(".span-fondo-texto");
 
 // APLICAR CODIGO DE COLOR Y FONDO EN SPAN
+// No creo que sea necesario usar addveentlistener aqui, ni separar las funciones
+// mas claro asi:
+// const codigoDeColor = (event) => {
+//   spanColorTexto.textContent = event.target.value;
+// };
+// inputColorTexto.oninput = (event) => {
+//   spanColorTexto.textContent = event.target.value;
+// };
+
 const codigoDeColor = (event) => {
   spanColorTexto.textContent = event.target.value;
 };
@@ -294,6 +349,7 @@ const codigoColorFondo = (event) => {
 inputFondoTexto.addEventListener("input", codigoColorFondo);
 
 // APLICAR EL COLOR DE LA LETRA
+// No necesitan el event aqui
 const cambiarColorTexto = (event) => {
   parrafoSuperior.style.color = inputColorTexto.value;
   parrafoInferior.style.color = inputColorTexto.value;
@@ -302,6 +358,7 @@ const cambiarColorTexto = (event) => {
 inputColorTexto.addEventListener("input", cambiarColorTexto);
 
 //APLICAR EL COLOR DE FONDO
+// No necesitan el event aqui
 const cambiarColorFondoTexto = (event) => {
   textoSuperior.style.backgroundColor = inputFondoTexto.value;
   textoInferior.style.backgroundColor = inputFondoTexto.value;
@@ -374,6 +431,17 @@ interlineadoTexto.oninput = () => {
 };
 
 //MODO OSCURO-CLARO
+
+// No esta mal como resolvieron el cambio de modo, pero habria sido muchiiiiiisimo mas breve 
+// si le daban una clase al body y en el css hacian por ejemplo
+
+// header {
+
+// }
+
+// .modo-oscuro header {
+
+// }
 
 const botonModoOscuro = document.getElementById("boton-modo-oscuro"); //boton
 
