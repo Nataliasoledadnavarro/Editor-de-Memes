@@ -6,6 +6,12 @@ Es una página web donde podrás editar **#elmejormeme!**
 
 Link al **[editor](https://nataliasoledadnavarro.github.io/Editor-de-Memes/)** 🏃‍♀️
 
+Les dejamos tambien algunas webs donde van a poder **copiar la ruta/dirección** de las imágenes para crear tus memes!
+
+• **[Gatitos!](https://placekitten.com/)**
+• **[Variadito!](hhttps://www.istockphoto.com/es/fotos/mejores-memes)**
+• **[Harold!](https://www.rtve.es/noticias/20210822/del-banco-imagenes-meme-redes-sociales-hide-the-pain-harold/2162000.shtml)**
+
 ---
 
 #### Vas a poder:

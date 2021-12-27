@@ -1,77 +1,87 @@
 <!DOCTYPE html>
 <html lang="es">
-  <head>
-    <meta charset="UTF-8" />
-    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <link href="style.css" rel="stylesheet"></li>
-    <script src="https://kit.fontawesome.com/0ca0e55b9a.js" crossorigin="anonymous"></script>
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="icon" type="image/ico" href="grin-squint-tears-regular.ico">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Otomanopee+One&display=swap" rel="stylesheet">
-    <link href="https://fonts.googleapis.com/css2?family=Style+Script&display=swap" rel="stylesheet">
-    <link href="https://fonts.googleapis.com/css2?family=WindSong:wght@500&display=swap" rel="stylesheet">
-    <link href="https://fonts.googleapis.com/css2?family=Shadows+Into+Light&display=swap" rel="stylesheet">
-    <link href="https://fonts.googleapis.com/css2?family=Permanent+Marker&display=swap" rel="stylesheet">
-    <link href="https://fonts.googleapis.com/css2?family=Palette+Mosaic&display=swap" rel="stylesheet">
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/FileSaver.js/2.0.0/FileSaver.min.js" integrity="sha512-csNcFYJniKjJxRWRV1R7fvnXrycHP6qDR21mgz1ZP55xY5d+aHLfo9/FcGDQLfn2IfngbAHd8LdfsagcCqgTcQ==" crossorigin="anonymous"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/dom-to-image/2.6.0/dom-to-image.min.js" integrity="sha512-01CJ9/g7e8cUmY0DFTMcUw/ikS799FHiOA0eyHsUWfOetgbx/t6oV4otQ5zXKQyIrQGTHSmRVPIgrgLcZi/WMA==" crossorigin="anonymous"></script>
-<!-- No es necesario repetir estos links de google fonts: con uno alcanza. Los que si se necesitan son los de cada 
-font en particular. Repetirlos impacta negativamente en el tiempo de carga de la pagina.  -->
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@100&display=swap" rel="stylesheet">
-    <title>¡CREÁ TU PROPIO MEME!</title>
-  </head>
- 
+
+<head>
+  <meta charset="UTF-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <link href="style.css" rel="stylesheet">
+  </li>
+  <script src="https://kit.fontawesome.com/0ca0e55b9a.js" crossorigin="anonymous"></script>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="icon" type="image/ico" href="grin-squint-tears-regular.ico">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Otomanopee+One&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Style+Script&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=WindSong:wght@500&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Shadows+Into+Light&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Permanent+Marker&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Palette+Mosaic&display=swap" rel="stylesheet">
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/FileSaver.js/2.0.0/FileSaver.min.js"
+    integrity="sha512-csNcFYJniKjJxRWRV1R7fvnXrycHP6qDR21mgz1ZP55xY5d+aHLfo9/FcGDQLfn2IfngbAHd8LdfsagcCqgTcQ=="
+    crossorigin="anonymous"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/dom-to-image/2.6.0/dom-to-image.min.js"
+    integrity="sha512-01CJ9/g7e8cUmY0DFTMcUw/ikS799FHiOA0eyHsUWfOetgbx/t6oV4otQ5zXKQyIrQGTHSmRVPIgrgLcZi/WMA=="
+    crossorigin="anonymous"></script>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@100&display=swap" rel="stylesheet">
+  <title>¡CREÁ TU PROPIO MEME!</title>
+</head>
+
 <body>
-  <!-- Ojo con el tabulado. Todo lo que esta dentro de header deberia estar dos espacios a la derecha.  -->
+ 
   <header>
-  <h1> Generador de Memes</h1>
-  <nav>
-    <button class="boton-imagen-nav" aria-label="Menu Imagen"><i class="far fa-images" ></i>  Imagen </button>
-    <button class="boton-texto-nav"><i class="fas fa-font" aria-label="Menu Texto"></i>  Texto</button>  
-    <button class="boton-modo-oscuro" id="boton-modo-oscuro"><i class="far fa-lightbulb" aria-label="Modo Oscuro"></i>  Modo oscuro</button>
-  </nav>
+      <h1> Generador de Memes</h1>
+        <nav>
+          <button class="boton-imagen-nav" aria-label="Menu Imagen"><i class="far fa-images"></i> Imagen </button>
+          <button class="boton-texto-nav"><i class="fas fa-font" aria-label="Menu Texto"></i> Texto</button>
+          <button class="boton-modo-oscuro" id="boton-modo-oscuro"><i class="far fa-lightbulb" aria-label="Modo Oscuro"></i>
+           Modo oscuro</button>
+        </nav>
   </header>
 
   <main>
-  <section class="conteiner-imagen" id="contenedor-imagen">
-    <div class="texto-superior"><p class="parrafo-superior">TEXTO SUPERIOR</p></div>
-    <!-- Eliminen el atributo src de la imagen para que no se vea rota apenas carga la pagina -->
-    <div class="imagen-src"><img src="" alt="Imagen para editar el meme" id="img-meme" class="imagen-fondo"></div>
-    <div class="texto-inferior"><p class="parrafo-inferior">TEXTO INFERIOR</p></div>
-  </section>
-    <button class="descargar" id="boton-descargar" aria-label="Descargar meme"><i class="fas fa-download"></i>Descargar meme</button>
+    <section class="conteiner-imagen" id="contenedor-imagen">
+      <div class="texto-superior">
+        <p class="parrafo-superior">TEXTO SUPERIOR</p>
+      </div>
+
+      <div class="imagen-src"><img alt="Imagen para editar el meme" id="img-meme" class="imagen-fondo"></div>
+      <div class="texto-inferior">
+        <p class="parrafo-inferior">TEXTO INFERIOR</p>
+      </div>
+    </section>
+    <button class="descargar" id="boton-descargar" aria-label="Descargar meme"><i class="fas fa-download"></i>Descargar
+      meme</button>
   </main>
 
-  <aside id="panel-img"  class="panel-img">
-    <button class="boton-cerrar-menu-imagen" aria-label="Cerrar menu imagen"><i class="far fa-window-close icono-cruz-img" id="cerrar-menu-imagen-claro"></i></button>
-    
-    <form class="form-img">
-      <h2 class="titulo-panel" id="titulo-formulario-imagen">IMAGEN</h2>  
+  <aside id="panel-img" class="panel-img">
+    <button class="boton-cerrar-menu-imagen" aria-label="Cerrar menu imagen"><i
+        class="far fa-window-close icono-cruz-img" id="cerrar-menu-imagen-claro"></i></button>
 
-      <!-- No es necesario el for si el label rodea al input -->
-        <label for="url" id="label-url">URL
-          <input type="text" id="url" name="url" aria-label="Url de imágen">
-        </label>
+    <form class="form-img">
+      <h2 class="titulo-panel" id="titulo-formulario-imagen">IMAGEN</h2>
+
+
+      <label id="label-url">URL
+        <input type="text" id="url" name="url" aria-label="Url de imágen">
+      </label>
 
       <h3 class="titulo-fondo" id="titulo-fondo-img">FONDO</h3>
       <div class="color-fondo-img">
-        <!-- Ojo con el tabulado aca -->
         <div class="conteiner-color-fondo">
-        <input type="color" id="color-fondo-img" value="#FFFFFF" aria-label="Seleccionar color fondo de imagen">
-        <span class="texto-color-fondo-img" aria-hidden="true">#FFFFFF</span>
+          <input type="color" id="color-fondo-img" value="#FFFFFF" aria-label="Seleccionar color fondo de imagen">
+          <span class="texto-color-fondo-img" aria-hidden="true">#FFFFFF</span>
         </div>
 
         <select name="opciones-fondo-img" id="opciones-fondo-img" aria-label="Opciones para editar fondo de la imagen">
-          <option value="ninguno">Ninguno</option>
-          <option value="aclarar">Aclarar</option>
-          <option value="oscurecer">Oscurecer</option>
-          <option value="diferencia">Diferencia</option>
-          <option value="luminosidad">Luminosidad</option>
-          <option value="multiplicar">Multiplicar</option>
+          <option value="normal">Ninguno</option>
+          <option value="lighten">Aclarar</option>
+          <option value="darken">Oscurecer</option>
+          <option value="difference">Diferencia</option>
+          <option value="luminosity">Luminosidad</option>
+          <option value="multiply">Multiplicar</option>
         </select>
       </div>
 
@@ -82,31 +92,31 @@ font en particular. Repetirlos impacta negativamente en el tiempo de carga de la
       </label>
 
       <label for="rango-opacidad" id="label-opacidad">OPACIDAD
-        <input type="range" id="rango-opacidad"min="0" max="1" step="0.1" value="1"  name="opacidad">
+        <input type="range" id="rango-opacidad" min="0" max="1" step="0.1" value="1" name="opacidad">
       </label>
-    
+
       <label for="rango-contraste" id="label-contraste">CONTRASTE
         <input type="range" id="rango-contraste" min="100" max="1000" step="1" value="100" name="contraste">
       </label>
 
       <label for="rango-desenfoque" id="label-desenfoque">DESENFOQUE
-        <input type="range" id="rango-desenfoque" min="0" max="10" step="0.1" value="0"  name="desenfoque">
+        <input type="range" id="rango-desenfoque" min="0" max="10" step="0.1" value="0" name="desenfoque">
       </label>
 
       <label for="rango-grises" id="label-escala-grises">ESCALA DE GRISES
-        <input type="range" id="rango-grises" min="0" max="100" step="1" value="0"  name="grises">
+        <input type="range" id="rango-grises" min="0" max="100" step="1" value="0" name="grises">
       </label>
 
       <label for="rango-sepia" id="label-sepia">SEPIA
-        <input type="range" id="rango-sepia" min="0" max="100" step="1" value="0"  name="sepia">
+        <input type="range" id="rango-sepia" min="0" max="100" step="1" value="0" name="sepia">
       </label>
 
       <label for="rango-hue" id="label-hue">HUE
-        <input type="range" id="rango-hue" min="0" max="359" step="1" value="0"  name="hue"> 
+        <input type="range" id="rango-hue" min="0" max="359" step="1" value="0" name="hue">
       </label>
 
       <label for="rango-saturado" id="label-saturado">SATURADO
-        <input type="range" id="rango-saturado" min="100" max="1000" step="10" value="100"  name="saturado">
+        <input type="range" id="rango-saturado" min="100" max="1000" step="10" value="100" name="saturado">
       </label>
 
       <label for="rango-negativo" id="label-negativo">NEGATIVO
@@ -118,13 +128,15 @@ font en particular. Repetirlos impacta negativamente en el tiempo de carga de la
   </aside>
 
   <aside class="panel-texto ocultar" id="panel-texto">
-    <button class="boton-cerrar-menu-texto" aria-label="Cerrar menu texto"><i class="far fa-window-close icono-cruz-texto" id="cerrar-menu-texto-claro"></i></button>
-    
+    <button class="boton-cerrar-menu-texto" aria-label="Cerrar menu texto"><i
+        class="far fa-window-close icono-cruz-texto" id="cerrar-menu-texto-claro"></i></button>
+
     <form class="form-texto">
       <h2 class="titulo-panel-texto" id="titulo-formulario-texto">TEXTO</h2>
       <div>
         <h3 id="titulo-texto-superior">SUPERIOR</h3>
-        <textarea name="texto" id="superior" cols="10" rows="2" aria-label="Escribir texto superior">TEXTO SUPERIOR</textarea>
+        <textarea name="texto" id="superior" cols="10" rows="2"
+          aria-label="Escribir texto superior">TEXTO SUPERIOR</textarea>
         <label for="sin-texto-superior" id="label-checkbox-superior">
           <input type="checkbox" id="sin-texto-superior">
           Sin texto superior
@@ -132,29 +144,31 @@ font en particular. Repetirlos impacta negativamente en el tiempo de carga de la
       </div>
       <div>
         <h3 id="titulo-texto-inferior">INFERIOR</h3>
-        <textarea name="texto" id="inferior" cols="10" rows="2" aria-label="Escribir texto inferior">TEXTO INFERIOR</textarea>
+        <textarea name="texto" id="inferior" cols="10" rows="2"
+          aria-label="Escribir texto inferior">TEXTO INFERIOR</textarea>
         <label for="sin-texto" id="label-checkbox-inferior">
           <input type="checkbox" id="sin-texto-inferior" aria-label="Sin texto inferior">
           Sin texto inferior
-        </label> 
+        </label>
       </div>
       <h3 id="titulo-fuente">FUENTE</h3>
-        <select name="fuente" id="tipos-de-fuentes" aria-label="Seleccionar tipo de fuentes">
-          <option value="Arial">Arial</option>
-          <option value="Permanent Marker">Permanent Marker</option>
-          <option value="Palette Mosaic">Palette Mosaic</option>
-          <option value="WindSong">WindSong</option>
-          <option value="Courier New">Courier New</option>
-          <option value="Unset">Unset</option>
-          <option value="Shadows Into Light">Shadows Into Light</option>
-          <option value="Style Script">Style Script</option>
-          <option value="Times New Roman">Times New Roman</option>
-        </select>
+      <select name="fuente" id="tipos-de-fuentes" aria-label="Seleccionar tipo de fuentes">
+        <option value="Arial">Arial</option>
+        <option value="Permanent Marker">Permanent Marker</option>
+        <option value="Palette Mosaic">Palette Mosaic</option>
+        <option value="WindSong">WindSong</option>
+        <option value="Courier New">Courier New</option>
+        <option value="Unset">Unset</option>
+        <option value="Shadows Into Light">Shadows Into Light</option>
+        <option value="Style Script">Style Script</option>
+        <option value="Times New Roman">Times New Roman</option>
+      </select>
 
       <div class="tamanio-letra">
         <input type="number" id="tamanio-letra" min="12" value="30" aria-label="Tamaño de letra">
         <div class="alineacion">
-          <button id="boton-izquierda" aria-label="Alinear texto a la izquierda"><i class="fas fa-align-left"></i></button>
+          <button id="boton-izquierda" aria-label="Alinear texto a la izquierda"><i
+              class="fas fa-align-left"></i></button>
           <button id="boton-centrado" aria-label="Centrar texto"><i class="fas fa-align-center"></i></button>
           <button id="boton-derecha" aria-label="Alinear texto a la derecha"><i class="fas fa-align-right"></i></button>
         </div>
@@ -164,21 +178,23 @@ font en particular. Repetirlos impacta negativamente en el tiempo de carga de la
         <div class="color">
           <h3 id="titulo-color">COLOR </h3>
           <div class="conteiner-input-color-fondo-texto">
-            <input name="Color de texto" type="color" id="input-color-texto" value="#000000" aria-label="Color de texto">
+            <input name="Color de texto" type="color" id="input-color-texto" value="#000000"
+              aria-label="Color de texto">
             <span class="span-color-texto" aria-hidden="true">#000000</span>
           </div>
         </div>
         <div class="fondo">
           <h3 id="titulo-fondo">FONDO</h3>
           <div class="conteiner-input-color-fondo-texto">
-            <input name="Color de fondo" type="color" id="input-color-fondo" value="#FFFFFF" aria-label="Color de fondo">
+            <input name="Color de fondo" type="color" id="input-color-fondo" value="#FFFFFF"
+              aria-label="Color de fondo">
             <span class="span-fondo-texto" aria-hidden="true">#FFFFFF</span>
           </div>
         </div>
       </div>
       <label for="fondo-transparente" id="label-checkbox-fondo-transparente">
-          <input type="checkbox" id="fondo-transparente">
-          Fondo transparente
+        <input type="checkbox" id="fondo-transparente">
+        Fondo transparente
       </label>
       <div class="tipos-contorno">
         <h3 id="titulo-contorno">CONTORNO</h3>
@@ -198,11 +214,12 @@ font en particular. Repetirlos impacta negativamente en el tiempo de carga de la
           <option value="1.2">1.2</option>
           <option value="1.5">1.5</option>
           <option value="2">2</option>
-          <option value="2.5">2.5</option> 
+          <option value="2.5">2.5</option>
         </select>
       </label>
     </form>
   </aside>
   <script src="index.js"></script>
 </body>
-</html> 
+
+</html>
